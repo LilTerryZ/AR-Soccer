@@ -1,0 +1,624 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EBD9BB8528D11CFE007E75D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD9BB8428D11CFE007E75D9 /* AppDelegate.swift */; };
+		EBD9BB8728D11CFE007E75D9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD9BB8628D11CFE007E75D9 /* SceneDelegate.swift */; };
+		EBD9BB8928D11CFE007E75D9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD9BB8828D11CFE007E75D9 /* ViewController.swift */; };
+		EBD9BB8C28D11CFE007E75D9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBD9BB8A28D11CFE007E75D9 /* Main.storyboard */; };
+		EBD9BB8F28D11CFE007E75D9 /* AR_Soccer_Manager.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EBD9BB8D28D11CFE007E75D9 /* AR_Soccer_Manager.xcdatamodeld */; };
+		EBD9BB9128D11D00007E75D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBD9BB9028D11D00007E75D9 /* Assets.xcassets */; };
+		EBD9BB9428D11D00007E75D9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBD9BB9228D11D00007E75D9 /* LaunchScreen.storyboard */; };
+		EBD9BB9F28D11D00007E75D9 /* AR_Soccer_ManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD9BB9E28D11D00007E75D9 /* AR_Soccer_ManagerTests.swift */; };
+		EBD9BBA928D11D00007E75D9 /* AR_Soccer_ManagerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD9BBA828D11D00007E75D9 /* AR_Soccer_ManagerUITests.swift */; };
+		EBD9BBAB28D11D00007E75D9 /* AR_Soccer_ManagerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD9BBAA28D11D00007E75D9 /* AR_Soccer_ManagerUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EBD9BB9B28D11D00007E75D9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EBD9BB7928D11CFE007E75D9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EBD9BB8028D11CFE007E75D9;
+			remoteInfo = "AR Soccer Manager";
+		};
+		EBD9BBA528D11D00007E75D9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EBD9BB7928D11CFE007E75D9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EBD9BB8028D11CFE007E75D9;
+			remoteInfo = "AR Soccer Manager";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		EBD9BB8128D11CFE007E75D9 /* AR Soccer Manager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AR Soccer Manager.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EBD9BB8428D11CFE007E75D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EBD9BB8628D11CFE007E75D9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		EBD9BB8828D11CFE007E75D9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EBD9BB8B28D11CFE007E75D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EBD9BB8E28D11CFE007E75D9 /* AR_Soccer_Manager.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AR_Soccer_Manager.xcdatamodel; sourceTree = "<group>"; };
+		EBD9BB9028D11D00007E75D9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EBD9BB9328D11D00007E75D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EBD9BB9528D11D00007E75D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EBD9BB9A28D11D00007E75D9 /* AR Soccer ManagerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "AR Soccer ManagerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EBD9BB9E28D11D00007E75D9 /* AR_Soccer_ManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AR_Soccer_ManagerTests.swift; sourceTree = "<group>"; };
+		EBD9BBA428D11D00007E75D9 /* AR Soccer ManagerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "AR Soccer ManagerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EBD9BBA828D11D00007E75D9 /* AR_Soccer_ManagerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AR_Soccer_ManagerUITests.swift; sourceTree = "<group>"; };
+		EBD9BBAA28D11D00007E75D9 /* AR_Soccer_ManagerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AR_Soccer_ManagerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EBD9BB7E28D11CFE007E75D9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EBD9BB9728D11D00007E75D9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EBD9BBA128D11D00007E75D9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EBD9BB7828D11CFE007E75D9 = {
+			isa = PBXGroup;
+			children = (
+				EBD9BB8328D11CFE007E75D9 /* AR Soccer Manager */,
+				EBD9BB9D28D11D00007E75D9 /* AR Soccer ManagerTests */,
+				EBD9BBA728D11D00007E75D9 /* AR Soccer ManagerUITests */,
+				EBD9BB8228D11CFE007E75D9 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EBD9BB8228D11CFE007E75D9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EBD9BB8128D11CFE007E75D9 /* AR Soccer Manager.app */,
+				EBD9BB9A28D11D00007E75D9 /* AR Soccer ManagerTests.xctest */,
+				EBD9BBA428D11D00007E75D9 /* AR Soccer ManagerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EBD9BB8328D11CFE007E75D9 /* AR Soccer Manager */ = {
+			isa = PBXGroup;
+			children = (
+				EBD9BB8428D11CFE007E75D9 /* AppDelegate.swift */,
+				EBD9BB8628D11CFE007E75D9 /* SceneDelegate.swift */,
+				EBD9BB8828D11CFE007E75D9 /* ViewController.swift */,
+				EBD9BB8A28D11CFE007E75D9 /* Main.storyboard */,
+				EBD9BB9028D11D00007E75D9 /* Assets.xcassets */,
+				EBD9BB9228D11D00007E75D9 /* LaunchScreen.storyboard */,
+				EBD9BB9528D11D00007E75D9 /* Info.plist */,
+				EBD9BB8D28D11CFE007E75D9 /* AR_Soccer_Manager.xcdatamodeld */,
+			);
+			path = "AR Soccer Manager";
+			sourceTree = "<group>";
+		};
+		EBD9BB9D28D11D00007E75D9 /* AR Soccer ManagerTests */ = {
+			isa = PBXGroup;
+			children = (
+				EBD9BB9E28D11D00007E75D9 /* AR_Soccer_ManagerTests.swift */,
+			);
+			path = "AR Soccer ManagerTests";
+			sourceTree = "<group>";
+		};
+		EBD9BBA728D11D00007E75D9 /* AR Soccer ManagerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				EBD9BBA828D11D00007E75D9 /* AR_Soccer_ManagerUITests.swift */,
+				EBD9BBAA28D11D00007E75D9 /* AR_Soccer_ManagerUITestsLaunchTests.swift */,
+			);
+			path = "AR Soccer ManagerUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EBD9BB8028D11CFE007E75D9 /* AR Soccer Manager */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EBD9BBAE28D11D00007E75D9 /* Build configuration list for PBXNativeTarget "AR Soccer Manager" */;
+			buildPhases = (
+				EBD9BB7D28D11CFE007E75D9 /* Sources */,
+				EBD9BB7E28D11CFE007E75D9 /* Frameworks */,
+				EBD9BB7F28D11CFE007E75D9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "AR Soccer Manager";
+			productName = "AR Soccer Manager";
+			productReference = EBD9BB8128D11CFE007E75D9 /* AR Soccer Manager.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EBD9BB9928D11D00007E75D9 /* AR Soccer ManagerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EBD9BBB128D11D00007E75D9 /* Build configuration list for PBXNativeTarget "AR Soccer ManagerTests" */;
+			buildPhases = (
+				EBD9BB9628D11D00007E75D9 /* Sources */,
+				EBD9BB9728D11D00007E75D9 /* Frameworks */,
+				EBD9BB9828D11D00007E75D9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EBD9BB9C28D11D00007E75D9 /* PBXTargetDependency */,
+			);
+			name = "AR Soccer ManagerTests";
+			productName = "AR Soccer ManagerTests";
+			productReference = EBD9BB9A28D11D00007E75D9 /* AR Soccer ManagerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		EBD9BBA328D11D00007E75D9 /* AR Soccer ManagerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EBD9BBB428D11D00007E75D9 /* Build configuration list for PBXNativeTarget "AR Soccer ManagerUITests" */;
+			buildPhases = (
+				EBD9BBA028D11D00007E75D9 /* Sources */,
+				EBD9BBA128D11D00007E75D9 /* Frameworks */,
+				EBD9BBA228D11D00007E75D9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EBD9BBA628D11D00007E75D9 /* PBXTargetDependency */,
+			);
+			name = "AR Soccer ManagerUITests";
+			productName = "AR Soccer ManagerUITests";
+			productReference = EBD9BBA428D11D00007E75D9 /* AR Soccer ManagerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EBD9BB7928D11CFE007E75D9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1400;
+				LastUpgradeCheck = 1400;
+				TargetAttributes = {
+					EBD9BB8028D11CFE007E75D9 = {
+						CreatedOnToolsVersion = 14.0;
+					};
+					EBD9BB9928D11D00007E75D9 = {
+						CreatedOnToolsVersion = 14.0;
+						TestTargetID = EBD9BB8028D11CFE007E75D9;
+					};
+					EBD9BBA328D11D00007E75D9 = {
+						CreatedOnToolsVersion = 14.0;
+						TestTargetID = EBD9BB8028D11CFE007E75D9;
+					};
+				};
+			};
+			buildConfigurationList = EBD9BB7C28D11CFE007E75D9 /* Build configuration list for PBXProject "AR Soccer Manager" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EBD9BB7828D11CFE007E75D9;
+			productRefGroup = EBD9BB8228D11CFE007E75D9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EBD9BB8028D11CFE007E75D9 /* AR Soccer Manager */,
+				EBD9BB9928D11D00007E75D9 /* AR Soccer ManagerTests */,
+				EBD9BBA328D11D00007E75D9 /* AR Soccer ManagerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EBD9BB7F28D11CFE007E75D9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EBD9BB9428D11D00007E75D9 /* LaunchScreen.storyboard in Resources */,
+				EBD9BB9128D11D00007E75D9 /* Assets.xcassets in Resources */,
+				EBD9BB8C28D11CFE007E75D9 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EBD9BB9828D11D00007E75D9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EBD9BBA228D11D00007E75D9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EBD9BB7D28D11CFE007E75D9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EBD9BB8928D11CFE007E75D9 /* ViewController.swift in Sources */,
+				EBD9BB8F28D11CFE007E75D9 /* AR_Soccer_Manager.xcdatamodeld in Sources */,
+				EBD9BB8528D11CFE007E75D9 /* AppDelegate.swift in Sources */,
+				EBD9BB8728D11CFE007E75D9 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EBD9BB9628D11D00007E75D9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EBD9BB9F28D11D00007E75D9 /* AR_Soccer_ManagerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EBD9BBA028D11D00007E75D9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EBD9BBAB28D11D00007E75D9 /* AR_Soccer_ManagerUITestsLaunchTests.swift in Sources */,
+				EBD9BBA928D11D00007E75D9 /* AR_Soccer_ManagerUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EBD9BB9C28D11D00007E75D9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EBD9BB8028D11CFE007E75D9 /* AR Soccer Manager */;
+			targetProxy = EBD9BB9B28D11D00007E75D9 /* PBXContainerItemProxy */;
+		};
+		EBD9BBA628D11D00007E75D9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EBD9BB8028D11CFE007E75D9 /* AR Soccer Manager */;
+			targetProxy = EBD9BBA528D11D00007E75D9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EBD9BB8A28D11CFE007E75D9 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EBD9BB8B28D11CFE007E75D9 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EBD9BB9228D11D00007E75D9 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EBD9BB9328D11D00007E75D9 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EBD9BBAC28D11D00007E75D9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EBD9BBAD28D11D00007E75D9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EBD9BBAF28D11D00007E75D9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9963RQX256;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "AR Soccer Manager/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Haonan.AR-Soccer-Manager";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EBD9BBB028D11D00007E75D9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9963RQX256;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "AR Soccer Manager/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Haonan.AR-Soccer-Manager";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		EBD9BBB228D11D00007E75D9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9963RQX256;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Haonan.AR-Soccer-ManagerTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AR Soccer Manager.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/AR Soccer Manager";
+			};
+			name = Debug;
+		};
+		EBD9BBB328D11D00007E75D9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9963RQX256;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Haonan.AR-Soccer-ManagerTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AR Soccer Manager.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/AR Soccer Manager";
+			};
+			name = Release;
+		};
+		EBD9BBB528D11D00007E75D9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9963RQX256;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Haonan.AR-Soccer-ManagerUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "AR Soccer Manager";
+			};
+			name = Debug;
+		};
+		EBD9BBB628D11D00007E75D9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9963RQX256;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Haonan.AR-Soccer-ManagerUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "AR Soccer Manager";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EBD9BB7C28D11CFE007E75D9 /* Build configuration list for PBXProject "AR Soccer Manager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EBD9BBAC28D11D00007E75D9 /* Debug */,
+				EBD9BBAD28D11D00007E75D9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EBD9BBAE28D11D00007E75D9 /* Build configuration list for PBXNativeTarget "AR Soccer Manager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EBD9BBAF28D11D00007E75D9 /* Debug */,
+				EBD9BBB028D11D00007E75D9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EBD9BBB128D11D00007E75D9 /* Build configuration list for PBXNativeTarget "AR Soccer ManagerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EBD9BBB228D11D00007E75D9 /* Debug */,
+				EBD9BBB328D11D00007E75D9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EBD9BBB428D11D00007E75D9 /* Build configuration list for PBXNativeTarget "AR Soccer ManagerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EBD9BBB528D11D00007E75D9 /* Debug */,
+				EBD9BBB628D11D00007E75D9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		EBD9BB8D28D11CFE007E75D9 /* AR_Soccer_Manager.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				EBD9BB8E28D11CFE007E75D9 /* AR_Soccer_Manager.xcdatamodel */,
+			);
+			currentVersion = EBD9BB8E28D11CFE007E75D9 /* AR_Soccer_Manager.xcdatamodel */;
+			path = AR_Soccer_Manager.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = EBD9BB7928D11CFE007E75D9 /* Project object */;
+}
