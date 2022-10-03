@@ -6,8 +6,8 @@
 //
 
 import Foundation
-
 import UIKit
+
 class LeaderVC: UIViewController {
     @IBOutlet var tableView:UITableView!
 //    @IBOutlet var name:UILabel!

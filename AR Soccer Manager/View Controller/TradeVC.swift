@@ -1,16 +1,19 @@
 //
-//  ViewController.swift
+//  TradeVC.swift
 //  AR Soccer Manager
 //
-//  Created by Haonan Zhang on 2022-09-13.
+//  Created by Haonan Zhang on 2022-10-02.
 //
 
+import Foundation
 import UIKit
-class ViewController: UIViewController {
+
+class TradeVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        //self.view.backgroundColor = UIColor(patternImage: UIImage(named: "Homebcg.jpeg")!)
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "Homebcg.jpg")!)
+
         // Do any additional setup after loading the view.
     }
     override func viewWillAppear(_ animated: Bool) {
@@ -19,4 +22,3 @@ class ViewController: UIViewController {
     }
 
 }
-

@@ -605,10 +605,10 @@
             </objects>
             <point key="canvasLocation" x="-136.49289099526067" y="-240"/>
         </scene>
-        <!--View Controller-->
+        <!--LineupVC-->
         <scene sceneID="vaT-ap-hKK">
             <objects>
-                <viewController id="3GM-Me-2rp" sceneMemberID="viewController">
+                <viewController id="3GM-Me-2rp" customClass="LineupVC" customModule="AR_Soccer_Manager" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Qbq-dH-BRz">
                         <rect key="frame" x="0.0" y="0.0" width="844" height="390"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -656,10 +656,10 @@
             </objects>
             <point key="canvasLocation" x="1295" y="-197"/>
         </scene>
-        <!--View Controller-->
+        <!--TradeVC-->
         <scene sceneID="674-TN-vue">
             <objects>
-                <viewController id="GLq-9o-5AG" sceneMemberID="viewController">
+                <viewController id="GLq-9o-5AG" customClass="TradeVC" customModule="AR_Soccer_Manager" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TKd-EB-Mak">
                         <rect key="frame" x="0.0" y="0.0" width="844" height="390"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -761,10 +761,10 @@
             </objects>
             <point key="canvasLocation" x="-127" y="1014"/>
         </scene>
-        <!--View Controller-->
+        <!--ProfileVC-->
         <scene sceneID="Xa4-j2-O2C">
             <objects>
-                <viewController id="1XS-cQ-1p5" sceneMemberID="viewController">
+                <viewController id="1XS-cQ-1p5" customClass="ProfileVC" customModule="AR_Soccer_Manager" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lH2-P8-hV9">
                         <rect key="frame" x="0.0" y="0.0" width="844" height="390"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -924,8 +924,8 @@
     <inferredMetricsTieBreakers>
         <segue reference="Zgd-ZK-H6S"/>
         <segue reference="WHD-ff-561"/>
-        <segue reference="VjZ-FC-ow9"/>
-        <segue reference="e81-JE-43u"/>
+        <segue reference="wA8-dq-cq0"/>
+        <segue reference="Xjb-Dd-7Vw"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Barcelona.png" width="96" height="97.199996948242188"/>

@@ -41,6 +41,9 @@
 		EB749CA528EA5EC000BAAD15 /* play.png in Resources */ = {isa = PBXBuildFile; fileRef = EB749CA428EA5EC000BAAD15 /* play.png */; };
 		EB749CA728EA67B500BAAD15 /* PaddingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB749CA628EA67B500BAAD15 /* PaddingLabel.swift */; };
 		EB749CAB28EA6CA600BAAD15 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB749CAA28EA6CA600BAAD15 /* SettingsVC.swift */; };
+		EB749CAD28EA6E7300BAAD15 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB749CAC28EA6E7300BAAD15 /* ProfileVC.swift */; };
+		EB749CAF28EA6EEF00BAAD15 /* LineupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB749CAE28EA6EEF00BAAD15 /* LineupVC.swift */; };
+		EB749CB128EA6F0800BAAD15 /* TradeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB749CB028EA6F0800BAAD15 /* TradeVC.swift */; };
 		EB8C26C228DCE7C600DC04D4 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = EB8C26C128DCE7C600DC04D4 /* logo.png */; };
 		EB8C26C428DD496100DC04D4 /* LeaderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8C26C328DD496100DC04D4 /* LeaderVC.swift */; };
 		EBD9BB8528D11CFE007E75D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD9BB8428D11CFE007E75D9 /* AppDelegate.swift */; };
@@ -92,6 +95,9 @@
 		EB749CA428EA5EC000BAAD15 /* play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = play.png; sourceTree = "<group>"; };
 		EB749CA628EA67B500BAAD15 /* PaddingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddingLabel.swift; sourceTree = "<group>"; };
 		EB749CAA28EA6CA600BAAD15 /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
+		EB749CAC28EA6E7300BAAD15 /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
+		EB749CAE28EA6EEF00BAAD15 /* LineupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineupVC.swift; sourceTree = "<group>"; };
+		EB749CB028EA6F0800BAAD15 /* TradeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradeVC.swift; sourceTree = "<group>"; };
 		EB8C26C128DCE7C600DC04D4 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 		EB8C26C328DD496100DC04D4 /* LeaderVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderVC.swift; sourceTree = "<group>"; };
 		EBD9BB8128D11CFE007E75D9 /* AR Soccer Manager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AR Soccer Manager.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -181,6 +187,9 @@
 				EB3A074828D2735500869D70 /* HomeVC.swift */,
 				EB8C26C328DD496100DC04D4 /* LeaderVC.swift */,
 				EB749CAA28EA6CA600BAAD15 /* SettingsVC.swift */,
+				EB749CAC28EA6E7300BAAD15 /* ProfileVC.swift */,
+				EB749CAE28EA6EEF00BAAD15 /* LineupVC.swift */,
+				EB749CB028EA6F0800BAAD15 /* TradeVC.swift */,
 			);
 			path = "View Controller";
 			sourceTree = "<group>";
@@ -478,7 +487,9 @@
 				EB37FC1E28D12C7400D7F714 /* SlidingGroupAnimator.swift in Sources */,
 				EB37FC2428D12CCB00D7F714 /* BlurryOverlayView.swift in Sources */,
 				EB37FC2328D12CAD00D7F714 /* UIViewController+AMExtension.swift in Sources */,
+				EB749CAF28EA6EEF00BAAD15 /* LineupVC.swift in Sources */,
 				EB749CA728EA67B500BAAD15 /* PaddingLabel.swift in Sources */,
+				EB749CB128EA6F0800BAAD15 /* TradeVC.swift in Sources */,
 				EB37FC1328D12BFA00D7F714 /* SlidingAnimatorProtocol.swift in Sources */,
 				EB749CAB28EA6CA600BAAD15 /* SettingsVC.swift in Sources */,
 				EB37FC1C28D12C7400D7F714 /* SlidingShadowAnimator.swift in Sources */,
@@ -488,6 +499,7 @@
 				EB37FC1728D12C4500D7F714 /* CAMediaTimingFunction+AMExtension.swift in Sources */,
 				EB37FC1528D12C0800D7F714 /* SlidingAnimatorFactory.swift in Sources */,
 				EB37FC2028D12C9700D7F714 /* RightMenuSegue.swift in Sources */,
+				EB749CAD28EA6E7300BAAD15 /* ProfileVC.swift in Sources */,
 				EB37FC2128D12C9700D7F714 /* ContentSegue.swift in Sources */,
 				EB37FC1428D12C0600D7F714 /* SlidingAnimationOptions.swift in Sources */,
 				EB37FC1828D12C7400D7F714 /* SlidingContentAnimator.swift in Sources */,
