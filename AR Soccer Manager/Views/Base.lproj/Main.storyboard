@@ -132,6 +132,13 @@
                                     <segue destination="XSs-DF-FS2" kind="show" id="e81-JE-43u"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Settings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KlR-jP-Wee">
+                                <rect key="frame" x="381" y="37" width="82" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="uzg-LL-1PP"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -557,6 +564,13 @@
                                     <segue destination="Y6W-OH-hqX" kind="show" id="wA8-dq-cq0"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Lineup" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l5Q-UG-Fdu">
+                                <rect key="frame" x="388" y="47" width="68" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="fP9-yI-9Fc"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -580,7 +594,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fpd-w2-WxI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="749" y="102"/>
+            <point key="canvasLocation" x="749" y="83"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="674-TN-vue">
@@ -600,6 +614,13 @@
                                     <segue destination="Y6W-OH-hqX" kind="show" id="VjZ-FC-ow9"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Trade" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qaV-9I-rnr">
+                                <rect key="frame" x="394" y="47" width="56" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="oHp-g0-C4q"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -608,7 +629,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wo0-ym-dTp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="766" y="877"/>
+            <point key="canvasLocation" x="766" y="1014"/>
         </scene>
         <!--LeaderVC-->
         <scene sceneID="skR-Yr-cen">
@@ -839,7 +860,7 @@
         <segue reference="Zgd-ZK-H6S"/>
         <segue reference="WHD-ff-561"/>
         <segue reference="VjZ-FC-ow9"/>
-        <segue reference="e81-JE-43u"/>
+        <segue reference="B5a-Rc-EqZ"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Barcelona.png" width="96" height="97.199996948242188"/>
