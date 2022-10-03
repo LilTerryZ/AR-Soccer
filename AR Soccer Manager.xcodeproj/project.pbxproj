@@ -38,6 +38,9 @@
 		EB3A074928D2735500869D70 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3A074828D2735500869D70 /* HomeVC.swift */; };
 		EB647C6928D40E890000B8A3 /* Homebcg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EB647C6828D40E890000B8A3 /* Homebcg.jpg */; };
 		EB749CA328E3F16300BAAD15 /* avatar.png in Resources */ = {isa = PBXBuildFile; fileRef = EB749CA228E3F16300BAAD15 /* avatar.png */; };
+		EB749CA528EA5EC000BAAD15 /* play.png in Resources */ = {isa = PBXBuildFile; fileRef = EB749CA428EA5EC000BAAD15 /* play.png */; };
+		EB749CA728EA67B500BAAD15 /* PaddingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB749CA628EA67B500BAAD15 /* PaddingLabel.swift */; };
+		EB749CAB28EA6CA600BAAD15 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB749CAA28EA6CA600BAAD15 /* SettingsVC.swift */; };
 		EB8C26C228DCE7C600DC04D4 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = EB8C26C128DCE7C600DC04D4 /* logo.png */; };
 		EB8C26C428DD496100DC04D4 /* LeaderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8C26C328DD496100DC04D4 /* LeaderVC.swift */; };
 		EBD9BB8528D11CFE007E75D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD9BB8428D11CFE007E75D9 /* AppDelegate.swift */; };
@@ -86,6 +89,9 @@
 		EB3A074828D2735500869D70 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		EB647C6828D40E890000B8A3 /* Homebcg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Homebcg.jpg; sourceTree = "<group>"; };
 		EB749CA228E3F16300BAAD15 /* avatar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = avatar.png; sourceTree = "<group>"; };
+		EB749CA428EA5EC000BAAD15 /* play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = play.png; sourceTree = "<group>"; };
+		EB749CA628EA67B500BAAD15 /* PaddingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddingLabel.swift; sourceTree = "<group>"; };
+		EB749CAA28EA6CA600BAAD15 /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
 		EB8C26C128DCE7C600DC04D4 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 		EB8C26C328DD496100DC04D4 /* LeaderVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderVC.swift; sourceTree = "<group>"; };
 		EBD9BB8128D11CFE007E75D9 /* AR Soccer Manager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AR Soccer Manager.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -149,6 +155,7 @@
 		EB37FC4828D15F9800D7F714 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				EB749CA428EA5EC000BAAD15 /* play.png */,
 				EB749CA228E3F16300BAAD15 /* avatar.png */,
 				EB1F41D428DE072F006B2F94 /* settings.png */,
 				EB1F41D228DE032F006B2F94 /* return.png */,
@@ -173,6 +180,7 @@
 				EBD9BB8828D11CFE007E75D9 /* ViewController.swift */,
 				EB3A074828D2735500869D70 /* HomeVC.swift */,
 				EB8C26C328DD496100DC04D4 /* LeaderVC.swift */,
+				EB749CAA28EA6CA600BAAD15 /* SettingsVC.swift */,
 			);
 			path = "View Controller";
 			sourceTree = "<group>";
@@ -243,6 +251,7 @@
 			isa = PBXGroup;
 			children = (
 				EBD9BBC128D12388007E75D9 /* SlideMenu */,
+				EB749CA628EA67B500BAAD15 /* PaddingLabel.swift */,
 			);
 			path = Functions;
 			sourceTree = "<group>";
@@ -427,6 +436,7 @@
 				EB647C6928D40E890000B8A3 /* Homebcg.jpg in Resources */,
 				EB37FC6628D17E5D00D7F714 /* Barcelona.png in Resources */,
 				EB37FC6028D17A7200D7F714 /* Sell.png in Resources */,
+				EB749CA528EA5EC000BAAD15 /* play.png in Resources */,
 				EB37FC5C28D1794100D7F714 /* Player.png in Resources */,
 				EB37FC5828D1777200D7F714 /* Homebcg1.jpg in Resources */,
 				EB749CA328E3F16300BAAD15 /* avatar.png in Resources */,
@@ -468,7 +478,9 @@
 				EB37FC1E28D12C7400D7F714 /* SlidingGroupAnimator.swift in Sources */,
 				EB37FC2428D12CCB00D7F714 /* BlurryOverlayView.swift in Sources */,
 				EB37FC2328D12CAD00D7F714 /* UIViewController+AMExtension.swift in Sources */,
+				EB749CA728EA67B500BAAD15 /* PaddingLabel.swift in Sources */,
 				EB37FC1328D12BFA00D7F714 /* SlidingAnimatorProtocol.swift in Sources */,
+				EB749CAB28EA6CA600BAAD15 /* SettingsVC.swift in Sources */,
 				EB37FC1C28D12C7400D7F714 /* SlidingShadowAnimator.swift in Sources */,
 				EB3A074928D2735500869D70 /* HomeVC.swift in Sources */,
 				EB37FC2228D12C9700D7F714 /* LeftMenuSegue.swift in Sources */,
