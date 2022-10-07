@@ -12,7 +12,7 @@ class Simulation{
     var resultDataDict = [String: Any]()
     
     func runSimulation(homeTeamName: String , awayTeamName: String) async -> [String: Any] {
-        guard let url = URL(string: "http://127.0.0.1:5001/ar-soccer-manager-5cab3/us-central1/simulateGame") else {
+        guard let url = URL(string: "https://us-central1-ar-soccer-manager-5cab3.cloudfunctions.net/simulateGame") else {
             print("Invalid URL")
             return ["Error": "Invalid URL"]
         }
@@ -29,11 +29,11 @@ class Simulation{
         request.httpBody = requestBodyJson
         
         do{
-            let (data, response) = try await URLSession.shared.data(for:request)
+            let (data, _) = try await URLSession.shared.data(for:request)
             
             if let dataString = String(data: data, encoding: .utf8) {
                 return self.convertAndReturnData(str: dataString)
-            }
+            } 
         }catch{
             return ["Error": "Bad Request"]
         }
