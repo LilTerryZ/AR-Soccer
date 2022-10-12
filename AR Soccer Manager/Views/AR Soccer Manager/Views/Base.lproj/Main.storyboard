@@ -484,13 +484,13 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" alignment="center" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="ynb-BX-DPy">
-                                <rect key="frame" x="167" y="68" width="150" height="152"/>
+                                <rect key="frame" x="167" y="58" width="150" height="162"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="gIw-ZV-Pr2">
-                                        <rect key="frame" x="39.333333333333307" y="8.0000000000000018" width="71.333333333333314" height="22.666666666666671"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="gIw-ZV-Pr2">
+                                        <rect key="frame" x="29.333333333333307" y="8" width="91.333333333333314" height="32.666666666666664"/>
                                         <subviews>
-                                            <label opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" ambiguous="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zby-Zj-BkF" customClass="PaddingLabel" customModule="AR_Soccer_Manager" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="71.333333333333329" height="22.666666666666668"/>
+                                            <label opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" usesAttributedText="YES" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zby-Zj-BkF" customClass="PaddingLabel" customModule="AR_Soccer_Manager" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="91.333333333333329" height="32.666666666666664"/>
                                                 <attributedString key="attributedText">
                                                     <fragment content="Matchday 8">
                                                         <attributes>
@@ -526,12 +526,12 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </stackView>
-                                    <label opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" ambiguous="YES" text="Next game" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="B3e-Yt-d5d">
-                                        <rect key="frame" x="40.333333333333321" y="36.666666666666671" width="69.666666666666686" height="17"/>
+                                    <label opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" text="Next game" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="B3e-Yt-d5d">
+                                        <rect key="frame" x="40.333333333333321" y="46.666666666666671" width="69.666666666666686" height="17"/>
                                         <fontDescription key="fontDescription" type="italicSystem" pointSize="14"/>
                                     </label>
-                                    <label opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" ambiguous="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gg2-Wz-v2G">
-                                        <rect key="frame" x="21" y="59.666666666666664" width="108" height="21.666666666666664"/>
+                                    <label opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" usesAttributedText="YES" lineBreakMode="tailTruncation" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gg2-Wz-v2G">
+                                        <rect key="frame" x="21" y="69.666666666666671" width="108" height="21.666666666666671"/>
                                         <attributedString key="attributedText">
                                             <fragment content="23h 10min 5s">
                                                 <attributes>
@@ -543,7 +543,7 @@
                                         </attributedString>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="vs.png" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nR9-1B-RDG">
-                                        <rect key="frame" x="41.666666666666686" y="87.333333333333343" width="67" height="56.666666666666657"/>
+                                        <rect key="frame" x="41.666666666666686" y="97.333333333333343" width="67" height="56.666666666666657"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="67" id="5DR-Gn-Mab"/>
                                             <constraint firstAttribute="height" constant="56.670000000000002" id="Cfi-P8-Gxq"/>
@@ -648,18 +648,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="844" height="390"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <arView multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xBH-Wp-MzU">
-                                <rect key="frame" x="-16" y="-23" width="860" height="435"/>
+                            <arView multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5S1-tc-mnx">
+                                <rect key="frame" x="-71" y="-20" width="1054" height="468"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </arView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kOT-RO-unn">
-                                <rect key="frame" x="37" y="47" width="32" height="22"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ydg-xL-rTo">
+                                <rect key="frame" x="36" y="47" width="32" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" systemColor="labelColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="return.png"/>
                                 <connections>
-                                    <segue destination="Y6W-OH-hqX" kind="show" id="t3V-hC-KPl"/>
+                                    <segue destination="Y6W-OH-hqX" kind="show" id="pOa-8d-ZMY"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -668,7 +668,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="iG3-vJ-hc4"/>
                     <connections>
-                        <outlet property="arView" destination="xBH-Wp-MzU" id="yM5-Q6-nOx"/>
+                        <outlet property="arView" destination="5S1-tc-mnx" id="NwO-yC-Yux"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fpd-w2-WxI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -937,13 +937,13 @@
     </scenes>
     <designables>
         <designable name="Zby-Zj-BkF">
-            <size key="intrinsicContentSize" width="71.333333333333329" height="15.666666666666666"/>
+            <size key="intrinsicContentSize" width="91.333333333333329" height="32.666666666666664"/>
         </designable>
     </designables>
     <inferredMetricsTieBreakers>
         <segue reference="Zgd-ZK-H6S"/>
         <segue reference="WHD-ff-561"/>
-        <segue reference="VjZ-FC-ow9"/>
+        <segue reference="pOa-8d-ZMY"/>
         <segue reference="B5a-Rc-EqZ"/>
     </inferredMetricsTieBreakers>
     <resources>

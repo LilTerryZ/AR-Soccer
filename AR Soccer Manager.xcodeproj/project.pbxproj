@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C552606028F73E0000065A60 /* Experience.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = C552602C28F73E0000065A60 /* Experience.rcproject */; };
+		C552606428F73E2300065A60 /* SimulationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C552606128F73E2300065A60 /* SimulationService.swift */; };
+		C552606528F73E2300065A60 /* ARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C552606228F73E2300065A60 /* ARViewController.swift */; };
 		EB1F41D328DE032F006B2F94 /* return.png in Resources */ = {isa = PBXBuildFile; fileRef = EB1F41D228DE032F006B2F94 /* return.png */; };
 		EB1F41D528DE072F006B2F94 /* settings.png in Resources */ = {isa = PBXBuildFile; fileRef = EB1F41D428DE072F006B2F94 /* settings.png */; };
 		EB37FC1328D12BFA00D7F714 /* SlidingAnimatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD9BBD128D123C0007E75D9 /* SlidingAnimatorProtocol.swift */; };
@@ -77,6 +80,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C552602C28F73E0000065A60 /* Experience.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Experience.rcproject; sourceTree = "<group>"; };
+		C552606128F73E2300065A60 /* SimulationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimulationService.swift; sourceTree = "<group>"; };
+		C552606228F73E2300065A60 /* ARViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARViewController.swift; sourceTree = "<group>"; };
 		EB1F41D228DE032F006B2F94 /* return.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = return.png; sourceTree = "<group>"; };
 		EB1F41D428DE072F006B2F94 /* settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings.png; sourceTree = "<group>"; };
 		EB37FC1628D12C4500D7F714 /* CAMediaTimingFunction+AMExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CAMediaTimingFunction+AMExtension.swift"; sourceTree = "<group>"; };
@@ -184,6 +190,8 @@
 			isa = PBXGroup;
 			children = (
 				EBD9BB8828D11CFE007E75D9 /* ViewController.swift */,
+				C552606228F73E2300065A60 /* ARViewController.swift */,
+				C552606128F73E2300065A60 /* SimulationService.swift */,
 				EB3A074828D2735500869D70 /* HomeVC.swift */,
 				EB8C26C328DD496100DC04D4 /* LeaderVC.swift */,
 				EB749CAA28EA6CA600BAAD15 /* SettingsVC.swift */,
@@ -251,6 +259,7 @@
 			isa = PBXGroup;
 			children = (
 				EBD9BB8A28D11CFE007E75D9 /* Main.storyboard */,
+				C552602C28F73E0000065A60 /* Experience.rcproject */,
 				EBD9BB9228D11D00007E75D9 /* LaunchScreen.storyboard */,
 			);
 			path = Views;
@@ -479,12 +488,14 @@
 				EB37FC1928D12C7400D7F714 /* SlidingDimmedBackgroundAnimator.swift in Sources */,
 				EB37FC1F28D12C7400D7F714 /* SlidingFixedMenuAnimator.swift in Sources */,
 				EB37FC1B28D12C7400D7F714 /* SlidingContentShadowAnimator.swift in Sources */,
+				C552606528F73E2300065A60 /* ARViewController.swift in Sources */,
 				EB37FC1D28D12C7400D7F714 /* SlidingStandardAnimator.swift in Sources */,
 				EBD9BBC328D12393007E75D9 /* SlideMenuMainViewController.swift in Sources */,
 				EB37FC1A28D12C7400D7F714 /* SlidingBlurAnimator.swift in Sources */,
 				EBD9BB8928D11CFE007E75D9 /* ViewController.swift in Sources */,
 				EBD9BB8F28D11CFE007E75D9 /* AR_Soccer_Manager.xcdatamodeld in Sources */,
 				EB37FC1E28D12C7400D7F714 /* SlidingGroupAnimator.swift in Sources */,
+				C552606028F73E0000065A60 /* Experience.rcproject in Sources */,
 				EB37FC2428D12CCB00D7F714 /* BlurryOverlayView.swift in Sources */,
 				EB37FC2328D12CAD00D7F714 /* UIViewController+AMExtension.swift in Sources */,
 				EB749CAF28EA6EEF00BAAD15 /* LineupVC.swift in Sources */,
@@ -502,6 +513,7 @@
 				EB749CAD28EA6E7300BAAD15 /* ProfileVC.swift in Sources */,
 				EB37FC2128D12C9700D7F714 /* ContentSegue.swift in Sources */,
 				EB37FC1428D12C0600D7F714 /* SlidingAnimationOptions.swift in Sources */,
+				C552606428F73E2300065A60 /* SimulationService.swift in Sources */,
 				EB37FC1828D12C7400D7F714 /* SlidingContentAnimator.swift in Sources */,
 				EBD9BB8528D11CFE007E75D9 /* AppDelegate.swift in Sources */,
 				EBD9BBBD28D122C3007E75D9 /* SceneDelegate.swift in Sources */,

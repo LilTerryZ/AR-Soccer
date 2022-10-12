@@ -1,0 +1,57 @@
+[
+  {
+    "libraryIdentifier" : "b506de22e003dcec606565ff3b6042dc",
+    "format" : "model",
+    "displayName" : "CR7_Soccer_Tackle.usdz"
+  },
+  {
+    "libraryIdentifier" : "cc1a20b684908f3105ab6de46db74010",
+    "format" : "model",
+    "displayName" : "CR7Soccer_Penalty_Kick.usdz"
+  },
+  {
+    "libraryIdentifier" : "5b7986032664086c2d763e0d0a59974f",
+    "format" : "model",
+    "displayName" : "CR7_Goalkeeper_Body_Block.usdz"
+  },
+  {
+    "libraryIdentifier" : "1cd912bf697f9483c41a71cfe6523c5e",
+    "format" : "model",
+    "displayName" : "CR7_Goalkeeper_Diving_Save.usdz"
+  },
+  {
+    "libraryIdentifier" : "64bf0963134436b800cbc67b6502e865",
+    "format" : "model",
+    "displayName" : "CR7_Jog_Backward.usdz"
+  },
+  {
+    "libraryIdentifier" : "e0c20ce61f90179fa187e7990303b503",
+    "format" : "model",
+    "displayName" : "CR7_Jog_Forward.usdz"
+  },
+  {
+    "libraryIdentifier" : "821872f49ee9c0dfd54cdd09cb5a61b7",
+    "format" : "model",
+    "displayName" : "CR7_Soccer_Spin.usdz"
+  },
+  {
+    "libraryIdentifier" : "5357b5911c7f04dbd9d7bd1c13886e08",
+    "format" : "model",
+    "displayName" : "CR7_Fall_over.usdz"
+  },
+  {
+    "libraryIdentifier" : "66555aef05f6a79975ec04d845637e54",
+    "format" : "model",
+    "displayName" : "Football_Field.usdz"
+  },
+  {
+    "libraryIdentifier" : "992baa9fe39fd710c97be7b9de7f840c",
+    "format" : "model",
+    "displayName" : "CR7_Receive_Soccerball.usdz"
+  },
+  {
+    "libraryIdentifier" : "8640472852aff9077c419c3c463fb004",
+    "format" : "model",
+    "displayName" : "CR7Soccer_Idle.usdz"
+  }
+]
