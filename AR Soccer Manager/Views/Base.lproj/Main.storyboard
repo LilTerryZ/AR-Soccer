@@ -9,6 +9,27 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--View Controller-->
+        <scene sceneID="VmV-PP-eZQ">
+            <objects>
+                <viewController id="dzQ-yq-nv8" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xMs-q3-W98">
+                        <rect key="frame" x="0.0" y="0.0" width="844" height="390"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GDL-T7-8M3">
+                                <rect key="frame" x="100" y="120" width="421" height="150"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            </pickerView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Q12-4a-SrK"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Htd-XN-FKi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1666.3507109004738" y="-1455.3846153846152"/>
+        </scene>
         <!--HomeVC-->
         <scene sceneID="FrP-RK-dLw">
             <objects>
@@ -484,18 +505,18 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" alignment="center" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="ynb-BX-DPy">
-                                <rect key="frame" x="167" y="59" width="150" height="161"/>
+                                <rect key="frame" x="167" y="58" width="150" height="162"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="gIw-ZV-Pr2">
-                                        <rect key="frame" x="34" y="8.0000000000000018" width="82" height="31.666666666666671"/>
+                                        <rect key="frame" x="29.333333333333307" y="8" width="91.333333333333314" height="32.666666666666664"/>
                                         <subviews>
                                             <label opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" usesAttributedText="YES" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zby-Zj-BkF" customClass="PaddingLabel" customModule="AR_Soccer_Manager" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="82" height="31.666666666666668"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="91.333333333333329" height="32.666666666666664"/>
                                                 <attributedString key="attributedText">
                                                     <fragment content="Matchday 8">
                                                         <attributes>
                                                             <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                                            <font key="NSFont" size="13" name=".SFNS-Regular"/>
+                                                            <font key="NSFont" metaFont="system"/>
                                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                         </attributes>
                                                     </fragment>
@@ -527,11 +548,11 @@
                                         </userDefinedRuntimeAttributes>
                                     </stackView>
                                     <label opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" text="Next game" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="B3e-Yt-d5d">
-                                        <rect key="frame" x="40.333333333333321" y="45.666666666666671" width="69.666666666666686" height="17"/>
+                                        <rect key="frame" x="40.333333333333321" y="46.666666666666671" width="69.666666666666686" height="17"/>
                                         <fontDescription key="fontDescription" type="italicSystem" pointSize="14"/>
                                     </label>
                                     <label opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" usesAttributedText="YES" lineBreakMode="tailTruncation" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gg2-Wz-v2G">
-                                        <rect key="frame" x="21" y="68.666666666666671" width="108" height="21.666666666666671"/>
+                                        <rect key="frame" x="21" y="69.666666666666671" width="108" height="21.666666666666671"/>
                                         <attributedString key="attributedText">
                                             <fragment content="23h 10min 5s">
                                                 <attributes>
@@ -543,7 +564,7 @@
                                         </attributedString>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="vs.png" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nR9-1B-RDG">
-                                        <rect key="frame" x="41.666666666666686" y="96.333333333333343" width="67" height="56.666666666666657"/>
+                                        <rect key="frame" x="41.666666666666686" y="97.333333333333343" width="67" height="56.666666666666657"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="67" id="5DR-Gn-Mab"/>
                                             <constraint firstAttribute="height" constant="56.670000000000002" id="Cfi-P8-Gxq"/>
@@ -918,13 +939,13 @@
     </scenes>
     <designables>
         <designable name="Zby-Zj-BkF">
-            <size key="intrinsicContentSize" width="82" height="31.666666666666664"/>
+            <size key="intrinsicContentSize" width="91.333333333333329" height="32.666666666666664"/>
         </designable>
     </designables>
     <inferredMetricsTieBreakers>
-        <segue reference="Zgd-ZK-H6S"/>
-        <segue reference="WHD-ff-561"/>
-        <segue reference="wA8-dq-cq0"/>
+        <segue reference="Gwx-S3-ZuC"/>
+        <segue reference="orl-sm-qXL"/>
+        <segue reference="Qxj-Nv-gu4"/>
         <segue reference="Xjb-Dd-7Vw"/>
     </inferredMetricsTieBreakers>
     <resources>
