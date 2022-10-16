@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C552606928FB9F2600065A60 /* SimulationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C552606728FB9F2600065A60 /* SimulationService.swift */; };
+		C552606A28FB9F2600065A60 /* ARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C552606828FB9F2600065A60 /* ARViewController.swift */; };
+		C552606C28FB9F3F00065A60 /* Experience.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = C552606B28FB9F3F00065A60 /* Experience.rcproject */; };
 		EB1F41D328DE032F006B2F94 /* return.png in Resources */ = {isa = PBXBuildFile; fileRef = EB1F41D228DE032F006B2F94 /* return.png */; };
 		EB1F41D528DE072F006B2F94 /* settings.png in Resources */ = {isa = PBXBuildFile; fileRef = EB1F41D428DE072F006B2F94 /* settings.png */; };
 		EB37FC1328D12BFA00D7F714 /* SlidingAnimatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD9BBD128D123C0007E75D9 /* SlidingAnimatorProtocol.swift */; };
@@ -98,6 +101,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C552606728FB9F2600065A60 /* SimulationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimulationService.swift; sourceTree = "<group>"; };
+		C552606828FB9F2600065A60 /* ARViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARViewController.swift; sourceTree = "<group>"; };
+		C552606B28FB9F3F00065A60 /* Experience.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Experience.rcproject; sourceTree = "<group>"; };
 		EB1F41D228DE032F006B2F94 /* return.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = return.png; sourceTree = "<group>"; };
 		EB1F41D428DE072F006B2F94 /* settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings.png; sourceTree = "<group>"; };
 		EB37FC1628D12C4500D7F714 /* CAMediaTimingFunction+AMExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CAMediaTimingFunction+AMExtension.swift"; sourceTree = "<group>"; };
@@ -218,6 +224,9 @@
 		EB3A074728D2690200869D70 /* View Controller */ = {
 			isa = PBXGroup;
 			children = (
+				C552606B28FB9F3F00065A60 /* Experience.rcproject */,
+				C552606828FB9F2600065A60 /* ARViewController.swift */,
+				C552606728FB9F2600065A60 /* SimulationService.swift */,
 				EBD9BB8828D11CFE007E75D9 /* ViewController.swift */,
 				EB3A074828D2735500869D70 /* HomeVC.swift */,
 				EB8C26C328DD496100DC04D4 /* LeaderVC.swift */,
@@ -549,6 +558,7 @@
 				EBD9BBC328D12393007E75D9 /* SlideMenuMainViewController.swift in Sources */,
 				EB37FC1A28D12C7400D7F714 /* SlidingBlurAnimator.swift in Sources */,
 				EBD9BB8928D11CFE007E75D9 /* ViewController.swift in Sources */,
+				C552606928FB9F2600065A60 /* SimulationService.swift in Sources */,
 				EBD9BB8F28D11CFE007E75D9 /* AR_Soccer_Manager.xcdatamodeld in Sources */,
 				EB37FC1E28D12C7400D7F714 /* SlidingGroupAnimator.swift in Sources */,
 				EB37FC2428D12CCB00D7F714 /* BlurryOverlayView.swift in Sources */,
@@ -561,6 +571,8 @@
 				EB37FC1C28D12C7400D7F714 /* SlidingShadowAnimator.swift in Sources */,
 				EB3A074928D2735500869D70 /* HomeVC.swift in Sources */,
 				EB37FC2228D12C9700D7F714 /* LeftMenuSegue.swift in Sources */,
+				C552606A28FB9F2600065A60 /* ARViewController.swift in Sources */,
+				C552606C28FB9F3F00065A60 /* Experience.rcproject in Sources */,
 				EB8C26C428DD496100DC04D4 /* LeaderVC.swift in Sources */,
 				EB37FC1728D12C4500D7F714 /* CAMediaTimingFunction+AMExtension.swift in Sources */,
 				EB37FC1528D12C0800D7F714 /* SlidingAnimatorFactory.swift in Sources */,
@@ -755,6 +767,7 @@
 				DEVELOPMENT_TEAM = 9963RQX256;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "AR Soccer Manager/Info.plist";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Allow AR Soccer Manager to access your camera for simulation purposes.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -783,6 +796,7 @@
 				DEVELOPMENT_TEAM = 9963RQX256;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "AR Soccer Manager/Info.plist";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Allow AR Soccer Manager to access your camera for simulation purposes.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

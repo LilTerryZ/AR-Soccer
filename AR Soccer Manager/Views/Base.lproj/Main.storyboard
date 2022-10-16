@@ -894,18 +894,37 @@
         <!--View Controller-->
         <scene sceneID="Zpe-M3-8YD">
             <objects>
-                <viewController id="nBa-Nh-w1B" sceneMemberID="viewController">
+                <viewController id="nBa-Nh-w1B" customClass="ARViewController" customModule="AR_Soccer_Manager" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cWm-D8-JLo">
                         <rect key="frame" x="0.0" y="0.0" width="844" height="390"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <arView multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cX7-gA-Yfg">
+                                <rect key="frame" x="-69" y="-51" width="1022" height="489"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </arView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mky-yb-chh">
+                                <rect key="frame" x="32" y="31" width="32" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" systemColor="labelColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="return.png"/>
+                                <connections>
+                                    <segue destination="Y6W-OH-hqX" kind="show" id="xOS-57-X61"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="7XL-F8-Hlm"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="iG3-vJ-hc4"/>
+                    <connections>
+                        <outlet property="arView" destination="cX7-gA-Yfg" id="Z8q-pT-J5D"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fpd-w2-WxI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1295" y="-197"/>
+            <point key="canvasLocation" x="1294.5497630331754" y="-198.46153846153845"/>
         </scene>
         <!--TradeVC-->
         <scene sceneID="674-TN-vue">
@@ -1175,7 +1194,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="Zgd-ZK-H6S"/>
         <segue reference="WHD-ff-561"/>
-        <segue reference="Qxj-Nv-gu4"/>
+        <segue reference="xOS-57-X61"/>
         <segue reference="e81-JE-43u"/>
     </inferredMetricsTieBreakers>
     <resources>
