@@ -8,8 +8,8 @@
 import Foundation
 import UIKit
 
-class HomeVC: UIViewController {
-
+class HomeVC: UIViewController{
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "Homebcg.jpg")!)
@@ -22,3 +22,4 @@ class HomeVC: UIViewController {
     }
 
 }
+

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>434026155780-7073rj7sm363moa2dsrf41s7iusrq7vt.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.434026155780-7073rj7sm363moa2dsrf41s7iusrq7vt</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDQRT42GjfUesM7qQ-V6OPcvYFmkqUD-bI</string>
+	<key>GCM_SENDER_ID</key>
+	<string>434026155780</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>Haonan.AR-Soccer-Manager</string>
+	<key>PROJECT_ID</key>
+	<string>ar-soccer-manager-5cab3</string>
+	<key>STORAGE_BUCKET</key>
+	<string>ar-soccer-manager-5cab3.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:434026155780:ios:247cea97caa1b145310a51</string>
+</dict>
+</plist>
