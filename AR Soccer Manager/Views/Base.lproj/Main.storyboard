@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dzQ-yq-nv8">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="XSs-DF-FS2">
     <device id="retina6_0" orientation="landscape" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -207,10 +207,41 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qwe-gI-aFN">
+                                <rect key="frame" x="80" y="32" width="32" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" systemColor="labelColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="return.png"/>
+                                <connections>
+                                    <segue destination="XSs-DF-FS2" kind="show" id="b3Z-PR-xWG"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pe4-JS-bxd">
+                                <rect key="frame" x="684" y="307" width="75" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="linkColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Start">
+                                    <color key="baseForegroundColor" systemColor="systemBackgroundColor"/>
+                                </buttonConfiguration>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="C21-Cn-D3L" kind="show" id="ixt-jf-aU7"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Q12-4a-SrK"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="guX-He-WT6"/>
                     <connections>
                         <outlet property="bundesliga" destination="uym-HK-Rld" id="mnU-PF-NoX"/>
                         <outlet property="clubSelected" destination="9cB-PL-GeE" id="CeD-ZK-qmf"/>
@@ -222,11 +253,12 @@
                         <outlet property="selectLiga" destination="MDH-U0-Ap1" id="h8z-w0-pZu"/>
                         <outlet property="selectLigue" destination="zgQ-oD-VEI" id="tKA-hc-GLY"/>
                         <outlet property="selectPremier" destination="bkA-l0-sv5" id="15D-e3-8I4"/>
+                        <outlet property="startBtn" destination="Pe4-JS-bxd" id="rL7-fP-ZuG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Htd-XN-FKi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1666.3507109004738" y="-1455.3846153846152"/>
+            <point key="canvasLocation" x="-1464" y="-1405"/>
         </scene>
         <!--HomeVC-->
         <scene sceneID="FrP-RK-dLw">
@@ -278,7 +310,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="C21-Cn-D3L" kind="show" id="fBu-Ug-X7r"/>
+                                    <segue destination="dzQ-yq-nv8" kind="show" id="A5u-oM-q8a"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="do0-Mc-dbC">
@@ -418,7 +450,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dad-i9-Ibw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1678.4360189573458" y="724.61538461538464"/>
+            <point key="canvasLocation" x="-1464" y="771"/>
         </scene>
         <!--ViewController-->
         <scene sceneID="ICi-Eu-Bcp">
@@ -652,10 +684,10 @@
                                             </fragment>
                                         </attributedString>
                                     </label>
-                                    <label opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" ambiguous="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sHl-55-m3u">
-                                        <rect key="frame" x="21.000000000000004" y="118" width="61.333333333333343" height="18"/>
+                                    <label opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" ambiguous="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sHl-55-m3u">
+                                        <rect key="frame" x="25.333333333333325" y="118" width="52.666666666666657" height="18"/>
                                         <attributedString key="attributedText">
-                                            <fragment content="Diamond">
+                                            <fragment content="Haonan">
                                                 <attributes>
                                                     <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <font key="NSFont" metaFont="system" size="15"/>
@@ -684,12 +716,12 @@
                                             </fragment>
                                         </attributedString>
                                     </label>
-                                    <label opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" ambiguous="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eti-Z1-dDp">
-                                        <rect key="frame" x="22.666666666666625" y="124.66666666666664" width="50.666666666666657" height="8.3333333333333286"/>
+                                    <label opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" ambiguous="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eti-Z1-dDp">
+                                        <rect key="frame" x="33.333333333333371" y="124.66666666666664" width="29.666666666666671" height="8.3333333333333286"/>
                                         <attributedString key="attributedText">
-                                            <fragment content="Samuel">
+                                            <fragment content="Elon">
                                                 <attributes>
-                                                    <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <font key="NSFont" metaFont="system" size="15"/>
                                                     <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                 </attributes>
@@ -703,13 +735,13 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" alignment="center" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="ynb-BX-DPy">
-                                <rect key="frame" x="167" y="58" width="150" height="162"/>
+                                <rect key="frame" x="167" y="68" width="150" height="152"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="gIw-ZV-Pr2">
-                                        <rect key="frame" x="29.333333333333307" y="8" width="91.333333333333314" height="32.666666666666664"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="gIw-ZV-Pr2">
+                                        <rect key="frame" x="39.333333333333307" y="8.0000000000000018" width="71.333333333333314" height="22.666666666666671"/>
                                         <subviews>
-                                            <label opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" usesAttributedText="YES" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zby-Zj-BkF" customClass="PaddingLabel" customModule="AR_Soccer_Manager" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="91.333333333333329" height="32.666666666666664"/>
+                                            <label opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" ambiguous="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zby-Zj-BkF" customClass="PaddingLabel" customModule="AR_Soccer_Manager" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="71.333333333333329" height="22.666666666666668"/>
                                                 <attributedString key="attributedText">
                                                     <fragment content="Matchday 8">
                                                         <attributes>
@@ -745,12 +777,12 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </stackView>
-                                    <label opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" text="Next game" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="B3e-Yt-d5d">
-                                        <rect key="frame" x="40.333333333333321" y="46.666666666666671" width="69.666666666666686" height="17"/>
+                                    <label opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" ambiguous="YES" text="Next game" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="B3e-Yt-d5d">
+                                        <rect key="frame" x="40.333333333333321" y="36.666666666666671" width="69.666666666666686" height="17"/>
                                         <fontDescription key="fontDescription" type="italicSystem" pointSize="14"/>
                                     </label>
-                                    <label opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" usesAttributedText="YES" lineBreakMode="tailTruncation" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gg2-Wz-v2G">
-                                        <rect key="frame" x="21" y="69.666666666666671" width="108" height="21.666666666666671"/>
+                                    <label opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" ambiguous="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gg2-Wz-v2G">
+                                        <rect key="frame" x="21" y="59.666666666666664" width="108" height="21.666666666666664"/>
                                         <attributedString key="attributedText">
                                             <fragment content="23h 10min 5s">
                                                 <attributes>
@@ -762,7 +794,7 @@
                                         </attributedString>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="vs.png" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nR9-1B-RDG">
-                                        <rect key="frame" x="41.666666666666686" y="97.333333333333343" width="67" height="56.666666666666657"/>
+                                        <rect key="frame" x="41.666666666666686" y="87.333333333333343" width="67" height="56.666666666666657"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="67" id="5DR-Gn-Mab"/>
                                             <constraint firstAttribute="height" constant="56.670000000000002" id="Cfi-P8-Gxq"/>
@@ -1137,14 +1169,14 @@
     </scenes>
     <designables>
         <designable name="Zby-Zj-BkF">
-            <size key="intrinsicContentSize" width="91.333333333333329" height="32.666666666666664"/>
+            <size key="intrinsicContentSize" width="71.333333333333329" height="15.666666666666666"/>
         </designable>
     </designables>
     <inferredMetricsTieBreakers>
         <segue reference="Zgd-ZK-H6S"/>
         <segue reference="WHD-ff-561"/>
         <segue reference="Qxj-Nv-gu4"/>
-        <segue reference="B5a-Rc-EqZ"/>
+        <segue reference="e81-JE-43u"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Barcelona.png" width="96" height="97.199996948242188"/>
@@ -1160,6 +1192,9 @@
         <image name="vs.png" width="24" height="20.399999618530273"/>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
