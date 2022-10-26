@@ -488,35 +488,35 @@
         <scene sceneID="s0d-6b-0kx">
             <objects>
                 <viewController title="HomeVC" id="Y6W-OH-hqX" customClass="HomeVC" customModule="AR_Soccer_Manager" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="844" height="390"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="top" axis="vertical" distribution="fillEqually" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="DzK-El-mXv">
-                                <rect key="frame" x="110" y="260" width="641" height="76"/>
+                                <rect key="frame" x="110" y="268" width="641" height="206"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="jDJ-yp-DN7">
-                                        <rect key="frame" x="0.0" y="0.0" width="641" height="33"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="641" height="98"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="gfJ-oT-W52">
-                                                <rect key="frame" x="0.0" y="0.0" width="207" height="33"/>
+                                                <rect key="frame" x="0.0" y="15.333333333333314" width="207" height="67"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Player.png" translatesAutoresizingMaskIntoConstraints="NO" id="oIc-vp-dIW">
-                                                        <rect key="frame" x="8" y="8" width="50" height="17"/>
+                                                        <rect key="frame" x="8" y="9.6666666666666856" width="50" height="48"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="50" id="pgO-gR-T8d"/>
                                                         </constraints>
                                                         <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
                                                     </imageView>
                                                     <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Jx7-ej-c8O">
-                                                        <rect key="frame" x="61" y="8" width="106" height="17"/>
+                                                        <rect key="frame" x="61" y="8" width="106" height="51"/>
                                                         <subviews>
-                                                            <label opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" ambiguous="YES" text="Line-up" textAlignment="natural" lineBreakMode="tailTruncation" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Mtq-Ih-NZQ">
-                                                                <rect key="frame" x="28" y="0.0" width="50" height="0.0"/>
+                                                            <label opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" text="Line-up" textAlignment="natural" lineBreakMode="tailTruncation" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Mtq-Ih-NZQ">
+                                                                <rect key="frame" x="28" y="0.0" width="50" height="17"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                             </label>
-                                                            <label opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" ambiguous="YES" placeholderIntrinsicWidth="100" placeholderIntrinsicHeight="34" usesAttributedText="YES" lineBreakMode="tailTruncation" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gV4-ur-CSn">
-                                                                <rect key="frame" x="3" y="0.0" width="100" height="17"/>
+                                                            <label opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" placeholderIntrinsicWidth="100" placeholderIntrinsicHeight="34" usesAttributedText="YES" lineBreakMode="tailTruncation" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gV4-ur-CSn">
+                                                                <rect key="frame" x="3" y="17" width="100" height="34"/>
                                                                 <attributedString key="attributedText">
                                                                     <fragment content="4-2-3-1">
                                                                         <attributes>
@@ -546,23 +546,23 @@
                                                 </connections>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="nXn-KB-95H">
-                                                <rect key="frame" x="217" y="0.0" width="207" height="33"/>
+                                                <rect key="frame" x="217" y="20.666666666666689" width="207" height="56.333333333333343"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Whistle.png" translatesAutoresizingMaskIntoConstraints="NO" id="rpq-b3-Hgf">
-                                                        <rect key="frame" x="8" y="8" width="50" height="17"/>
+                                                        <rect key="frame" x="8" y="8" width="50" height="40.333333333333336"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="50" id="FxC-wj-gte"/>
                                                         </constraints>
                                                     </imageView>
                                                     <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="oHp-fs-frD">
-                                                        <rect key="frame" x="68" y="8" width="99" height="17"/>
+                                                        <rect key="frame" x="68" y="12.999999999999998" width="99" height="30.333333333333329"/>
                                                         <subviews>
-                                                            <label opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" ambiguous="YES" text="Training" textAlignment="natural" lineBreakMode="tailTruncation" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wSj-SV-dGt">
-                                                                <rect key="frame" x="23.666666666666682" y="0.0" width="51.666666666666657" height="3.6666666666666665"/>
+                                                            <label opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" text="Training" textAlignment="natural" lineBreakMode="tailTruncation" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wSj-SV-dGt">
+                                                                <rect key="frame" x="23.666666666666682" y="0.0" width="51.666666666666657" height="17"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                             </label>
-                                                            <label opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" ambiguous="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3ft-Ld-v8n">
-                                                                <rect key="frame" x="8.3333333333333144" y="3.6666666666666865" width="82.333333333333329" height="13.333333333333336"/>
+                                                            <label opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" usesAttributedText="YES" lineBreakMode="tailTruncation" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3ft-Ld-v8n">
+                                                                <rect key="frame" x="8.3333333333333144" y="17" width="82.333333333333329" height="13.333333333333336"/>
                                                                 <attributedString key="attributedText">
                                                                     <fragment content="Coach available">
                                                                         <attributes>
@@ -588,23 +588,23 @@
                                                 </userDefinedRuntimeAttributes>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="0Pw-vf-kJ2">
-                                                <rect key="frame" x="434" y="0.0" width="207" height="33"/>
+                                                <rect key="frame" x="434" y="20.666666666666689" width="207" height="56.333333333333343"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Sell.png" translatesAutoresizingMaskIntoConstraints="NO" id="RBx-em-PKF">
-                                                        <rect key="frame" x="8" y="8" width="50" height="17"/>
+                                                        <rect key="frame" x="8" y="8" width="50" height="40.333333333333336"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="50" id="SYo-E6-nt8"/>
                                                         </constraints>
                                                     </imageView>
                                                     <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="1vs-7o-0Fc">
-                                                        <rect key="frame" x="68" y="8" width="99" height="17"/>
+                                                        <rect key="frame" x="68" y="12.999999999999998" width="99" height="30.333333333333329"/>
                                                         <subviews>
-                                                            <label opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" ambiguous="YES" text="Sell players" textAlignment="natural" lineBreakMode="tailTruncation" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wbe-kh-QoQ">
-                                                                <rect key="frame" x="12.666666666666629" y="0.0" width="73.666666666666671" height="3.6666666666666665"/>
+                                                            <label opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" text="Sell players" textAlignment="natural" lineBreakMode="tailTruncation" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wbe-kh-QoQ">
+                                                                <rect key="frame" x="12.666666666666629" y="0.0" width="73.666666666666671" height="17"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                             </label>
-                                                            <label opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" ambiguous="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="G1k-8l-8KW">
-                                                                <rect key="frame" x="0.0" y="3.6666666666666865" width="99" height="13.333333333333336"/>
+                                                            <label opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" usesAttributedText="YES" lineBreakMode="tailTruncation" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="G1k-8l-8KW">
+                                                                <rect key="frame" x="0.0" y="17" width="99" height="13.333333333333336"/>
                                                                 <attributedString key="attributedText">
                                                                     <fragment content="Your call is needed">
                                                                         <attributes>
@@ -636,14 +636,14 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="QJW-at-bEd">
-                                        <rect key="frame" x="220.66666666666669" y="43" width="200" height="33"/>
+                                        <rect key="frame" x="220.66666666666669" y="108" width="200" height="98"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="play.png" translatesAutoresizingMaskIntoConstraints="NO" id="xLV-CE-8c1">
-                                                <rect key="frame" x="8" y="8" width="73.333333333333329" height="17"/>
+                                                <rect key="frame" x="8" y="8" width="73.333333333333329" height="48"/>
                                                 <gestureRecognizers/>
                                             </imageView>
                                             <label opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" text="Start Game" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dPR-Uw-vzJ">
-                                                <rect key="frame" x="86.333333333333314" y="8" width="73.666666666666686" height="17"/>
+                                                <rect key="frame" x="86.333333333333314" y="23.333333333333314" width="73.666666666666686" height="17"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             </label>
                                         </subviews>
@@ -667,13 +667,13 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="P2H-1S-woZ">
-                                <rect key="frame" x="90" y="75" width="103" height="136"/>
+                                <rect key="frame" x="90" y="75" width="103" height="144"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="Barcelona.png" translatesAutoresizingMaskIntoConstraints="NO" id="v79-KB-dSI">
-                                        <rect key="frame" x="3.6666666666666714" y="0.0" width="96" height="89.333333333333329"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Barcelona.png" translatesAutoresizingMaskIntoConstraints="NO" id="v79-KB-dSI">
+                                        <rect key="frame" x="3.6666666666666714" y="0.0" width="96" height="97.333333333333329"/>
                                     </imageView>
-                                    <label opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" ambiguous="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8WJ-Bq-rsx">
-                                        <rect key="frame" x="0.0" y="89.333333333333343" width="103" height="28.666666666666671"/>
+                                    <label opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" usesAttributedText="YES" lineBreakMode="tailTruncation" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8WJ-Bq-rsx">
+                                        <rect key="frame" x="0.0" y="97.333333333333343" width="103" height="28.666666666666671"/>
                                         <attributedString key="attributedText">
                                             <fragment content="Barcelona">
                                                 <attributes>
@@ -684,8 +684,8 @@
                                             </fragment>
                                         </attributedString>
                                     </label>
-                                    <label opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" ambiguous="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sHl-55-m3u">
-                                        <rect key="frame" x="25.333333333333325" y="118" width="52.666666666666657" height="18"/>
+                                    <label opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" usesAttributedText="YES" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sHl-55-m3u">
+                                        <rect key="frame" x="25.333333333333325" y="126" width="52.666666666666657" height="18"/>
                                         <attributedString key="attributedText">
                                             <fragment content="Haonan">
                                                 <attributes>
@@ -735,13 +735,13 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" alignment="center" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="ynb-BX-DPy">
-                                <rect key="frame" x="167" y="68" width="150" height="152"/>
+                                <rect key="frame" x="167" y="66" width="150" height="162"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="gIw-ZV-Pr2">
-                                        <rect key="frame" x="39.333333333333307" y="8.0000000000000018" width="71.333333333333314" height="22.666666666666671"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="gIw-ZV-Pr2">
+                                        <rect key="frame" x="29.333333333333307" y="8" width="91.333333333333314" height="32.666666666666664"/>
                                         <subviews>
-                                            <label opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" ambiguous="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zby-Zj-BkF" customClass="PaddingLabel" customModule="AR_Soccer_Manager" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="71.333333333333329" height="22.666666666666668"/>
+                                            <label opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" usesAttributedText="YES" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zby-Zj-BkF" customClass="PaddingLabel" customModule="AR_Soccer_Manager" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="91.333333333333329" height="32.666666666666664"/>
                                                 <attributedString key="attributedText">
                                                     <fragment content="Matchday 8">
                                                         <attributes>
@@ -777,12 +777,12 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </stackView>
-                                    <label opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" ambiguous="YES" text="Next game" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="B3e-Yt-d5d">
-                                        <rect key="frame" x="40.333333333333321" y="36.666666666666671" width="69.666666666666686" height="17"/>
+                                    <label opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" text="Next game" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="B3e-Yt-d5d">
+                                        <rect key="frame" x="40.333333333333321" y="46.666666666666671" width="69.666666666666686" height="17"/>
                                         <fontDescription key="fontDescription" type="italicSystem" pointSize="14"/>
                                     </label>
-                                    <label opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" ambiguous="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gg2-Wz-v2G">
-                                        <rect key="frame" x="21" y="59.666666666666664" width="108" height="21.666666666666664"/>
+                                    <label opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" usesAttributedText="YES" lineBreakMode="tailTruncation" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gg2-Wz-v2G">
+                                        <rect key="frame" x="21" y="69.666666666666657" width="108" height="21.666666666666671"/>
                                         <attributedString key="attributedText">
                                             <fragment content="23h 10min 5s">
                                                 <attributes>
@@ -794,7 +794,7 @@
                                         </attributedString>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="vs.png" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nR9-1B-RDG">
-                                        <rect key="frame" x="41.666666666666686" y="87.333333333333343" width="67" height="56.666666666666657"/>
+                                        <rect key="frame" x="41.666666666666686" y="97.333333333333343" width="67" height="56.666666666666657"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="67" id="5DR-Gn-Mab"/>
                                             <constraint firstAttribute="height" constant="56.670000000000002" id="Cfi-P8-Gxq"/>
@@ -900,7 +900,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <arView multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cX7-gA-Yfg">
-                                <rect key="frame" x="-69" y="-51" width="1022" height="489"/>
+                                <rect key="frame" x="141" y="77" width="579" height="249"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </arView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mky-yb-chh">
@@ -913,6 +913,27 @@
                                     <segue destination="Y6W-OH-hqX" kind="show" id="xOS-57-X61"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="HomeScore" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3qf-dH-7ud">
+                                <rect key="frame" x="229" y="31" width="90" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="AwayScore" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yif-EQ-rPX">
+                                <rect key="frame" x="534" y="31" width="84" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Event" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="06c-qN-xtd">
+                                <rect key="frame" x="141" y="334" width="586" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="7XL-F8-Hlm"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -920,6 +941,9 @@
                     <navigationItem key="navigationItem" id="iG3-vJ-hc4"/>
                     <connections>
                         <outlet property="arView" destination="cX7-gA-Yfg" id="Z8q-pT-J5D"/>
+                        <outlet property="awayScore" destination="yif-EQ-rPX" id="edj-z4-DlU"/>
+                        <outlet property="eventL" destination="06c-qN-xtd" id="k8S-IM-swr"/>
+                        <outlet property="homeScore" destination="3qf-dH-7ud" id="6Dg-HP-4qs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fpd-w2-WxI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1188,7 +1212,7 @@
     </scenes>
     <designables>
         <designable name="Zby-Zj-BkF">
-            <size key="intrinsicContentSize" width="71.333333333333329" height="15.666666666666666"/>
+            <size key="intrinsicContentSize" width="91.333333333333329" height="32.666666666666664"/>
         </designable>
     </designables>
     <inferredMetricsTieBreakers>

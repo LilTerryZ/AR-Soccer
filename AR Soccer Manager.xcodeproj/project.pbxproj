@@ -764,7 +764,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 9963RQX256;
+				DEVELOPMENT_TEAM = S96YGH2XSQ;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "AR Soccer Manager/Info.plist";
 				INFOPLIST_KEY_NSCameraUsageDescription = "Allow AR Soccer Manager to access your camera for simulation purposes.";
@@ -793,7 +793,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 9963RQX256;
+				DEVELOPMENT_TEAM = S96YGH2XSQ;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "AR Soccer Manager/Info.plist";
 				INFOPLIST_KEY_NSCameraUsageDescription = "Allow AR Soccer Manager to access your camera for simulation purposes.";
