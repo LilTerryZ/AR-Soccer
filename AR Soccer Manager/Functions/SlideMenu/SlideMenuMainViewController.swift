@@ -51,6 +51,7 @@ public extension SlideMenuDelegate {
 
 @IBDesignable
 open class SlideMenuMainViewController: UIViewController {
+  //  var txtClub=""
 
     public private(set) var leftMenuVC: UIViewController?
 	public private(set) var rightMenuVC: UIViewController?
@@ -118,6 +119,7 @@ open class SlideMenuMainViewController: UIViewController {
     }()
     
     override open func viewDidLoad() {
+        
         super.viewDidLoad()
         setupContent()
 		NotificationCenter.default.addObserver(self,

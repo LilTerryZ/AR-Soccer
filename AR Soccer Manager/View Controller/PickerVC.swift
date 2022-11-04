@@ -32,17 +32,28 @@ class PickerVC: UIViewController,DataRetrieval{
     var clubDataLiga=[String]()
     var clubDataBundesliga=[String]()
     
+    //let vc = HomeVC(nibName: "HomeVC", bundle: nil)
+    //let vc = HomeVC()
+    var txtName=""
+    var txtClub=""
+    var completionHandler:((String)->Void)?
+    
     @IBOutlet weak var clubSelected: UILabel!
     @IBOutlet weak var leagueSelected: UILabel!
     
     
     @IBOutlet weak var startBtn: UIButton!
     
-//    @IBAction func startBtn(sender: Any){
-//        if (clubSelected.text != "TBD"){}
-//        startBtn.isHidden=false
-//    }
-//
+    @IBAction func startBtn(sender: Any){
+      //  print("\(clubSelected.text) &&&&&&&&&&&&&&")
+        //completionHandler?(txtClub)
+        //completionHandler?(clubSelected.text)
+        let vc=storyboard?.instantiateViewController(withIdentifier: "HomeVC") as! HomeVC
+        vc.txtClub=clubSelected.text!
+        vc.modalPresentationStyle = .fullScreen
+        present(vc,animated: true,completion: nil)
+    }
+
     @IBAction func selectPremier( sender: UIButton )
     {
         premier.isHidden=false
@@ -168,25 +179,38 @@ class PickerVC: UIViewController,DataRetrieval{
             self.leagueSelected.text="Premier League"
             if (self.clubSelected.text != "TBD"){
                 self.startBtn.isHidden=false}
-            print(actionPremier.title)}
+            print(actionPremier.title)
+            
+//            self.txtClub = actionPremier.title
+//
+//            let vc=self.storyboard?.instantiateViewController(withIdentifier: "HomeVC") as! HomeVC
+//            vc.txtClub=self.clubSelected.text!
+           // self.completionHandler?(self.txtClub)
+        }
         let optionClosureLiga = {(actionLiga: UIAction) in
             self.clubSelected.text=actionLiga.title
             self.leagueSelected.text="La Liga"
             if (self.clubSelected.text != "TBD"){
                 self.startBtn.isHidden=false}
-            print(actionLiga.title)}
+            print(actionLiga.title)
+            self.txtClub = actionLiga.title
+        }
         let optionClosureLigue = {(actionLigue: UIAction) in
             self.clubSelected.text=actionLigue.title
             self.leagueSelected.text="Ligue 1"
             if (self.clubSelected.text != "TBD"){
                 self.startBtn.isHidden=false}
-            print(actionLigue.title)}
+            print(actionLigue.title)
+           // self.vc.txtClub = actionLigue.title
+        }
         let optionClosureBundesliga = {(actionBundesliga: UIAction) in
             self.clubSelected.text=actionBundesliga.title
             self.leagueSelected.text="Bundesliga"
             if (self.clubSelected.text != "TBD"){
                 self.startBtn.isHidden=false}
-            print(actionBundesliga.title)}
+            print(actionBundesliga.title)
+            //self.vc.txtClub = actionBundesliga.title
+        }
         
         var optionsArrPremier = [UIAction]()
         var optionsArrLiga = [UIAction]()
@@ -283,12 +307,11 @@ class PickerVC: UIViewController,DataRetrieval{
         }
         clubSelected.text="TBD"
         leagueSelected.text="TBD"
-        
 //        selectPremier.addAction(UIAction(title:"",handler:{(_) in print("default")}), for: .touchUpInside)
 //        selectLiga.addAction(UIAction(title:"",handler:{(_) in print("default")}), for: .touchUpInside)
 //        selectLigue.addAction(UIAction(title:"",handler:{(_) in print("default")}), for: .touchUpInside)
 //        selectBundesliga.addAction(UIAction(title:"",handler:{(_) in print("default")}), for: .touchUpInside)
-//
+       
         premier.addAction(UIAction(title:"",handler:{(_) in
             print("default")}), for: .touchUpInside)
         liga.addAction(UIAction(title:"",handler:{(_) in
