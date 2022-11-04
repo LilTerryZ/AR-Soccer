@@ -39,6 +39,7 @@
 		EB37FC6628D17E5D00D7F714 /* Barcelona.png in Resources */ = {isa = PBXBuildFile; fileRef = EB37FC6528D17E5D00D7F714 /* Barcelona.png */; };
 		EB37FC6A28D17EFD00D7F714 /* RM.png in Resources */ = {isa = PBXBuildFile; fileRef = EB37FC6928D17EFD00D7F714 /* RM.png */; };
 		EB3A074928D2735500869D70 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3A074828D2735500869D70 /* HomeVC.swift */; };
+		EB41DC702914E60800516B30 /* ResultVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB41DC6F2914E60800516B30 /* ResultVC.swift */; };
 		EB647C6928D40E890000B8A3 /* Homebcg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EB647C6828D40E890000B8A3 /* Homebcg.jpg */; };
 		EB749CA328E3F16300BAAD15 /* avatar.png in Resources */ = {isa = PBXBuildFile; fileRef = EB749CA228E3F16300BAAD15 /* avatar.png */; };
 		EB749CA528EA5EC000BAAD15 /* play.png in Resources */ = {isa = PBXBuildFile; fileRef = EB749CA428EA5EC000BAAD15 /* play.png */; };
@@ -118,6 +119,7 @@
 		EB37FC6528D17E5D00D7F714 /* Barcelona.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Barcelona.png; sourceTree = "<group>"; };
 		EB37FC6928D17EFD00D7F714 /* RM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RM.png; sourceTree = "<group>"; };
 		EB3A074828D2735500869D70 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		EB41DC6F2914E60800516B30 /* ResultVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultVC.swift; sourceTree = "<group>"; };
 		EB647C6828D40E890000B8A3 /* Homebcg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Homebcg.jpg; sourceTree = "<group>"; };
 		EB749CA228E3F16300BAAD15 /* avatar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = avatar.png; sourceTree = "<group>"; };
 		EB749CA428EA5EC000BAAD15 /* play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = play.png; sourceTree = "<group>"; };
@@ -238,6 +240,7 @@
 				EB749CAE28EA6EEF00BAAD15 /* LineupVC.swift */,
 				EB749CB028EA6F0800BAAD15 /* TradeVC.swift */,
 				EBF59DCF28F907EC00CE4A14 /* PickerVC.swift */,
+				EB41DC6F2914E60800516B30 /* ResultVC.swift */,
 			);
 			path = "View Controller";
 			sourceTree = "<group>";
@@ -579,6 +582,7 @@
 				C552606C28FB9F3F00065A60 /* Experience.rcproject in Sources */,
 				EB8C26C428DD496100DC04D4 /* LeaderVC.swift in Sources */,
 				EB37FC1728D12C4500D7F714 /* CAMediaTimingFunction+AMExtension.swift in Sources */,
+				EB41DC702914E60800516B30 /* ResultVC.swift in Sources */,
 				EB37FC1528D12C0800D7F714 /* SlidingAnimatorFactory.swift in Sources */,
 				EB37FC2028D12C9700D7F714 /* RightMenuSegue.swift in Sources */,
 				EBF59DD528F912EB00CE4A14 /* Club.swift in Sources */,
