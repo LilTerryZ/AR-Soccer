@@ -493,23 +493,23 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="top" axis="vertical" distribution="fillEqually" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="DzK-El-mXv">
-                                <rect key="frame" x="110" y="260" width="641" height="76"/>
+                                <rect key="frame" x="110" y="268" width="641" height="206"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="jDJ-yp-DN7">
-                                        <rect key="frame" x="0.0" y="0.0" width="641" height="33"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="641" height="98"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="gfJ-oT-W52">
-                                                <rect key="frame" x="0.0" y="0.0" width="207" height="33"/>
+                                                <rect key="frame" x="0.0" y="15.333333333333314" width="207" height="67"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Player.png" translatesAutoresizingMaskIntoConstraints="NO" id="oIc-vp-dIW">
-                                                        <rect key="frame" x="8" y="8" width="50" height="17"/>
+                                                        <rect key="frame" x="8" y="9.6666666666666856" width="50" height="48"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="50" id="pgO-gR-T8d"/>
                                                         </constraints>
                                                         <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
                                                     </imageView>
                                                     <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Jx7-ej-c8O">
-                                                        <rect key="frame" x="61" y="8" width="106" height="17"/>
+                                                        <rect key="frame" x="61" y="8" width="106" height="51"/>
                                                         <subviews>
                                                             <label opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" verticalCompressionResistancePriority="749" text="Line-up" textAlignment="natural" lineBreakMode="tailTruncation" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Mtq-Ih-NZQ">
                                                                 <rect key="frame" x="28" y="0.0" width="50" height="0.0"/>
@@ -546,16 +546,16 @@
                                                 </connections>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="nXn-KB-95H">
-                                                <rect key="frame" x="217" y="0.0" width="207" height="33"/>
+                                                <rect key="frame" x="217" y="20.666666666666689" width="207" height="56.333333333333343"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Whistle.png" translatesAutoresizingMaskIntoConstraints="NO" id="rpq-b3-Hgf">
-                                                        <rect key="frame" x="8" y="8" width="50" height="17"/>
+                                                        <rect key="frame" x="8" y="8" width="50" height="40.333333333333336"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="50" id="FxC-wj-gte"/>
                                                         </constraints>
                                                     </imageView>
                                                     <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="oHp-fs-frD">
-                                                        <rect key="frame" x="68" y="8" width="99" height="17"/>
+                                                        <rect key="frame" x="68" y="12.999999999999998" width="99" height="30.333333333333329"/>
                                                         <subviews>
                                                             <label opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" verticalCompressionResistancePriority="749" text="Training" textAlignment="natural" lineBreakMode="tailTruncation" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wSj-SV-dGt">
                                                                 <rect key="frame" x="23.666666666666682" y="0.0" width="51.666666666666657" height="3.6666666666666665"/>
@@ -563,6 +563,7 @@
                                                             </label>
                                                             <label opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" usesAttributedText="YES" lineBreakMode="tailTruncation" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3ft-Ld-v8n">
                                                                 <rect key="frame" x="8.3333333333333144" y="3.6666666666666865" width="82.333333333333329" height="13.333333333333336"/>
+
                                                                 <attributedString key="attributedText">
                                                                     <fragment content="Coach available">
                                                                         <attributes>
@@ -588,16 +589,16 @@
                                                 </userDefinedRuntimeAttributes>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="0Pw-vf-kJ2">
-                                                <rect key="frame" x="434" y="0.0" width="207" height="33"/>
+                                                <rect key="frame" x="434" y="20.666666666666689" width="207" height="56.333333333333343"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Sell.png" translatesAutoresizingMaskIntoConstraints="NO" id="RBx-em-PKF">
-                                                        <rect key="frame" x="8" y="8" width="50" height="17"/>
+                                                        <rect key="frame" x="8" y="8" width="50" height="40.333333333333336"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="50" id="SYo-E6-nt8"/>
                                                         </constraints>
                                                     </imageView>
                                                     <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="1vs-7o-0Fc">
-                                                        <rect key="frame" x="68" y="8" width="99" height="17"/>
+                                                        <rect key="frame" x="68" y="12.999999999999998" width="99" height="30.333333333333329"/>
                                                         <subviews>
                                                             <label opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" verticalCompressionResistancePriority="749" text="Sell players" textAlignment="natural" lineBreakMode="tailTruncation" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wbe-kh-QoQ">
                                                                 <rect key="frame" x="12.666666666666629" y="0.0" width="73.666666666666671" height="3.6666666666666665"/>
@@ -636,14 +637,14 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="QJW-at-bEd">
-                                        <rect key="frame" x="220.66666666666669" y="43" width="200" height="33"/>
+                                        <rect key="frame" x="220.66666666666669" y="108" width="200" height="98"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="play.png" translatesAutoresizingMaskIntoConstraints="NO" id="xLV-CE-8c1">
-                                                <rect key="frame" x="8" y="8" width="73.333333333333329" height="17"/>
+                                                <rect key="frame" x="8" y="8" width="73.333333333333329" height="48"/>
                                                 <gestureRecognizers/>
                                             </imageView>
                                             <label opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" text="Start Game" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dPR-Uw-vzJ">
-                                                <rect key="frame" x="86.333333333333314" y="8" width="73.666666666666686" height="17"/>
+                                                <rect key="frame" x="86.333333333333314" y="23.333333333333314" width="73.666666666666686" height="17"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             </label>
                                         </subviews>
@@ -899,18 +900,61 @@
         <!--View Controller-->
         <scene sceneID="Zpe-M3-8YD">
             <objects>
-                <viewController id="nBa-Nh-w1B" sceneMemberID="viewController">
+                <viewController id="nBa-Nh-w1B" customClass="ARViewController" customModule="AR_Soccer_Manager" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cWm-D8-JLo">
                         <rect key="frame" x="0.0" y="0.0" width="844" height="390"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <arView multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cX7-gA-Yfg">
+                                <rect key="frame" x="141" y="77" width="579" height="249"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </arView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mky-yb-chh">
+                                <rect key="frame" x="32" y="31" width="32" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" systemColor="labelColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="return.png"/>
+                                <connections>
+                                    <segue destination="Y6W-OH-hqX" kind="show" id="xOS-57-X61"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="HomeScore" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3qf-dH-7ud">
+                                <rect key="frame" x="229" y="31" width="90" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="AwayScore" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yif-EQ-rPX">
+                                <rect key="frame" x="534" y="31" width="84" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Event" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="06c-qN-xtd">
+                                <rect key="frame" x="141" y="334" width="586" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="7XL-F8-Hlm"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="iG3-vJ-hc4"/>
+                    <connections>
+                        <outlet property="arView" destination="cX7-gA-Yfg" id="Z8q-pT-J5D"/>
+                        <outlet property="awayScore" destination="yif-EQ-rPX" id="edj-z4-DlU"/>
+                        <outlet property="eventL" destination="06c-qN-xtd" id="k8S-IM-swr"/>
+                        <outlet property="homeScore" destination="3qf-dH-7ud" id="6Dg-HP-4qs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fpd-w2-WxI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1295" y="-197"/>
+            <point key="canvasLocation" x="1294.5497630331754" y="-198.46153846153845"/>
         </scene>
         <!--TradeVC-->
         <scene sceneID="674-TN-vue">
