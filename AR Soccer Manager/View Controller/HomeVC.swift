@@ -27,8 +27,8 @@ class HomeVC: UIViewController{
     var txtName=""
     var txtClub=""
     var imgURL=""
-    let vc = PickerVC(nibName: "PickerVC", bundle: nil)
-    let randomInt = Int.random(in: 1..<73)
+//    let vc = PickerVC(nibName: "PickerVC", bundle: nil)
+//    let randomInt = Int.random(in: 1..<73)
     
     override func viewDidLoad() {
         super.viewDidLoad()

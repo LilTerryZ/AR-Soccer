@@ -26,10 +26,27 @@ class ARViewController: UIViewController {
     
     var hScore: Int = 0
     var aScore: Int = 0
-            
+
+        
+ /*   @IBOutlet weak var resultBtn: UIButton!
+    
+    @IBAction func resultBtn(sender: Any){
+        let vc=storyboard?.instantiateViewController(withIdentifier: "ResultVC") as! ResultVC
+//        vc.txtUserClub=clubSelected.text!
+        
+        
+        
+        
+        
+        vc.modalPresentationStyle = .fullScreen
+        present(vc,animated: true,completion: nil)
+    } */
+    
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
+       // resultBtn.isHidden=true
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "Homebcg.jpg")!)
         
         // Load the "Box" scene from the "Experience" Reality File
@@ -58,7 +75,7 @@ class ARViewController: UIViewController {
         self.awayScore?.text = "Away: \(aScore)"
         
         runSimulation()
-        
+
         func runSimulation() {
             let simulation = Simulation()
             
@@ -194,6 +211,7 @@ class ARViewController: UIViewController {
                         try await Task.sleep(nanoseconds: 8000000000)
                     }
                 }
+                //resultBtn.isHidden=false
             }
             
         }
