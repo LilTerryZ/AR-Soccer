@@ -40,6 +40,38 @@ class Simulation{
         return [String: Any]()
         
     }
+    
+    func runLeagueFixture() async -> [String: Any]{
+        
+        guard let url = URL(string: "https://us-central1-ar-soccer-manager-5cab3.cloudfunctions.net/simulateTournmentFixture") else {
+            print("Invalid URL")
+            return ["Error": "Invalid URL"]
+        }
+        let body = ["leagueName": "Premier League"]
+        let requestBodyJson = try? JSONSerialization.data(withJSONObject: body)
+
+        var request = URLRequest(url: url)
+
+        request.httpMethod = "POST"
+
+        request.setValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type")
+
+        request.httpBody = requestBodyJson
+        
+        do{
+            let (data, _) = try await URLSession.shared.data(for:request)
+            
+            if let dataString = String(data: data, encoding: .utf8) {
+                return self.convertAndReturnData(str: dataString)
+            }
+        }catch{
+            return ["Error": "Bad Request"]
+        }
+        
+        return [String: Any]()
+        
+    }
+    
     func convertAndReturnData(str:String) -> [String: Any] {
         let data = Data(str.utf8)
         var returnData = [String: Any]()
