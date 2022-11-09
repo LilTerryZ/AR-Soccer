@@ -28,7 +28,7 @@ class ARViewController: UIViewController {
     var aScore: Int = 0
 
         
- /*   @IBOutlet weak var resultBtn: UIButton!
+   @IBOutlet weak var resultBtn: UIButton!
     
     @IBAction func resultBtn(sender: Any){
         let vc=storyboard?.instantiateViewController(withIdentifier: "ResultVC") as! ResultVC
@@ -40,7 +40,7 @@ class ARViewController: UIViewController {
         
         vc.modalPresentationStyle = .fullScreen
         present(vc,animated: true,completion: nil)
-    } */
+    }
     
 
     
@@ -211,7 +211,7 @@ class ARViewController: UIViewController {
                         try await Task.sleep(nanoseconds: 8000000000)
                     }
                 }
-                //resultBtn.isHidden=false
+                resultBtn.isHidden=false
             }
             
         }
