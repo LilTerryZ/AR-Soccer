@@ -34,8 +34,7 @@ class PickerVC: UIViewController,DataRetrieval{
     
     //let vc = HomeVC(nibName: "HomeVC", bundle: nil)
     //let vc = HomeVC()
-    var txtName=""
-    var txtClub=""
+
     var completionHandler:((String)->Void)?
     
     @IBOutlet weak var clubSelected: UILabel!
@@ -193,7 +192,7 @@ class PickerVC: UIViewController,DataRetrieval{
             if (self.clubSelected.text != "TBD"){
                 self.startBtn.isHidden=false}
             print(actionLiga.title)
-            self.txtClub = actionLiga.title
+//            self.txtClub = actionLiga.title
         }
         let optionClosureLigue = {(actionLigue: UIAction) in
             self.clubSelected.text=actionLigue.title
