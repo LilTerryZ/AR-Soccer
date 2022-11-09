@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="XSs-DF-FS2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="XSs-DF-FS2">
     <device id="retina6_0" orientation="landscape" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="UIMenu" message="Requires Xcode 11 or later." minToolsVersion="11.0" requiredIntegratedClassName="UICommandDiff"/>
@@ -330,9 +330,6 @@
                                         <integer key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <segue destination="TxB-Dd-Z8g" kind="show" id="WHD-ff-561"/>
-                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="nPr-Q2-vDn">
                                 <rect key="frame" x="150" y="47" width="600" height="180"/>
@@ -451,38 +448,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dad-i9-Ibw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1464" y="771"/>
-        </scene>
-        <!--ViewController-->
-        <scene sceneID="ICi-Eu-Bcp">
-            <objects>
-                <viewController storyboardIdentifier="SlideVC" title="ViewController" id="C21-Cn-D3L" customClass="SlideMenuMainViewController" customModule="AR_Soccer_Manager" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="G5t-RI-OID">
-                        <rect key="frame" x="0.0" y="0.0" width="844" height="390"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="asW-iz-yWC"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="RFb-lR-x99"/>
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="string" keyPath="leftMenuSegueName" value="leftMenuSegue"/>
-                        <userDefinedRuntimeAttribute type="string" keyPath="rightMenuSegueName" value="rightMenuSegue"/>
-                        <userDefinedRuntimeAttribute type="string" keyPath="contentSegueName" value="contentSegue"/>
-                        <userDefinedRuntimeAttribute type="number" keyPath="leftMenuWidth">
-                            <real key="value" value="800"/>
-                        </userDefinedRuntimeAttribute>
-                        <userDefinedRuntimeAttribute type="number" keyPath="rightMenuWidth">
-                            <real key="value" value="800"/>
-                        </userDefinedRuntimeAttribute>
-                    </userDefinedRuntimeAttributes>
-                    <connections>
-                        <segue destination="Y6W-OH-hqX" kind="custom" identifier="contentSegue" customClass="ContentSegue" customModule="AR_Soccer_Manager" id="Qxj-Nv-gu4"/>
-                        <segue destination="1XS-cQ-1p5" kind="custom" identifier="leftMenuSegue" customClass="LeftMenuSegue" customModule="AR_Soccer_Manager" id="Gwx-S3-ZuC"/>
-                        <segue destination="TxB-Dd-Z8g" kind="custom" identifier="rightMenuSegue" customClass="RightMenuSegue" customModule="AR_Soccer_Manager" customModuleProvider="target" id="orl-sm-qXL"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="QRR-IV-aAD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-928" y="-240"/>
         </scene>
         <!--HomeVC-->
         <scene sceneID="s0d-6b-0kx">
@@ -856,11 +821,7 @@
                         <segue destination="3GM-Me-2rp" kind="show" id="3HU-hs-Wg3"/>
                     </connections>
                 </tapGestureRecognizer>
-                <tapGestureRecognizer id="Wdp-4I-XDr">
-                    <connections>
-                        <segue destination="GLq-9o-5AG" kind="show" id="sGa-MJ-hlS"/>
-                    </connections>
-                </tapGestureRecognizer>
+                <tapGestureRecognizer id="Wdp-4I-XDr"/>
                 <tapGestureRecognizer id="I4d-hG-cfC">
                     <connections>
                         <segue destination="nBa-Nh-w1B" kind="show" id="W75-j1-Yy0"/>
@@ -1270,118 +1231,6 @@
             </objects>
             <point key="canvasLocation" x="2059.4786729857819" y="-198.46153846153845"/>
         </scene>
-        <!--TradeVC-->
-        <scene sceneID="674-TN-vue">
-            <objects>
-                <viewController id="GLq-9o-5AG" customClass="TradeVC" customModule="AR_Soccer_Manager" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="TKd-EB-Mak">
-                        <rect key="frame" x="0.0" y="0.0" width="844" height="390"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eV9-78-Qmt">
-                                <rect key="frame" x="89" y="52" width="32" height="22"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" systemColor="labelColor"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="return.png"/>
-                                <connections>
-                                    <segue destination="Y6W-OH-hqX" kind="show" id="VjZ-FC-ow9"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Trade" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qaV-9I-rnr">
-                                <rect key="frame" x="394" y="47" width="56" height="28"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GlZ-gg-buh">
-                                <rect key="frame" x="238" y="141" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="oHp-g0-C4q"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="59a-XL-cFZ"/>
-                    <connections>
-                        <outlet property="img" destination="GlZ-gg-buh" id="rVb-kn-Kgx"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="wo0-ym-dTp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="657" y="518"/>
-        </scene>
-        <!--LeaderVC-->
-        <scene sceneID="skR-Yr-cen">
-            <objects>
-                <viewController id="TxB-Dd-Z8g" customClass="LeaderVC" customModule="AR_Soccer_Manager" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="ZIU-uI-c0Z">
-                        <rect key="frame" x="0.0" y="0.0" width="844" height="390"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="M4q-ru-fhD">
-                                <rect key="frame" x="197" y="105" width="450" height="251"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.84457999340000001" green="0.69333894549999997" blue="0.23961580160000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="leaderCell" textLabel="fdm-PD-5yi" detailTextLabel="NeM-2b-0aI" style="IBUITableViewCellStyleValue1" id="CRy-NO-aDz">
-                                        <rect key="frame" x="0.0" y="50" width="450" height="43.666667938232422"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="CRy-NO-aDz" id="EJZ-bj-a6U">
-                                            <rect key="frame" x="0.0" y="0.0" width="450" height="43.666667938232422"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="fdm-PD-5yi">
-                                                    <rect key="frame" x="20" y="15" width="25" height="14.333333333333334"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="NeM-2b-0aI">
-                                                    <rect key="frame" x="397.33333333333331" y="15" width="32.666666666666664" height="14.333333333333334"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                        <color key="backgroundColor" red="0.84457999340000001" green="0.69333894549999997" blue="0.23961580160000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                    </tableViewCell>
-                                </prototypes>
-                            </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Leaderboard" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m02-4X-rui">
-                                <rect key="frame" x="332" y="47" width="180" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gKX-nv-lRy">
-                                <rect key="frame" x="72" y="41" width="32" height="22"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" systemColor="labelColor"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="return.png"/>
-                                <connections>
-                                    <segue destination="XSs-DF-FS2" kind="show" id="eEZ-Gf-g9g"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="1LS-LC-CZl"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="jUE-1i-EMd"/>
-                    <connections>
-                        <outlet property="tableView" destination="M4q-ru-fhD" id="wKd-c5-ynT"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="jud-HE-KYH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-127" y="1014"/>
-        </scene>
         <!--ProfileVC-->
         <scene sceneID="Xa4-j2-O2C">
             <objects>
@@ -1539,14 +1388,12 @@
     </scenes>
     <designables>
         <designable name="Zby-Zj-BkF">
-            <size key="intrinsicContentSize" width="91.333333333333329" height="32.666666666666664"/>
+            <size key="intrinsicContentSize" width="71.333333333333329" height="15.666666666666666"/>
         </designable>
     </designables>
     <inferredMetricsTieBreakers>
-        <segue reference="Zgd-ZK-H6S"/>
-        <segue reference="WHD-ff-561"/>
-        <segue reference="VjZ-FC-ow9"/>
-        <segue reference="vA1-j6-YVc"/>
+        <segue reference="3HU-hs-Wg3"/>
+        <segue reference="Xjb-Dd-7Vw"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Barcelona.png" width="96" height="97.199996948242188"/>
