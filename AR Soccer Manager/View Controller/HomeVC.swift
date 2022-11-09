@@ -30,6 +30,13 @@ class HomeVC: UIViewController{
 //    let vc = PickerVC(nibName: "PickerVC", bundle: nil)
 //    let randomInt = Int.random(in: 1..<73)
     
+    @IBAction func startBtn(sender: Any){
+        let vc=storyboard?.instantiateViewController(withIdentifier: "ARViewController") as! ARViewController
+        vc.teamName = txtClub
+        vc.modalPresentationStyle = .fullScreen
+        present(vc,animated: true,completion: nil)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "Homebcg.jpg")!)

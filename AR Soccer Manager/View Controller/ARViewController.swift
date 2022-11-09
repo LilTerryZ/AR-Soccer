@@ -26,6 +26,8 @@ class ARViewController: UIViewController {
     
     var hScore: Int = 0
     var aScore: Int = 0
+    
+    var teamName = ""
 
         
    @IBOutlet weak var resultBtn: UIButton!
@@ -80,8 +82,8 @@ class ARViewController: UIViewController {
             let simulation = Simulation()
             
             Task{
-                let result = await simulation.runSimulation(homeTeamName: "Liverpool", awayTeamName: "Manchester City")
-                
+                let result = await simulation.runSimulation(homeTeamName: teamName, awayTeamName: "Liverpool")
+                print(teamName)
                 print(result["events"]!)
                 
                 let events = result["events"]

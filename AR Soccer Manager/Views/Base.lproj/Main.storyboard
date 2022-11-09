@@ -663,9 +663,6 @@
                                                 <integer key="value" value="3"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <outletCollection property="gestureRecognizers" destination="I4d-hG-cfC" appends="YES" id="hPD-r3-mPQ"/>
-                                        </connections>
                                     </stackView>
                                 </subviews>
                             </stackView>
@@ -811,6 +808,16 @@
                                     </fragment>
                                 </attributedString>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mRU-rc-9H7">
+                                <rect key="frame" x="734" y="82" width="55.666666666666686" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Play"/>
+                                <connections>
+                                    <action selector="startBtnWithSender:" destination="Y6W-OH-hqX" eventType="touchDown" id="PxV-oG-e3b"/>
+                                    <segue destination="nBa-Nh-w1B" kind="show" id="ngx-Cr-WEV"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemGreenColor"/>
@@ -907,7 +914,7 @@
         <!--View Controller-->
         <scene sceneID="Zpe-M3-8YD">
             <objects>
-                <viewController id="nBa-Nh-w1B" customClass="ARViewController" customModule="AR_Soccer_Manager" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ARViewController" id="nBa-Nh-w1B" customClass="ARViewController" customModule="AR_Soccer_Manager" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cWm-D8-JLo">
                         <rect key="frame" x="0.0" y="0.0" width="844" height="390"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1545,6 +1552,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="Zgd-ZK-H6S"/>
         <segue reference="WHD-ff-561"/>
+        <segue reference="W75-j1-Yy0"/>
         <segue reference="VjZ-FC-ow9"/>
         <segue reference="vA1-j6-YVc"/>
     </inferredMetricsTieBreakers>
