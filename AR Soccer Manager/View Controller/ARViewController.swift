@@ -28,16 +28,41 @@ class ARViewController: UIViewController {
     var aScore: Int = 0
     
     var teamName = ""
+    var oppName = ""
+    
+    var oppPoss = 0.0
+    var teamPoss = 0.0
+    
+    var oppPasses = 0
+    var teamPasses = 0
+    
+    var oppShots = 0
+    var teamShots = 0
+    
+    var totalPoss = 0.0
+    
+    var simHS = 0
+    var simAS = 0
+    
+    var eventsList = ["events"]
 
         
    @IBOutlet weak var resultBtn: UIButton!
+    @IBOutlet weak var skipBtn: UIButton!
     
     @IBAction func resultBtn(sender: Any){
         let vc=storyboard?.instantiateViewController(withIdentifier: "ResultVC") as! ResultVC
-        vc.txtUserScore=String(hScore)
-        vc.txtOppositeScore=String(aScore)
-        vc.txtUserClub=userClub
-        
+        vc.txtUserScore=String(simHS)
+        vc.txtOppositeScore=String(simAS)
+        vc.txtUserClub=teamName
+        vc.txtOppositeClub=oppName
+        vc.txtOppositePose=String(oppPoss)
+        vc.txtUserPose=String(teamPoss)
+        vc.txtUserShots=String(teamShots)
+        vc.txtOppositeShots=String(oppShots)
+        vc.txtOppositePassses=String(oppPasses)
+        vc.txtUserPasses=String(teamPasses)
+        vc.events = eventsList
         
         
         vc.modalPresentationStyle = .fullScreen
@@ -46,11 +71,17 @@ class ARViewController: UIViewController {
     
     @IBAction func skipBtn(sender: Any){
         let vc=storyboard?.instantiateViewController(withIdentifier: "ResultVC") as! ResultVC
-        vc.txtUserScore=String(hScore)
-        vc.txtOppositeScore=String(aScore)
-        vc.txtUserClub=userClub
-        
-        
+        vc.txtUserScore=String(simHS)
+        vc.txtOppositeScore=String(simAS)
+        vc.txtUserClub=teamName
+        vc.txtOppositeClub=oppName
+        vc.txtOppositePose=String(oppPoss)
+        vc.txtUserPose=String(teamPoss)
+        vc.txtUserShots=String(teamShots)
+        vc.txtOppositeShots=String(oppShots)
+        vc.txtOppositePassses=String(oppPasses)
+        vc.txtUserPasses=String(teamPasses)
+        vc.events = eventsList
         
         vc.modalPresentationStyle = .fullScreen
         present(vc,animated: true,completion: nil)
@@ -60,6 +91,7 @@ class ARViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         resultBtn.isHidden=true
+        skipBtn.isHidden=true
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "Homebcg.jpg")!)
         
         // Load the "Box" scene from the "Experience" Reality File
@@ -99,10 +131,86 @@ class ARViewController: UIViewController {
                 
                 let events = result["events"]
                 
+                for event in events as! [String]{
+                    if event == "HA" {
+                        eventsList.append("\(teamName) is trying to make some moves!")
+                        teamPasses = teamPasses+1
+                        teamPoss = teamPoss + 1
+                        totalPoss = totalPoss+1
+                    } else if event == "AT" {
+                        eventsList.append("\(oppName) presses the attack!")
+                        oppPasses = oppPasses+1
+                        oppPoss = oppPoss+1
+                        totalPoss = totalPoss+1
+                    } else if event == "HDC" {
+                        eventsList.append("An excellent steal by \(teamName)")
+                        teamPoss = teamPoss + 1
+                        totalPoss = totalPoss+1
+                    } else if event == "ADC" {
+                        eventsList.append("An amazing tackle from \(oppName)")
+                        oppPoss = oppPoss+1
+                        totalPoss = totalPoss+1
+                    } else if event == "HMC" {
+                        eventsList.append("\(oppName) has stolen possesion from \(teamName)!")
+                        oppPoss = oppPoss+1
+                        totalPoss = totalPoss+1
+                    } else if event == "AMC" {
+                        eventsList.append("\(teamName) intercepts \(oppName)'s pass!")
+                        teamPoss = teamPoss + 1
+                        totalPoss = totalPoss+1
+                    } else if event == "HS" {
+                        teamShots = teamShots+1
+                        teamPoss = teamPoss + 1
+                        totalPoss = totalPoss+1
+                        simHS = simHS+1
+                        eventsList.append("\(teamName) has scored!")
+                    } else if event == "AS" {
+                        oppShots = oppShots+1
+                        oppPoss = oppPoss+1
+                        totalPoss = totalPoss+1
+                        simAS = simAS+1
+                        eventsList.append("\(oppName) has scored!")
+                    } else if event == "HGKS" {
+                        eventsList.append("\(teamName) has blocked \(oppName)'s shot!")
+                        oppShots = oppShots+1
+                        oppPoss = oppPoss+1
+                        totalPoss = totalPoss+1
+                    } else if event == "AGKS" {
+                        eventsList.append("\(oppName) has blocked \(teamName)'s shot!")
+                        teamShots = teamShots+1
+                        teamPoss = teamPoss + 1
+                        totalPoss = totalPoss+1
+                    } else if event == "HT" {
+                        eventsList.append("HALFTIME!")
+                    } else if event == "FT" {
+                        eventsList.append("FULLTIME!")
+                    } else if event == "KF"  {
+                        eventsList.append("KICKOFF!")
+                    }
+                }
+                
+                teamPoss = (teamPoss/totalPoss) * 100.0
+                teamPoss = round(teamPoss * 10) / 10.0
+                
+                oppPoss = (oppPoss/totalPoss) * 100.0
+                oppPoss = round(oppPoss * 10) / 10.0
+                
+                print("STATS DONE")
+                print(totalPoss)
+                print(teamPoss)
+                print(oppPoss)
+                print(simAS)
+                print(simHS)
+                print(teamShots)
+                print(oppShots)
+                print(teamPasses)
+                print(oppPasses)
+                skipBtn.isHidden=false
+                
                 for event in events as! [String] {
                     if event == "HA" {
                         arView.scene.anchors.append(dribbleAnchor)
-                        eventChange(text: "Home team trying to make some moves!")
+                        eventChange(text: "\(teamName) is trying to make some moves!")
                         DispatchQueue.main.asyncAfter(deadline: .now() + 6.57) {
                             print("Removing")
                             self.arView.scene.anchors.removeAll()
@@ -111,7 +219,7 @@ class ARViewController: UIViewController {
                         try await Task.sleep(nanoseconds: 7000000000)
                     } else if event == "AT" {
                         arView.scene.anchors.append(passAnchor)
-                        eventChange(text: "The away team presses the attack!")
+                        eventChange(text: "\(oppName) presses the attack!")
                         DispatchQueue.main.asyncAfter(deadline: .now() + 6.57) {
                             print("Removing")
                             self.arView.scene.anchors.removeAll()
@@ -120,7 +228,7 @@ class ARViewController: UIViewController {
                         try await Task.sleep(nanoseconds: 7000000000)
                     } else if event == "HDC" {
                         arView.scene.anchors.append(tackleAnchor)
-                        eventChange(text: "An excellent steal by the home team!")
+                        eventChange(text: "An excellent steal by \(teamName)")
                         DispatchQueue.main.asyncAfter(deadline: .now() + 5.4) {
                             print("Removing")
                             self.arView.scene.anchors.removeAll()
@@ -129,7 +237,7 @@ class ARViewController: UIViewController {
                         try await Task.sleep(nanoseconds: 6000000000)
                     } else if event == "ADC" {
                         arView.scene.anchors.append(tackleAnchor2)
-                        eventChange(text: "An amazing tackle from the away team!")
+                        eventChange(text: "An amazing tackle from \(oppName)")
                         DispatchQueue.main.asyncAfter(deadline: .now() + 5.4) {
                             print("Removing")
                             self.arView.scene.anchors.removeAll()
@@ -138,7 +246,7 @@ class ARViewController: UIViewController {
                         try await Task.sleep(nanoseconds: 6000000000)
                     } else if event == "HMC" {
                         arView.scene.anchors.append(passIAnchor)
-                        eventChange(text: "The away team has stolen possesion from home!")
+                        eventChange(text: "\(oppName) has stolen possesion from \(teamName)!")
                         DispatchQueue.main.asyncAfter(deadline: .now() + 3.71) {
                             print("Removing")
                             self.arView.scene.anchors.removeAll()
@@ -147,7 +255,7 @@ class ARViewController: UIViewController {
                         try await Task.sleep(nanoseconds: 4000000000)
                     } else if event == "AMC" {
                         arView.scene.anchors.append(passIAnchor2)
-                        eventChange(text: "Home team intercepts the away teams pass!")
+                        eventChange(text: "\(teamName) intercepts \(oppName)'s pass!")
                         DispatchQueue.main.asyncAfter(deadline: .now() + 3.71) {
                             print("Removing")
                             self.arView.scene.anchors.removeAll()
@@ -157,7 +265,7 @@ class ARViewController: UIViewController {
                     } else if event == "HS" {
                         homeScore()
                         arView.scene.anchors.append(goalAnchor)
-                        eventChange(text: "The home team has scored!")
+                        eventChange(text: "\(teamName) has scored!")
                         DispatchQueue.main.asyncAfter(deadline: .now() + 6.2) {
                             print("Removing")
                             self.arView.scene.anchors.removeAll()
@@ -167,7 +275,7 @@ class ARViewController: UIViewController {
                     } else if event == "AS" {
                         awayScore()
                         arView.scene.anchors.append(goalAnchor2)
-                        eventChange(text: "Away team has scored!")
+                        eventChange(text: "\(oppName) has scored!")
                         DispatchQueue.main.asyncAfter(deadline: .now() + 6.2) {
                             print("Removing")
                             self.arView.scene.anchors.removeAll()
@@ -176,7 +284,7 @@ class ARViewController: UIViewController {
                         try await Task.sleep(nanoseconds: 7000000000)
                     } else if event == "HGKS" {
                         arView.scene.anchors.append(saveAnchor)
-                        eventChange(text: "The home team has blocked the away teams shot!")
+                        eventChange(text: "\(teamName) has blocked \(oppName)'s shot!")
                         DispatchQueue.main.asyncAfter(deadline: .now() + 6) {
                             print("Removing")
                             self.arView.scene.anchors.removeAll()
@@ -185,7 +293,7 @@ class ARViewController: UIViewController {
                         try await Task.sleep(nanoseconds: 7000000000)
                     } else if event == "AGKS" {
                         arView.scene.anchors.append(saveAnchor2)
-                        eventChange(text: "The away team has blocked the shot!")
+                        eventChange(text: "\(oppName) has blocked \(teamName)'s shot!")
                         DispatchQueue.main.asyncAfter(deadline: .now() + 6) {
                             print("Removing")
                             self.arView.scene.anchors.removeAll()

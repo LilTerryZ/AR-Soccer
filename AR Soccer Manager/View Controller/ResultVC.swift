@@ -28,9 +28,7 @@ class ResultVC: UIViewController{
     var txtUserClub="",txtOppositeClub="",txtUserScore="",txtOppositeScore="",txtUserShots="",txtOppositeShots="",txtUserPasses="",txtOppositePassses="",txtUserPose="",txtOppositePose=""
     
     
-    let events=[
-    "Home makes an amazing tackle","Away has pass intercepted","Home making some moves"
-    ]
+    var events = ["Game Events:"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,8 +38,17 @@ class ResultVC: UIViewController{
         eventsList.delegate=self
         eventsList.dataSource=self
         userScore.text=txtUserScore
+        oppositePassses.text=txtOppositePassses
+        oppositePose.text=txtOppositePose
         oppositeScore.text=txtOppositeScore
+        oppositeShots.text=txtOppositeShots
         userClub.text=txtUserClub
+        userClub2.text=txtUserClub
+        userPose.text=txtUserPose
+        userPasses.text=txtUserPasses
+        userShots.text=txtUserShots
+        oppositeClub2.text=txtOppositeClub
+        oppositeClub.text=txtOppositeClub
 //        eventsList.register(UITableViewCell.self, forCellReuseIdentifier: "eventCell")
         
 //        userClub.text="bbbbb"
