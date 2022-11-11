@@ -231,7 +231,6 @@
 			children = (
 				C552606B28FB9F3F00065A60 /* Experience.rcproject */,
 				C552606828FB9F2600065A60 /* ARViewController.swift */,
-				C552606728FB9F2600065A60 /* SimulationService.swift */,
 				EBD9BB8828D11CFE007E75D9 /* ViewController.swift */,
 				EB3A074828D2735500869D70 /* HomeVC.swift */,
 				EB8C26C328DD496100DC04D4 /* LeaderVC.swift */,
@@ -313,6 +312,7 @@
 			children = (
 				EBD9BBC128D12388007E75D9 /* SlideMenu */,
 				EB749CA628EA67B500BAAD15 /* PaddingLabel.swift */,
+				C552606728FB9F2600065A60 /* SimulationService.swift */,
 			);
 			path = Functions;
 			sourceTree = "<group>";

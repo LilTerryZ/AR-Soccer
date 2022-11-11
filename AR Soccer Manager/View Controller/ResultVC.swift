@@ -28,8 +28,8 @@ class ResultVC: UIViewController{
     var txtUserClub="",txtOppositeClub="",txtUserScore="",txtOppositeScore="",txtUserShots="",txtOppositeShots="",txtUserPasses="",txtOppositePassses="",txtUserPose="",txtOppositePose=""
     
     
-    let names=[
-    "Diamond","Haonan","Samuel"
+    let events=[
+    "Home makes an amazing tackle","Away has pass intercepted","Home making some moves"
     ]
 
     override func viewDidLoad() {
@@ -39,6 +39,9 @@ class ResultVC: UIViewController{
         oppositeScore.font = UIFont.systemFont(ofSize: 30, weight: UIFont.Weight.heavy)
         eventsList.delegate=self
         eventsList.dataSource=self
+        userScore.text=txtUserScore
+        oppositeScore.text=txtOppositeScore
+        userClub.text=txtUserClub
 //        eventsList.register(UITableViewCell.self, forCellReuseIdentifier: "eventCell")
         
 //        userClub.text="bbbbb"
@@ -57,7 +60,7 @@ class ResultVC: UIViewController{
 
 extension ResultVC:UITableViewDelegate{
     func numberOfSections(in tableView: UITableView) -> Int {
-        return names.count
+        return events.count
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("cell tapped")
@@ -66,12 +69,12 @@ extension ResultVC:UITableViewDelegate{
 }
 extension ResultVC:UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
-        return names.count
+        return events.count
     }
     func tableView(_ tableView:UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
        // let cell = tableView.dequeueReusableCell(withIdentifier: "foodCellType", for: indexPath) as! LeaderCell
         let eventCell=tableView.dequeueReusableCell(withIdentifier: "eventCell", for: indexPath)
-        eventCell.textLabel?.text=names[indexPath.row]
+        eventCell.textLabel?.text=events[indexPath.row]
 
         return eventCell
 

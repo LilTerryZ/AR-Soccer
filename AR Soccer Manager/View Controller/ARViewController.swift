@@ -26,14 +26,27 @@ class ARViewController: UIViewController {
     
     var hScore: Int = 0
     var aScore: Int = 0
-        
+    
+    var userClub=""
     @IBOutlet weak var resultBtn: UIButton!
     
     @IBAction func resultBtn(sender: Any){
         let vc=storyboard?.instantiateViewController(withIdentifier: "ResultVC") as! ResultVC
-//        vc.txtUserClub=clubSelected.text!
+        vc.txtUserScore=String(hScore)
+        vc.txtOppositeScore=String(aScore)
+        vc.txtUserClub=userClub
         
         
+        
+        vc.modalPresentationStyle = .fullScreen
+        present(vc,animated: true,completion: nil)
+    }
+    
+    @IBAction func skipBtn(sender: Any){
+        let vc=storyboard?.instantiateViewController(withIdentifier: "ResultVC") as! ResultVC
+        vc.txtUserScore=String(hScore)
+        vc.txtOppositeScore=String(aScore)
+        vc.txtUserClub=userClub
         
         
         
