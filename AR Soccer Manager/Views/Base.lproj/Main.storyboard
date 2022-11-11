@@ -851,11 +851,7 @@
                         <segue destination="3GM-Me-2rp" kind="show" id="3HU-hs-Wg3"/>
                     </connections>
                 </tapGestureRecognizer>
-                <tapGestureRecognizer id="Wdp-4I-XDr">
-                    <connections>
-                        <segue destination="GLq-9o-5AG" kind="show" id="sGa-MJ-hlS"/>
-                    </connections>
-                </tapGestureRecognizer>
+                <tapGestureRecognizer id="Wdp-4I-XDr"/>
                 <tapGestureRecognizer id="I4d-hG-cfC">
                     <connections>
                         <segue destination="nBa-Nh-w1B" kind="show" id="W75-j1-Yy0"/>
@@ -974,6 +970,7 @@
                         <outlet property="eventL" destination="06c-qN-xtd" id="k8S-IM-swr"/>
                         <outlet property="homeScore" destination="3qf-dH-7ud" id="6Dg-HP-4qs"/>
                         <outlet property="resultBtn" destination="Mmn-To-aN5" id="Amt-3U-gI9"/>
+                        <outlet property="skipBtn" destination="JZc-Xv-ocY" id="ogj-kN-nla"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fpd-w2-WxI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1268,66 +1265,24 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="eventsList" destination="cnX-Dv-cRu" id="4OO-Rd-czv"/>
-                        <outlet property="oppositeClub" destination="afu-1q-kJ0" id="CCd-ad-gVD"/>
-                        <outlet property="oppositeClub2" destination="afu-1q-kJ0" id="hTF-YC-w1H"/>
-                        <outlet property="oppositePassses" destination="7hd-2h-FI5" id="Sfx-VP-zl6"/>
-                        <outlet property="oppositePose" destination="5gb-dY-AKk" id="TMk-PI-lRG"/>
-                        <outlet property="oppositeScore" destination="phK-aF-wIl" id="3Qf-NE-Lnk"/>
-                        <outlet property="oppositeShots" destination="14O-Np-1vK" id="qmS-pn-xLR"/>
-                        <outlet property="userClub" destination="8By-r6-QSJ" id="LyP-aB-qzF"/>
-                        <outlet property="userClub2" destination="SxD-La-nVo" id="bzq-Qy-N9X"/>
-                        <outlet property="userPasses" destination="uGx-wC-6na" id="ZtE-5R-IOG"/>
-                        <outlet property="userPose" destination="VMV-Jc-f4O" id="yIs-qj-bs3"/>
-                        <outlet property="userScore" destination="0g0-yG-MYV" id="BKP-le-cWA"/>
-                        <outlet property="userShots" destination="l7v-IR-lts" id="YHm-O5-3Sr"/>
+                        <outlet property="eventsList" destination="cnX-Dv-cRu" id="MqZ-tu-HcA"/>
+                        <outlet property="oppositeClub" destination="VHx-VE-epe" id="c6v-fi-u2q"/>
+                        <outlet property="oppositeClub2" destination="afu-1q-kJ0" id="buk-4o-KkB"/>
+                        <outlet property="oppositePassses" destination="7hd-2h-FI5" id="5bc-kX-LL9"/>
+                        <outlet property="oppositePose" destination="5gb-dY-AKk" id="mwr-IC-vF0"/>
+                        <outlet property="oppositeScore" destination="phK-aF-wIl" id="w1U-Ds-Fm7"/>
+                        <outlet property="oppositeShots" destination="14O-Np-1vK" id="t8E-yc-gp8"/>
+                        <outlet property="userClub" destination="8By-r6-QSJ" id="oKA-p7-Ibp"/>
+                        <outlet property="userClub2" destination="SxD-La-nVo" id="Rzb-pN-O2F"/>
+                        <outlet property="userPasses" destination="uGx-wC-6na" id="nKn-qf-llZ"/>
+                        <outlet property="userPose" destination="VMV-Jc-f4O" id="4U4-vg-DUy"/>
+                        <outlet property="userScore" destination="0g0-yG-MYV" id="Azj-RA-2VN"/>
+                        <outlet property="userShots" destination="l7v-IR-lts" id="8WS-GG-4i2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ab8-Ed-S1I" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2059.4786729857819" y="-198.46153846153845"/>
-        </scene>
-        <!--TradeVC-->
-        <scene sceneID="674-TN-vue">
-            <objects>
-                <viewController id="GLq-9o-5AG" customClass="TradeVC" customModule="AR_Soccer_Manager" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="TKd-EB-Mak">
-                        <rect key="frame" x="0.0" y="0.0" width="844" height="390"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eV9-78-Qmt">
-                                <rect key="frame" x="89" y="52" width="32" height="22"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" systemColor="labelColor"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="return.png"/>
-                                <connections>
-                                    <segue destination="Y6W-OH-hqX" kind="show" id="VjZ-FC-ow9"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Trade" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qaV-9I-rnr">
-                                <rect key="frame" x="394" y="47" width="56" height="28"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GlZ-gg-buh">
-                                <rect key="frame" x="238" y="141" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="oHp-g0-C4q"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="59a-XL-cFZ"/>
-                    <connections>
-                        <outlet property="img" destination="GlZ-gg-buh" id="rVb-kn-Kgx"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="wo0-ym-dTp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="657" y="518"/>
         </scene>
         <!--LeaderVC-->
         <scene sceneID="skR-Yr-cen">
@@ -1556,14 +1511,14 @@
     </scenes>
     <designables>
         <designable name="Zby-Zj-BkF">
-            <size key="intrinsicContentSize" width="71.333333333333329" height="15.666666666666666"/>
+            <size key="intrinsicContentSize" width="91.333333333333329" height="32.666666666666664"/>
         </designable>
     </designables>
     <inferredMetricsTieBreakers>
-        <segue reference="Zgd-ZK-H6S"/>
-        <segue reference="WHD-ff-561"/>
-        <segue reference="VjZ-FC-ow9"/>
-        <segue reference="b3Z-PR-xWG"/>
+        <segue reference="Gwx-S3-ZuC"/>
+        <segue reference="orl-sm-qXL"/>
+        <segue reference="Qxj-Nv-gu4"/>
+        <segue reference="vA1-j6-YVc"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Barcelona.png" width="96" height="97.199996948242188"/>

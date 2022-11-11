@@ -47,11 +47,8 @@
 		EB749CAB28EA6CA600BAAD15 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB749CAA28EA6CA600BAAD15 /* SettingsVC.swift */; };
 		EB749CAD28EA6E7300BAAD15 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB749CAC28EA6E7300BAAD15 /* ProfileVC.swift */; };
 		EB749CAF28EA6EEF00BAAD15 /* LineupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB749CAE28EA6EEF00BAAD15 /* LineupVC.swift */; };
-		EB749CB128EA6F0800BAAD15 /* TradeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB749CB028EA6F0800BAAD15 /* TradeVC.swift */; };
 		EB8C26C228DCE7C600DC04D4 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = EB8C26C128DCE7C600DC04D4 /* logo.png */; };
-		EB8C26C428DD496100DC04D4 /* LeaderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8C26C328DD496100DC04D4 /* LeaderVC.swift */; };
 		EBD9BB8528D11CFE007E75D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD9BB8428D11CFE007E75D9 /* AppDelegate.swift */; };
-		EBD9BB8928D11CFE007E75D9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD9BB8828D11CFE007E75D9 /* ViewController.swift */; };
 		EBD9BB8C28D11CFE007E75D9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBD9BB8A28D11CFE007E75D9 /* Main.storyboard */; };
 		EBD9BB8F28D11CFE007E75D9 /* AR_Soccer_Manager.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EBD9BB8D28D11CFE007E75D9 /* AR_Soccer_Manager.xcdatamodeld */; };
 		EBD9BB9128D11D00007E75D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBD9BB9028D11D00007E75D9 /* Assets.xcassets */; };
@@ -127,12 +124,9 @@
 		EB749CAA28EA6CA600BAAD15 /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
 		EB749CAC28EA6E7300BAAD15 /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
 		EB749CAE28EA6EEF00BAAD15 /* LineupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineupVC.swift; sourceTree = "<group>"; };
-		EB749CB028EA6F0800BAAD15 /* TradeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradeVC.swift; sourceTree = "<group>"; };
 		EB8C26C128DCE7C600DC04D4 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
-		EB8C26C328DD496100DC04D4 /* LeaderVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderVC.swift; sourceTree = "<group>"; };
 		EBD9BB8128D11CFE007E75D9 /* AR Soccer Manager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AR Soccer Manager.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBD9BB8428D11CFE007E75D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		EBD9BB8828D11CFE007E75D9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		EBD9BB8B28D11CFE007E75D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EBD9BB8E28D11CFE007E75D9 /* AR_Soccer_Manager.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AR_Soccer_Manager.xcdatamodel; sourceTree = "<group>"; };
 		EBD9BB9028D11D00007E75D9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -231,13 +225,10 @@
 			children = (
 				C552606B28FB9F3F00065A60 /* Experience.rcproject */,
 				C552606828FB9F2600065A60 /* ARViewController.swift */,
-				EBD9BB8828D11CFE007E75D9 /* ViewController.swift */,
 				EB3A074828D2735500869D70 /* HomeVC.swift */,
-				EB8C26C328DD496100DC04D4 /* LeaderVC.swift */,
 				EB749CAA28EA6CA600BAAD15 /* SettingsVC.swift */,
 				EB749CAC28EA6E7300BAAD15 /* ProfileVC.swift */,
 				EB749CAE28EA6EEF00BAAD15 /* LineupVC.swift */,
-				EB749CB028EA6F0800BAAD15 /* TradeVC.swift */,
 				EBF59DCF28F907EC00CE4A14 /* PickerVC.swift */,
 				EB41DC6F2914E60800516B30 /* ResultVC.swift */,
 			);
@@ -564,7 +555,6 @@
 				EB37FC1D28D12C7400D7F714 /* SlidingStandardAnimator.swift in Sources */,
 				EBD9BBC328D12393007E75D9 /* SlideMenuMainViewController.swift in Sources */,
 				EB37FC1A28D12C7400D7F714 /* SlidingBlurAnimator.swift in Sources */,
-				EBD9BB8928D11CFE007E75D9 /* ViewController.swift in Sources */,
 				C552606928FB9F2600065A60 /* SimulationService.swift in Sources */,
 				EBD9BB8F28D11CFE007E75D9 /* AR_Soccer_Manager.xcdatamodeld in Sources */,
 				EB37FC1E28D12C7400D7F714 /* SlidingGroupAnimator.swift in Sources */,
@@ -572,7 +562,6 @@
 				EB37FC2328D12CAD00D7F714 /* UIViewController+AMExtension.swift in Sources */,
 				EB749CAF28EA6EEF00BAAD15 /* LineupVC.swift in Sources */,
 				EB749CA728EA67B500BAAD15 /* PaddingLabel.swift in Sources */,
-				EB749CB128EA6F0800BAAD15 /* TradeVC.swift in Sources */,
 				EB37FC1328D12BFA00D7F714 /* SlidingAnimatorProtocol.swift in Sources */,
 				EB749CAB28EA6CA600BAAD15 /* SettingsVC.swift in Sources */,
 				EB37FC1C28D12C7400D7F714 /* SlidingShadowAnimator.swift in Sources */,
@@ -580,7 +569,6 @@
 				EB37FC2228D12C9700D7F714 /* LeftMenuSegue.swift in Sources */,
 				C552606A28FB9F2600065A60 /* ARViewController.swift in Sources */,
 				C552606C28FB9F3F00065A60 /* Experience.rcproject in Sources */,
-				EB8C26C428DD496100DC04D4 /* LeaderVC.swift in Sources */,
 				EB37FC1728D12C4500D7F714 /* CAMediaTimingFunction+AMExtension.swift in Sources */,
 				EB41DC702914E60800516B30 /* ResultVC.swift in Sources */,
 				EB37FC1528D12C0800D7F714 /* SlidingAnimatorFactory.swift in Sources */,
