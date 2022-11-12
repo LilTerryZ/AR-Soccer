@@ -25,6 +25,9 @@ class PickVC: UIViewController{
     @IBOutlet weak var userClubSelected: UILabel!
     @IBOutlet weak var oppoClubSelected: UILabel!
     
+    @IBOutlet weak var err1: UILabel!
+    @IBOutlet weak var err2: UILabel!
+    
     
     @IBOutlet weak var startBtn: UIButton!
     @IBAction func startBtn(sender: Any){
@@ -60,15 +63,35 @@ class PickVC: UIViewController{
     func createPicker(){
         let optionClosureUserClub = {(actionUserClub: UIAction) in
             self.userClubSelected.text=actionUserClub.title
-            if (self.userClubSelected.text != "TBD" && self.oppoClubSelected.text != "TBD"){
-                self.startBtn.isHidden=false}
+            self.startBtn.isHidden=true
+            self.err1.isHidden=true
+            self.err2.isHidden=true
+            if(self.userClubSelected.text == self.oppoClubSelected.text){
+                self.err1.isHidden=false
+                self.err2.isHidden=false
+            }else{
+                if (self.userClubSelected.text != "TBD" && self.oppoClubSelected.text != "TBD"){
+                    self.startBtn.isHidden=false
+                    
+                }
+            }
             print(actionUserClub.title)
         }
         
         let optionClosureOppoClub = {(actionOppoClub: UIAction) in
             self.oppoClubSelected.text=actionOppoClub.title
-            if (self.userClubSelected.text != "TBD" && self.oppoClubSelected.text != "TBD"){
-                self.startBtn.isHidden=false}
+            self.startBtn.isHidden=true
+            self.err1.isHidden=true
+            self.err2.isHidden=true
+            if(self.userClubSelected.text == self.oppoClubSelected.text){
+                self.err1.isHidden=false
+                self.err2.isHidden=false
+            }else{
+                if (self.userClubSelected.text != "TBD" && self.oppoClubSelected.text != "TBD"){
+                    self.startBtn.isHidden=false
+                    
+                }
+            }
             print(actionOppoClub.title)
             
         }
@@ -95,6 +118,8 @@ class PickVC: UIViewController{
         super.loadView()
         self.getClub(success: (allClubs))
         startBtn.isHidden=true
+        err1.isHidden=true
+        err2.isHidden=true
     }
 
   
