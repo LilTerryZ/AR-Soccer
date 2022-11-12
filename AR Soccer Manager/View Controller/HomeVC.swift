@@ -25,14 +25,17 @@ class HomeVC: UIViewController{
     //let vc = PickerVC()
     var clubImageData=[String: String]()
     var txtName=""
-    var txtClub=""
+    var txtUserClub=""
+    var txtOppoClub=""
     var imgURL=""
+    
 //    let vc = PickerVC(nibName: "PickerVC", bundle: nil)
 //    let randomInt = Int.random(in: 1..<73)
     
     @IBAction func startBtn(sender: Any){
         let vc=storyboard?.instantiateViewController(withIdentifier: "ARViewController") as! ARViewController
-        vc.teamName = txtClub
+        vc.teamName = txtUserClub
+//        vc.oppoClub=txtOppoClub
         vc.modalPresentationStyle = .fullScreen
         present(vc,animated: true,completion: nil)
     }
@@ -47,8 +50,8 @@ class HomeVC: UIViewController{
 //        vc.completionHandler={text in
 //            self.userClub?.text=text
 //        }
-        self.userClub?.text=txtClub
-       
+        self.userClub?.text=txtUserClub
+        self.oppositeClub?.text=txtOppoClub
     
         // Do any additional setup after loading the view.
     }
@@ -85,11 +88,11 @@ class HomeVC: UIViewController{
                 print("logo",self.clubImageData.count)
                 print(self.clubImageData)
 //                self.didFetchData(data: self.clubImageData)
-            self.oppositeClub?.text="Liverpool"
-            self.imgURL=self.clubImageData["Liverpool"] ?? "Barcelona"
+
+            self.imgURL=self.clubImageData[self.txtOppoClub] ?? "Barcelona"
             self.loadOppoImg(logoURL: URL(string: imgURL)!)
             
-            self.imgURL=self.clubImageData[self.txtClub] ?? "Barcelona"
+            self.imgURL=self.clubImageData[self.txtUserClub] ?? "Barcelona"
             self.loadUserImg(logoURL: URL(string: imgURL)!)
 //            self.userClubLogo?.frame = CGRect(x: 0, y: 0, width: 96, height: 96)
 //            var im=UIImageView(frame: CGRectMake(x:0, y:0, self.view.frame.size.width*0.2,50))

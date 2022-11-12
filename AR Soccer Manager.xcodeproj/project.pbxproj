@@ -38,6 +38,7 @@
 		EB37FC6428D17B8900D7F714 /* Rank.png in Resources */ = {isa = PBXBuildFile; fileRef = EB37FC6328D17B8900D7F714 /* Rank.png */; };
 		EB37FC6628D17E5D00D7F714 /* Barcelona.png in Resources */ = {isa = PBXBuildFile; fileRef = EB37FC6528D17E5D00D7F714 /* Barcelona.png */; };
 		EB37FC6A28D17EFD00D7F714 /* RM.png in Resources */ = {isa = PBXBuildFile; fileRef = EB37FC6928D17EFD00D7F714 /* RM.png */; };
+		EB387144291F095300D3AFCF /* PickVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB387143291F095300D3AFCF /* PickVC.swift */; };
 		EB3A074928D2735500869D70 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3A074828D2735500869D70 /* HomeVC.swift */; };
 		EB41DC702914E60800516B30 /* ResultVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB41DC6F2914E60800516B30 /* ResultVC.swift */; };
 		EB647C6928D40E890000B8A3 /* Homebcg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EB647C6828D40E890000B8A3 /* Homebcg.jpg */; };
@@ -115,6 +116,7 @@
 		EB37FC6328D17B8900D7F714 /* Rank.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Rank.png; sourceTree = "<group>"; };
 		EB37FC6528D17E5D00D7F714 /* Barcelona.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Barcelona.png; sourceTree = "<group>"; };
 		EB37FC6928D17EFD00D7F714 /* RM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RM.png; sourceTree = "<group>"; };
+		EB387143291F095300D3AFCF /* PickVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickVC.swift; sourceTree = "<group>"; };
 		EB3A074828D2735500869D70 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		EB41DC6F2914E60800516B30 /* ResultVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultVC.swift; sourceTree = "<group>"; };
 		EB647C6828D40E890000B8A3 /* Homebcg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Homebcg.jpg; sourceTree = "<group>"; };
@@ -231,6 +233,7 @@
 				EB749CAE28EA6EEF00BAAD15 /* LineupVC.swift */,
 				EBF59DCF28F907EC00CE4A14 /* PickerVC.swift */,
 				EB41DC6F2914E60800516B30 /* ResultVC.swift */,
+				EB387143291F095300D3AFCF /* PickVC.swift */,
 			);
 			path = "View Controller";
 			sourceTree = "<group>";
@@ -564,6 +567,7 @@
 				EB749CA728EA67B500BAAD15 /* PaddingLabel.swift in Sources */,
 				EB37FC1328D12BFA00D7F714 /* SlidingAnimatorProtocol.swift in Sources */,
 				EB749CAB28EA6CA600BAAD15 /* SettingsVC.swift in Sources */,
+				EB387144291F095300D3AFCF /* PickVC.swift in Sources */,
 				EB37FC1C28D12C7400D7F714 /* SlidingShadowAnimator.swift in Sources */,
 				EB3A074928D2735500869D70 /* HomeVC.swift in Sources */,
 				EB37FC2228D12C9700D7F714 /* LeftMenuSegue.swift in Sources */,

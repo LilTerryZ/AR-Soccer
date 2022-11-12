@@ -15,6 +15,7 @@ protocol DataRetrieval{
 
 
 class PickerVC: UIViewController,DataRetrieval{
+
     @IBOutlet weak var premier:UIButton!
     @IBOutlet weak var ligue:UIButton!
     @IBOutlet weak var liga:UIButton!
@@ -48,7 +49,7 @@ class PickerVC: UIViewController,DataRetrieval{
         //completionHandler?(txtClub)
         //completionHandler?(clubSelected.text)
         let vc=storyboard?.instantiateViewController(withIdentifier: "HomeVC") as! HomeVC
-        vc.txtClub=clubSelected.text!
+        vc.txtUserClub=clubSelected.text!
         vc.modalPresentationStyle = .fullScreen
         present(vc,animated: true,completion: nil)
     }
