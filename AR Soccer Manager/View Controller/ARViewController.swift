@@ -1,6 +1,6 @@
 //
-//  ViewController.swift
-//  AR Test 2
+//  ARViewController.swift
+//  AR Simulation
 //
 //  Created by Diamond Winter-Hogan on 2022-08-27.
 //
@@ -15,14 +15,6 @@ class ARViewController: UIViewController {
     @IBOutlet var eventL: UILabel!
     
     @IBOutlet var arView: ARView!
-    var gameTimer: Timer?
-    var anchorStatus = false
-    
-    var timer:Timer = Timer()
-    var count:Double = 0.0
-    var timerCounting:Bool = false
-    
-    var sceneTime: Double = 0.0
     
     var hScore: Int = 0
     var aScore: Int = 0
@@ -151,11 +143,11 @@ class ARViewController: UIViewController {
                         oppPoss = oppPoss+1
                         totalPoss = totalPoss+1
                     } else if event == "HMC" {
-                        eventsList.append("\(oppName) has stolen possesion from \(teamName)!")
+                        eventsList.append("\(teamName) has stolen possesion from \(oppName)!")
                         oppPoss = oppPoss+1
                         totalPoss = totalPoss+1
                     } else if event == "AMC" {
-                        eventsList.append("\(teamName) intercepts \(oppName)'s pass!")
+                        eventsList.append("\(oppName) intercepts \(teamName)'s pass!")
                         teamPoss = teamPoss + 1
                         totalPoss = totalPoss+1
                     } else if event == "HS" {

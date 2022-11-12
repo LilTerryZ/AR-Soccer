@@ -35,7 +35,7 @@ class HomeVC: UIViewController{
     @IBAction func startBtn(sender: Any){
         let vc=storyboard?.instantiateViewController(withIdentifier: "ARViewController") as! ARViewController
         vc.teamName = txtUserClub
-//        vc.oppoClub=txtOppoClub
+        vc.oppName = txtOppoClub
         vc.modalPresentationStyle = .fullScreen
         present(vc,animated: true,completion: nil)
     }
