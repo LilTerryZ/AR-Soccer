@@ -13,6 +13,8 @@
 		EB1217302922E4AD00AD47D1 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB12172F2922E4AD00AD47D1 /* LoginVC.swift */; };
 		EB12173229231F2D00AD47D1 /* SignupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB12173129231F2D00AD47D1 /* SignupVC.swift */; };
 		EB1217342923246100AD47D1 /* logo.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = EB1217332923246100AD47D1 /* logo.jpeg */; };
+		EB1217382923360200AD47D1 /* FBLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1217372923360200AD47D1 /* FBLogin.swift */; };
+		EB12173A2923361100AD47D1 /* GoogleLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1217392923361100AD47D1 /* GoogleLogin.swift */; };
 		EB1F41D328DE032F006B2F94 /* return.png in Resources */ = {isa = PBXBuildFile; fileRef = EB1F41D228DE032F006B2F94 /* return.png */; };
 		EB1F41D528DE072F006B2F94 /* settings.png in Resources */ = {isa = PBXBuildFile; fileRef = EB1F41D428DE072F006B2F94 /* settings.png */; };
 		EB37FC1328D12BFA00D7F714 /* SlidingAnimatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD9BBD128D123C0007E75D9 /* SlidingAnimatorProtocol.swift */; };
@@ -110,6 +112,8 @@
 		EB12172F2922E4AD00AD47D1 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		EB12173129231F2D00AD47D1 /* SignupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupVC.swift; sourceTree = "<group>"; };
 		EB1217332923246100AD47D1 /* logo.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = logo.jpeg; sourceTree = "<group>"; };
+		EB1217372923360200AD47D1 /* FBLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FBLogin.swift; sourceTree = "<group>"; };
+		EB1217392923361100AD47D1 /* GoogleLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleLogin.swift; sourceTree = "<group>"; };
 		EB1F41D228DE032F006B2F94 /* return.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = return.png; sourceTree = "<group>"; };
 		EB1F41D428DE072F006B2F94 /* settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings.png; sourceTree = "<group>"; };
 		EB37FC1628D12C4500D7F714 /* CAMediaTimingFunction+AMExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CAMediaTimingFunction+AMExtension.swift"; sourceTree = "<group>"; };
@@ -316,6 +320,8 @@
 				EBD9BBC128D12388007E75D9 /* SlideMenu */,
 				EB749CA628EA67B500BAAD15 /* PaddingLabel.swift */,
 				C552606728FB9F2600065A60 /* SimulationService.swift */,
+				EB1217372923360200AD47D1 /* FBLogin.swift */,
+				EB1217392923361100AD47D1 /* GoogleLogin.swift */,
 			);
 			path = Functions;
 			sourceTree = "<group>";
@@ -593,7 +599,9 @@
 				EB749CAD28EA6E7300BAAD15 /* ProfileVC.swift in Sources */,
 				EB37FC2128D12C9700D7F714 /* ContentSegue.swift in Sources */,
 				EB37FC1428D12C0600D7F714 /* SlidingAnimationOptions.swift in Sources */,
+				EB12173A2923361100AD47D1 /* GoogleLogin.swift in Sources */,
 				EB37FC1828D12C7400D7F714 /* SlidingContentAnimator.swift in Sources */,
+				EB1217382923360200AD47D1 /* FBLogin.swift in Sources */,
 				EBD9BB8528D11CFE007E75D9 /* AppDelegate.swift in Sources */,
 				EBD9BBBD28D122C3007E75D9 /* SceneDelegate.swift in Sources */,
 			);
