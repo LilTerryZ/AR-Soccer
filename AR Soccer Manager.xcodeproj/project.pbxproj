@@ -10,6 +10,9 @@
 		C552606928FB9F2600065A60 /* SimulationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C552606728FB9F2600065A60 /* SimulationService.swift */; };
 		C552606A28FB9F2600065A60 /* ARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C552606828FB9F2600065A60 /* ARViewController.swift */; };
 		C552606C28FB9F3F00065A60 /* Experience.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = C552606B28FB9F3F00065A60 /* Experience.rcproject */; };
+		EB1217302922E4AD00AD47D1 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB12172F2922E4AD00AD47D1 /* LoginVC.swift */; };
+		EB12173229231F2D00AD47D1 /* SignupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB12173129231F2D00AD47D1 /* SignupVC.swift */; };
+		EB1217342923246100AD47D1 /* logo.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = EB1217332923246100AD47D1 /* logo.jpeg */; };
 		EB1F41D328DE032F006B2F94 /* return.png in Resources */ = {isa = PBXBuildFile; fileRef = EB1F41D228DE032F006B2F94 /* return.png */; };
 		EB1F41D528DE072F006B2F94 /* settings.png in Resources */ = {isa = PBXBuildFile; fileRef = EB1F41D428DE072F006B2F94 /* settings.png */; };
 		EB37FC1328D12BFA00D7F714 /* SlidingAnimatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD9BBD128D123C0007E75D9 /* SlidingAnimatorProtocol.swift */; };
@@ -104,6 +107,9 @@
 		C552606728FB9F2600065A60 /* SimulationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimulationService.swift; sourceTree = "<group>"; };
 		C552606828FB9F2600065A60 /* ARViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARViewController.swift; sourceTree = "<group>"; };
 		C552606B28FB9F3F00065A60 /* Experience.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Experience.rcproject; sourceTree = "<group>"; };
+		EB12172F2922E4AD00AD47D1 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		EB12173129231F2D00AD47D1 /* SignupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupVC.swift; sourceTree = "<group>"; };
+		EB1217332923246100AD47D1 /* logo.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = logo.jpeg; sourceTree = "<group>"; };
 		EB1F41D228DE032F006B2F94 /* return.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = return.png; sourceTree = "<group>"; };
 		EB1F41D428DE072F006B2F94 /* settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings.png; sourceTree = "<group>"; };
 		EB37FC1628D12C4500D7F714 /* CAMediaTimingFunction+AMExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CAMediaTimingFunction+AMExtension.swift"; sourceTree = "<group>"; };
@@ -202,6 +208,7 @@
 		EB37FC4828D15F9800D7F714 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				EB1217332923246100AD47D1 /* logo.jpeg */,
 				EBE5588A2913731700B8B68C /* 1.png */,
 				EB749CA428EA5EC000BAAD15 /* play.png */,
 				EB749CA228E3F16300BAAD15 /* avatar.png */,
@@ -234,6 +241,8 @@
 				EBF59DCF28F907EC00CE4A14 /* PickerVC.swift */,
 				EB41DC6F2914E60800516B30 /* ResultVC.swift */,
 				EB387143291F095300D3AFCF /* PickVC.swift */,
+				EB12172F2922E4AD00AD47D1 /* LoginVC.swift */,
+				EB12173129231F2D00AD47D1 /* SignupVC.swift */,
 			);
 			path = "View Controller";
 			sourceTree = "<group>";
@@ -506,6 +515,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EB1F41D528DE072F006B2F94 /* settings.png in Resources */,
+				EB1217342923246100AD47D1 /* logo.jpeg in Resources */,
 				EB37FC5628D1767E00D7F714 /* vs.png in Resources */,
 				EBD9BB9428D11D00007E75D9 /* LaunchScreen.storyboard in Resources */,
 				EB37FC6A28D17EFD00D7F714 /* RM.png in Resources */,
@@ -552,9 +562,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				EBF59DD028F907EC00CE4A14 /* PickerVC.swift in Sources */,
+				EB12173229231F2D00AD47D1 /* SignupVC.swift in Sources */,
 				EB37FC1928D12C7400D7F714 /* SlidingDimmedBackgroundAnimator.swift in Sources */,
 				EB37FC1F28D12C7400D7F714 /* SlidingFixedMenuAnimator.swift in Sources */,
 				EB37FC1B28D12C7400D7F714 /* SlidingContentShadowAnimator.swift in Sources */,
+				EB1217302922E4AD00AD47D1 /* LoginVC.swift in Sources */,
 				EB37FC1D28D12C7400D7F714 /* SlidingStandardAnimator.swift in Sources */,
 				EBD9BBC328D12393007E75D9 /* SlideMenuMainViewController.swift in Sources */,
 				EB37FC1A28D12C7400D7F714 /* SlidingBlurAnimator.swift in Sources */,
