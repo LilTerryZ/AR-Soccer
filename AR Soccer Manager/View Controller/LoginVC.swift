@@ -116,7 +116,7 @@ class LoginVC: UIViewController {
 extension ViewController{
     
     private func googleLogin() {
-        RRGoogleLogin.shared.googleUserDetails.asObservable()
+        GoogleLogin.shared.googleUserDetails.asObservable()
         .subscribe(onNext: { [weak self] (userDetails) in
             guard let strongSelf = self else {return}
             strongSelf.socialLogin(user: userDetails)
@@ -127,7 +127,7 @@ extension ViewController{
     }
     
     private func facebookLogin() {
-        RRFBLogin.shared.fbUserDetails.asObservable()
+        FBLogin.shared.fbUserDetails.asObservable()
         .subscribe(onNext: { [weak self] (userDetails) in
             guard let strongSelf = self else {return}
             strongSelf.socialLogin(user: userDetails)

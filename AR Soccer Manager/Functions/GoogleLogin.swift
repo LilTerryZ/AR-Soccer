@@ -7,13 +7,13 @@
 
 import Foundation
 import UIKit
-import GoogleSignIn
-import RxSwift
+//import GoogleSignIn
+//import RxSwift
 
-class RRGoogleLogin: UIViewController {
+class GoogleLogin: UIViewController {
     
     // MARK: - Variable -
-    static let shared = RRGoogleLogin()
+    static let shared = GoogleLogin()
     
     open var googleUserDetails: PublishSubject<SocialUserDetails> = PublishSubject()
     
@@ -31,7 +31,7 @@ class RRGoogleLogin: UIViewController {
 }
 
 // MARK: - GIDSignInDelegate -
-extension RRGoogleLogin: GIDSignInDelegate {
+extension GoogleLogin: GIDSignInDelegate {
     
     public func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error?) {
         if let error = error {

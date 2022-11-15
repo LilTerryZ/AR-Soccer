@@ -7,14 +7,14 @@
 
 import Foundation
 import UIKit
-import FBSDKCoreKit
-import FBSDKLoginKit
-import RxSwift
+//import FBSDKCoreKit
+//import FBSDKLoginKit
+//import RxSwift
 
-class RRFBLogin {
+class FBLogin {
     
     // MARK: - Variable -
-    static let shared = RRFBLogin()
+    static let shared = FBLogin()
     
     open var fbUserDetails: PublishSubject<SocialUserDetails> = PublishSubject()
     
