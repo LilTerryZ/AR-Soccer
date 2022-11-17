@@ -1168,6 +1168,30 @@
             </objects>
             <point key="canvasLocation" x="702" y="-240"/>
         </scene>
+        <!--TradeVC-->
+        <scene sceneID="qLp-LZ-XcX">
+            <objects>
+                <viewController id="nXe-zO-NsY" customClass="TradeVC" customModule="AR_Soccer_Manager" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ghu-Cy-vT7">
+                        <rect key="frame" x="0.0" y="0.0" width="844" height="390"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Trade" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YUw-xs-D5U">
+                                <rect key="frame" x="391" y="47" width="63" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="HOF-Oe-LMX"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Myp-MV-MEN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="672" y="1044"/>
+        </scene>
         <!--ResultVC-->
         <scene sceneID="zO9-l2-SRA">
             <objects>
@@ -1889,7 +1913,7 @@
     </scenes>
     <designables>
         <designable name="Zby-Zj-BkF">
-            <size key="intrinsicContentSize" width="91.333333333333329" height="32.666666666666664"/>
+            <size key="intrinsicContentSize" width="71.333333333333329" height="15.666666666666666"/>
         </designable>
     </designables>
     <inferredMetricsTieBreakers>

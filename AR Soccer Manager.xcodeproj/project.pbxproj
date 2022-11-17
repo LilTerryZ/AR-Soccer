@@ -65,6 +65,7 @@
 		EBD9BBBD28D122C3007E75D9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD9BBBC28D122C3007E75D9 /* SceneDelegate.swift */; };
 		EBD9BBC328D12393007E75D9 /* SlideMenuMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD9BBC228D12393007E75D9 /* SlideMenuMainViewController.swift */; };
 		EBE5588B2913731700B8B68C /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = EBE5588A2913731700B8B68C /* 1.png */; };
+		EBEE0D8B29256CE200F13C93 /* TradeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBEE0D8A29256CE200F13C93 /* TradeVC.swift */; };
 		EBF59DB328F8F6F000CE4A14 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EBF59DB228F8F6F000CE4A14 /* GoogleService-Info.plist */; };
 		EBF59DB428F8F6F000CE4A14 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EBF59DB228F8F6F000CE4A14 /* GoogleService-Info.plist */; };
 		EBF59DB528F8F6F000CE4A14 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EBF59DB228F8F6F000CE4A14 /* GoogleService-Info.plist */; };
@@ -167,6 +168,7 @@
 		EBD9BBDB28D123C0007E75D9 /* SlidingAnimationOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlidingAnimationOptions.swift; sourceTree = "<group>"; };
 		EBD9BBDC28D123C0007E75D9 /* SlidingAnimatorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlidingAnimatorFactory.swift; sourceTree = "<group>"; };
 		EBE5588A2913731700B8B68C /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
+		EBEE0D8A29256CE200F13C93 /* TradeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradeVC.swift; sourceTree = "<group>"; };
 		EBF59DB228F8F6F000CE4A14 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EBF59DCF28F907EC00CE4A14 /* PickerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerVC.swift; sourceTree = "<group>"; };
 		EBF59DD428F912EB00CE4A14 /* Club.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Club.swift; sourceTree = "<group>"; };
@@ -247,6 +249,7 @@
 				EB387143291F095300D3AFCF /* PickVC.swift */,
 				EB12172F2922E4AD00AD47D1 /* LoginVC.swift */,
 				EB12173129231F2D00AD47D1 /* SignupVC.swift */,
+				EBEE0D8A29256CE200F13C93 /* TradeVC.swift */,
 			);
 			path = "View Controller";
 			sourceTree = "<group>";
@@ -574,6 +577,7 @@
 				EB37FC1B28D12C7400D7F714 /* SlidingContentShadowAnimator.swift in Sources */,
 				EB1217302922E4AD00AD47D1 /* LoginVC.swift in Sources */,
 				EB37FC1D28D12C7400D7F714 /* SlidingStandardAnimator.swift in Sources */,
+				EBEE0D8B29256CE200F13C93 /* TradeVC.swift in Sources */,
 				EBD9BBC328D12393007E75D9 /* SlideMenuMainViewController.swift in Sources */,
 				EB37FC1A28D12C7400D7F714 /* SlidingBlurAnimator.swift in Sources */,
 				C552606928FB9F2600065A60 /* SimulationService.swift in Sources */,
