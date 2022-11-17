@@ -30,10 +30,21 @@ class LoginVC: UIViewController {
     }
     
 //    let rxbag = DisposeBag()
+    let userDefault = UserRepository()
+   
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "Homebcg.jpg")!)
+        
+        let userId = userDefault.getInfo(itemID: "userId")
+        print(String(decoding: userId!, as: UTF8.self))
+        
+        if(userId != nil){
+            let vc = self.storyboard?.instantiateViewController(withIdentifier: "MainVC") as! MainVC
+            vc.modalPresentationStyle = .fullScreen
+            present(vc,animated: true,completion: nil)
+        }
         
 //        googleLogin()
 //        facebookLogin()
@@ -86,11 +97,16 @@ class LoginVC: UIViewController {
               let photoURL = user.photoURL
             }
             
-            print(user?.uid)
+           
             
-            let vc = storyboard?.instantiateViewController(withIdentifier: "MainVC") as! MainVC
+            userDefault.removeInfo(itemID: "userId")
+            userDefault.storeInfo(itemID: "userId", data: user?.uid.data(using: .utf8) as! Data)
+            
+            
+            let vc = self.storyboard?.instantiateViewController(withIdentifier: "MainVC") as! MainVC
             vc.modalPresentationStyle = .fullScreen
             present(vc,animated: true,completion: nil)
+           
         }else{
             
             let alert = UIAlertController(title: "Login Error", message: "Please fill all the credential property", preferredStyle: UIAlertController.Style.alert)

@@ -1,5 +1,5 @@
 //
-//  MainVC.swift
+//  LeaguesVC.swift
 //  AR Soccer Manager
 //
 //  Created by Samuel Gerges on 2022-11-16.
@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class MainVC: UIViewController{
+class LeaguesVC: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "Homebcg.jpg")!)
@@ -25,4 +25,19 @@ class MainVC: UIViewController{
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: animated)
     }
+    
+    @IBAction func PremierLeagueBtn(_ sender: Any) {
+    }
+    
+    @IBAction func LaLigaBtn(_ sender: Any) {
+    }
+    
+    @IBAction func LigueOneBtn(_ sender: Any) {
+    }
+    
+    @IBAction func BundesligaBtn(_ sender: Any) {
+    }
+    
+    
+    @IBOutlet weak var StandingTableRef: UITableView!
 }

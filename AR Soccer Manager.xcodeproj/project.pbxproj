@@ -11,6 +11,8 @@
 		17C964C82925CB65001362D7 /* FacebookCore in Frameworks */ = {isa = PBXBuildFile; productRef = 17C964C72925CB65001362D7 /* FacebookCore */; };
 		17C964CA2925CB65001362D7 /* FacebookLogin in Frameworks */ = {isa = PBXBuildFile; productRef = 17C964C92925CB65001362D7 /* FacebookLogin */; };
 		17C964CC2925D121001362D7 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C964CB2925D121001362D7 /* MainVC.swift */; };
+		17C964CE2925D9A3001362D7 /* UserRepositoryUDService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C964CD2925D9A3001362D7 /* UserRepositoryUDService.swift */; };
+		17C964D02925E5CD001362D7 /* LeaguesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C964CF2925E5CD001362D7 /* LeaguesVC.swift */; };
 		C552606928FB9F2600065A60 /* SimulationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C552606728FB9F2600065A60 /* SimulationService.swift */; };
 		C552606A28FB9F2600065A60 /* ARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C552606828FB9F2600065A60 /* ARViewController.swift */; };
 		C552606C28FB9F3F00065A60 /* Experience.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = C552606B28FB9F3F00065A60 /* Experience.rcproject */; };
@@ -109,6 +111,8 @@
 
 /* Begin PBXFileReference section */
 		17C964CB2925D121001362D7 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
+		17C964CD2925D9A3001362D7 /* UserRepositoryUDService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserRepositoryUDService.swift; path = "../../../AR-Soccer-Manager copy/AR Soccer Manager/Services/UserRepositoryUDService.swift"; sourceTree = "<group>"; };
+		17C964CF2925E5CD001362D7 /* LeaguesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaguesVC.swift; sourceTree = "<group>"; };
 		C552606728FB9F2600065A60 /* SimulationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimulationService.swift; sourceTree = "<group>"; };
 		C552606828FB9F2600065A60 /* ARViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARViewController.swift; sourceTree = "<group>"; };
 		C552606B28FB9F3F00065A60 /* Experience.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Experience.rcproject; sourceTree = "<group>"; };
@@ -252,6 +256,7 @@
 				EB12172F2922E4AD00AD47D1 /* LoginVC.swift */,
 				EB12173129231F2D00AD47D1 /* SignupVC.swift */,
 				17C964CB2925D121001362D7 /* MainVC.swift */,
+				17C964CF2925E5CD001362D7 /* LeaguesVC.swift */,
 			);
 			path = "View Controller";
 			sourceTree = "<group>";
@@ -322,6 +327,7 @@
 		EBD9BBBE28D12364007E75D9 /* Functions */ = {
 			isa = PBXGroup;
 			children = (
+				17C964CD2925D9A3001362D7 /* UserRepositoryUDService.swift */,
 				EBD9BBC128D12388007E75D9 /* SlideMenu */,
 				EB749CA628EA67B500BAAD15 /* PaddingLabel.swift */,
 				C552606728FB9F2600065A60 /* SimulationService.swift */,
@@ -581,6 +587,7 @@
 				EB37FC1F28D12C7400D7F714 /* SlidingFixedMenuAnimator.swift in Sources */,
 				EB37FC1B28D12C7400D7F714 /* SlidingContentShadowAnimator.swift in Sources */,
 				EB1217302922E4AD00AD47D1 /* LoginVC.swift in Sources */,
+				17C964CE2925D9A3001362D7 /* UserRepositoryUDService.swift in Sources */,
 				EB37FC1D28D12C7400D7F714 /* SlidingStandardAnimator.swift in Sources */,
 				EBD9BBC328D12393007E75D9 /* SlideMenuMainViewController.swift in Sources */,
 				EB37FC1A28D12C7400D7F714 /* SlidingBlurAnimator.swift in Sources */,
@@ -609,6 +616,7 @@
 				EB37FC2128D12C9700D7F714 /* ContentSegue.swift in Sources */,
 				EB37FC1428D12C0600D7F714 /* SlidingAnimationOptions.swift in Sources */,
 				EB37FC1828D12C7400D7F714 /* SlidingContentAnimator.swift in Sources */,
+				17C964D02925E5CD001362D7 /* LeaguesVC.swift in Sources */,
 				EBD9BB8528D11CFE007E75D9 /* AppDelegate.swift in Sources */,
 				EBD9BBBD28D122C3007E75D9 /* SceneDelegate.swift in Sources */,
 			);
