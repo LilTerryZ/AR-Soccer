@@ -9,6 +9,9 @@ import Foundation
 import UIKit
 
 class LeaguesVC: UIViewController{
+    
+    @IBOutlet weak var StandingTableRef: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "Homebcg.jpg")!)
@@ -38,6 +41,5 @@ class LeaguesVC: UIViewController{
     @IBAction func BundesligaBtn(_ sender: Any) {
     }
     
-    
-    @IBOutlet weak var StandingTableRef: UITableView!
+   
 }
