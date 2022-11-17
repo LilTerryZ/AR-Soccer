@@ -22,7 +22,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
       //  window?.rootViewController=vc
         FirebaseApp.configure()
-        IDSignIn.sharedInstance().clientID = "clientID"
         window?.makeKeyAndVisible()
         // Override point for customization after application launch.
         return true
@@ -92,11 +91,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 extension AppDelegate {
     
     func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
-        if GIDSignIn.sharedInstance().handle(url) ||
-           ApplicationDelegate.shared.application(app, open: url, options: options) {
-            return true
-        }
-        return false
+        
+       ApplicationDelegate.shared.application(app, open: url, options: options)
+        return true
     }
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {

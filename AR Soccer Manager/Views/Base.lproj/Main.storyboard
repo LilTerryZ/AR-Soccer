@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SHM-KX-0aR">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SHM-KX-0aR">
     <device id="retina6_0" orientation="landscape" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="UIMenu" message="Requires Xcode 11 or later." minToolsVersion="11.0" requiredIntegratedClassName="UICommandDiff"/>
@@ -451,10 +451,10 @@
             </objects>
             <point key="canvasLocation" x="-2684.3601895734596" y="136.92307692307691"/>
         </scene>
-        <!--HomeVC-->
+        <!--MainVC-->
         <scene sceneID="FrP-RK-dLw">
             <objects>
-                <viewController id="XSs-DF-FS2" customClass="HomeVC" customModule="AR_Soccer_Manager" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainVC" title="MainVC" id="XSs-DF-FS2" customClass="MainVC" customModule="AR_Soccer_Manager" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="evx-Pp-4eb">
                         <rect key="frame" x="0.0" y="0.0" width="844" height="390"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -642,38 +642,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dad-i9-Ibw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1464" y="771"/>
-        </scene>
-        <!--ViewController-->
-        <scene sceneID="ICi-Eu-Bcp">
-            <objects>
-                <viewController storyboardIdentifier="SlideVC" title="ViewController" id="C21-Cn-D3L" customClass="SlideMenuMainViewController" customModule="AR_Soccer_Manager" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="G5t-RI-OID">
-                        <rect key="frame" x="0.0" y="0.0" width="844" height="390"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="asW-iz-yWC"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="RFb-lR-x99"/>
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="string" keyPath="leftMenuSegueName" value="leftMenuSegue"/>
-                        <userDefinedRuntimeAttribute type="string" keyPath="rightMenuSegueName" value="rightMenuSegue"/>
-                        <userDefinedRuntimeAttribute type="string" keyPath="contentSegueName" value="contentSegue"/>
-                        <userDefinedRuntimeAttribute type="number" keyPath="leftMenuWidth">
-                            <real key="value" value="800"/>
-                        </userDefinedRuntimeAttribute>
-                        <userDefinedRuntimeAttribute type="number" keyPath="rightMenuWidth">
-                            <real key="value" value="800"/>
-                        </userDefinedRuntimeAttribute>
-                    </userDefinedRuntimeAttributes>
-                    <connections>
-                        <segue destination="Y6W-OH-hqX" kind="custom" identifier="contentSegue" customClass="ContentSegue" customModule="AR_Soccer_Manager" id="Qxj-Nv-gu4"/>
-                        <segue destination="1XS-cQ-1p5" kind="custom" identifier="leftMenuSegue" customClass="LeftMenuSegue" customModule="AR_Soccer_Manager" id="Gwx-S3-ZuC"/>
-                        <segue destination="TxB-Dd-Z8g" kind="custom" identifier="rightMenuSegue" customClass="RightMenuSegue" customModule="AR_Soccer_Manager" customModuleProvider="target" id="orl-sm-qXL"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="QRR-IV-aAD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-928" y="-240"/>
         </scene>
         <!--HomeVC-->
         <scene sceneID="s0d-6b-0kx">
@@ -1893,10 +1861,8 @@
         </designable>
     </designables>
     <inferredMetricsTieBreakers>
-        <segue reference="Zgd-ZK-H6S"/>
-        <segue reference="WHD-ff-561"/>
         <segue reference="wA8-dq-cq0"/>
-        <segue reference="Xjb-Dd-7Vw"/>
+        <segue reference="B5a-Rc-EqZ"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Barcelona.png" width="96" height="97.199996948242188"/>
