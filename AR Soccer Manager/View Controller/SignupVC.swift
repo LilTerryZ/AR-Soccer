@@ -34,6 +34,10 @@ class SignupVC: UIViewController {
         navigationController?.setNavigationBarHidden(true, animated: animated)
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?){
+        self.view.endEditing(true)
+    }
+    
     func Register(){
         if self.email.text != ""{
             
