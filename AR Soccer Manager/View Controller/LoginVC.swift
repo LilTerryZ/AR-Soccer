@@ -29,11 +29,22 @@ class LoginVC: UIViewController {
         self.ResetPassword()
     }
     
-    let rxbag = DisposeBag()
+//    let rxbag = DisposeBag()
+    let userDefault = UserRepository()
+   
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "Homebcg.jpg")!)
+        
+        let userId = userDefault.getInfo(itemID: "userId")
+        print(String(decoding: userId!, as: UTF8.self))
+        
+        if(userId != nil){
+            let vc = self.storyboard?.instantiateViewController(withIdentifier: "MainVC") as! MainVC
+            vc.modalPresentationStyle = .fullScreen
+            present(vc,animated: true,completion: nil)
+        }
         
 //        googleLogin()
 //        facebookLogin()
@@ -72,9 +83,30 @@ class LoginVC: UIViewController {
                 }
                 
                 print("Login success!")
+               
 //                UserDefaults.standard.set(true, forKey: "status")
 //                NotificationCenter.default.post(name: NSNotification.Name("status"), object: nil)
             }
+            let user = Auth.auth().currentUser
+            if let user = user {
+              // The user's ID, unique to the Firebase project.
+              // Do NOT use this value to authenticate with your backend server,
+              // if you have one. Use getTokenWithCompletion:completion: instead.
+              let uid = user.uid
+              let email = user.email
+              let photoURL = user.photoURL
+            }
+            
+           
+            
+            userDefault.removeInfo(itemID: "userId")
+            userDefault.storeInfo(itemID: "userId", data: user?.uid.data(using: .utf8) as! Data)
+            
+            
+            let vc = self.storyboard?.instantiateViewController(withIdentifier: "MainVC") as! MainVC
+            vc.modalPresentationStyle = .fullScreen
+            present(vc,animated: true,completion: nil)
+           
         }else{
             
             let alert = UIAlertController(title: "Login Error", message: "Please fill all the credential property", preferredStyle: UIAlertController.Style.alert)
@@ -113,42 +145,42 @@ class LoginVC: UIViewController {
 }
 
 
-extension ViewController{
-    
-    private func googleLogin() {
-        GoogleLogin.shared.googleUserDetails.asObservable()
-        .subscribe(onNext: { [weak self] (userDetails) in
-            guard let strongSelf = self else {return}
-            strongSelf.socialLogin(user: userDetails)
-        }, onError: { [weak self] (error) in
-            guard let strongSelf = self else {return}
-            strongSelf.showAlert(title: nil, message: error.localizedDescription)
-        }).disposed(by: rxbag)
-    }
-    
-    private func facebookLogin() {
-        FBLogin.shared.fbUserDetails.asObservable()
-        .subscribe(onNext: { [weak self] (userDetails) in
-            guard let strongSelf = self else {return}
-            strongSelf.socialLogin(user: userDetails)
-        }, onError: { [weak self] (error) in
-            guard let strongSelf = self else {return}
-            strongSelf.showAlert(title: nil, message: error.localizedDescription)
-        }).disposed(by: rxbag)
-    }
-    
-    fileprivate func socialLogin(user :SocialUserDetails) {
-        //print(user.type)
-        print(user.name)
-        print(user.email)
-    }
-    
-    func showAlert(title : String?, message : String?, handler: ((UIAlertController) -> Void)? = nil){
-        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        alertController.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action) in
-            handler?(alertController)
-        }))
-        self.present(alertController, animated: true, completion: nil)
-    }
-}
+//extension ViewController{
+//
+//    private func googleLogin() {
+//        GoogleLogin.shared.googleUserDetails.asObservable()
+//        .subscribe(onNext: { [weak self] (userDetails) in
+//            guard let strongSelf = self else {return}
+//            strongSelf.socialLogin(user: userDetails)
+//        }, onError: { [weak self] (error) in
+//            guard let strongSelf = self else {return}
+//            strongSelf.showAlert(title: nil, message: error.localizedDescription)
+//        }).disposed(by: rxbag)
+//    }
+//
+//    private func facebookLogin() {
+//        FBLogin.shared.fbUserDetails.asObservable()
+//        .subscribe(onNext: { [weak self] (userDetails) in
+//            guard let strongSelf = self else {return}
+//            strongSelf.socialLogin(user: userDetails)
+//        }, onError: { [weak self] (error) in
+//            guard let strongSelf = self else {return}
+//            strongSelf.showAlert(title: nil, message: error.localizedDescription)
+//        }).disposed(by: rxbag)
+//    }
+//
+//    fileprivate func socialLogin(user :SocialUserDetails) {
+//        //print(user.type)
+//        print(user.name)
+//        print(user.email)
+//    }
+//
+//    func showAlert(title : String?, message : String?, handler: ((UIAlertController) -> Void)? = nil){
+//        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+//        alertController.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action) in
+//            handler?(alertController)
+//        }))
+//        self.present(alertController, animated: true, completion: nil)
+//    }
+//}
 
