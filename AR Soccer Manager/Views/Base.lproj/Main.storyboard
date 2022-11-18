@@ -197,8 +197,8 @@
                                 <rect key="frame" x="80" y="32" width="32" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" systemColor="labelColor"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" image="return.png"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="return.png"/>
                                 <connections>
                                     <segue destination="XSs-DF-FS2" kind="show" id="b3Z-PR-xWG"/>
                                 </connections>
@@ -380,8 +380,8 @@
                                 <rect key="frame" x="93" y="47" width="41" height="41"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" image="return.png"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="return.png"/>
                                 <connections>
                                     <segue destination="SHM-KX-0aR" kind="show" id="dxt-Kz-p0F"/>
                                 </connections>
@@ -578,8 +578,8 @@
                                 <rect key="frame" x="91" y="53" width="32" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" systemColor="labelColor"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" image="return.png"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="return.png"/>
                                 <connections>
                                     <segue destination="XSs-DF-FS2" kind="show" id="e81-JE-43u"/>
                                 </connections>
@@ -837,8 +837,8 @@
                                 <rect key="frame" x="73" y="36" width="32" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" systemColor="labelColor"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" image="return.png"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="return.png"/>
                                 <connections>
                                     <segue destination="XSs-DF-FS2" kind="show" id="B5a-Rc-EqZ"/>
                                 </connections>
@@ -1096,8 +1096,8 @@
                                 <rect key="frame" x="85" y="47" width="32" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" systemColor="labelColor"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" image="return.png"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="return.png"/>
                                 <connections>
                                     <segue destination="Y6W-OH-hqX" kind="show" id="wA8-dq-cq0"/>
                                 </connections>
@@ -1545,8 +1545,8 @@
                                 <rect key="frame" x="72" y="41" width="32" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" systemColor="labelColor"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" image="return.png"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="return.png"/>
                                 <connections>
                                     <segue destination="XSs-DF-FS2" kind="show" id="eEZ-Gf-g9g"/>
                                 </connections>
@@ -1701,8 +1701,8 @@
                                 <rect key="frame" x="95" y="55" width="32" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" systemColor="labelColor"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" image="return.png"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="return.png"/>
                                 <connections>
                                     <segue destination="XSs-DF-FS2" kind="show" id="Xjb-Dd-7Vw"/>
                                 </connections>
@@ -1878,8 +1878,8 @@
                                 <rect key="frame" x="80" y="32" width="32" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" systemColor="labelColor"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" image="return.png"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="return.png"/>
                                 <connections>
                                     <segue destination="XSs-DF-FS2" kind="show" id="ue5-6u-2gW"/>
                                 </connections>
@@ -2004,12 +2004,12 @@
     </scenes>
     <designables>
         <designable name="Zby-Zj-BkF">
-            <size key="intrinsicContentSize" width="91.333333333333329" height="32.666666666666664"/>
+            <size key="intrinsicContentSize" width="71.333333333333329" height="15.666666666666666"/>
         </designable>
     </designables>
     <inferredMetricsTieBreakers>
-        <segue reference="wA8-dq-cq0"/>
-        <segue reference="eEZ-Gf-g9g"/>
+        <segue reference="3HU-hs-Wg3"/>
+        <segue reference="B5a-Rc-EqZ"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Barcelona.png" width="96" height="97.199996948242188"/>

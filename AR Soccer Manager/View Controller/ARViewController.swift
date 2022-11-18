@@ -117,7 +117,7 @@ class ARViewController: UIViewController {
             let simulation = Simulation()
             
             Task{
-                let result = await simulation.runSimulation(homeTeamName: teamName, awayTeamName: "Liverpool")
+                let result = await simulation.runSimulation(homeTeamName: teamName, awayTeamName: oppName)
                 print(teamName)
                 print(result["events"]!)
                 

@@ -36,7 +36,7 @@ class MainVC: UIViewController{
             self.txtWelcome.text="Welcome back \(user?.displayName ?? "User")"
         }
         
-        print(String(decoding: userId!, as: UTF8.self))
+        //print(String(decoding: userId!, as: UTF8.self))
         
 
     }

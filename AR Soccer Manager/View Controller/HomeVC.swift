@@ -55,8 +55,8 @@ class HomeVC: UIViewController{
     
     @IBAction func startBtn(sender: Any){
         
-        loading = true
-        loadingView()
+        self.loading = true
+        self.loadingView()
         
         let vc=storyboard?.instantiateViewController(withIdentifier: "ARViewController") as! ARViewController
         vc.teamName = txtUserClub
