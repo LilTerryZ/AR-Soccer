@@ -38,7 +38,7 @@ class LoginVC: UIViewController {
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "Homebcg.jpg")!)
         
         let userId = userDefault.getInfo(itemID: "userId")
-        print(String(decoding: userId!, as: UTF8.self))
+//        print(String(decoding: userId!, as: UTF8.self))
         
         if(userId != nil){
             let vc = self.storyboard?.instantiateViewController(withIdentifier: "MainVC") as! MainVC
@@ -67,7 +67,10 @@ class LoginVC: UIViewController {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: animated)
     }
-    
+
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?){
+        self.view.endEditing(true)
+    }
     
     
     func Verify(){
