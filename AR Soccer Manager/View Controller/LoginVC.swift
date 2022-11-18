@@ -107,7 +107,7 @@ class LoginVC: UIViewController {
     func Verify(){
         if self.email.text != "" && self.passwd.text != ""{
             if(self.isValidEmailAddr(strToValidate: self.email.text!)==true){
-                Auth.auth().signIn(withEmail: self.email.text!, password: self.passwd.text!) { (res, err) in
+                Auth.auth().signIn(withEmail: self.email.text!, password: self.passwd.text!) { [self] (res, err) in
                     if err != nil{
                         let alert = UIAlertController(title: "Login Error", message: "The email or password is incorrect", preferredStyle: UIAlertController.Style.alert)
                         alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
@@ -120,22 +120,28 @@ class LoginVC: UIViewController {
                     
                     UserDefaults.standard.set(true, forKey: "status")
                     NotificationCenter.default.post(name: NSNotification.Name("status"), object: nil)
+                    
+                    
+                    
+                    
+                    let user = Auth.auth().currentUser
+                    if let user = user {
+                        // The user's ID, unique to the Firebase project.
+                        // Do NOT use this value to authenticate with your backend server,
+                        // if you have one. Use getTokenWithCompletion:completion: instead.
+                        let uid = user.uid
+                        let email = user.email
+                        let photoURL = user.photoURL
+                    }
+                    
+                    
+                    print(user)
+                    self.userDefault.removeInfo(itemID: "userId")
+                    self.userDefault.storeInfo(itemID: "userId", data: user?.uid.data(using: .utf8) as! Data)
+                    
+                    
                 }
-                let user = Auth.auth().currentUser
-                if let user = user {
-                    // The user's ID, unique to the Firebase project.
-                    // Do NOT use this value to authenticate with your backend server,
-                    // if you have one. Use getTokenWithCompletion:completion: instead.
-                    let uid = user.uid
-                    let email = user.email
-                    let photoURL = user.photoURL
-                }
-                
-                
-                
-                userDefault.removeInfo(itemID: "userId")
-                userDefault.storeInfo(itemID: "userId", data: user?.uid.data(using: .utf8) as! Data)
-                
+            
                 
                 let vc = self.storyboard?.instantiateViewController(withIdentifier: "MainVC") as! MainVC
                 vc.modalPresentationStyle = .fullScreen
