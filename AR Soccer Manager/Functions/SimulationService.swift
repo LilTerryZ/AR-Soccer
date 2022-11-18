@@ -16,7 +16,14 @@ class Simulation{
             return ["Error": "Invalid URL"]
         }
         print(homeTeamName, awayTeamName)
-        let body = ["homeTeam": ["name": homeTeamName],"awayTeam": ["name": awayTeamName]]
+        
+        let userDefault = UserRepository()
+        
+        let userId = userDefault.getInfo(itemID: "userId")
+        print(String(decoding: userId!, as: UTF8.self))
+        
+        let body = ["homeTeam": ["name": homeTeamName],"awayTeam": ["name": awayTeamName], "leagueName" : "Premier League", "userId": String(decoding: userId!, as: UTF8.self)] as [String : Any]
+        
         let requestBodyJson = try? JSONSerialization.data(withJSONObject: body)
 
         var request = URLRequest(url: url)
