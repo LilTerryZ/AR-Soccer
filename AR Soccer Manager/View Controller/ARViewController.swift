@@ -115,6 +115,7 @@ class ARViewController: UIViewController {
 
         func runSimulation() {
             let simulation = Simulation()
+            print(oppName)
             
             Task{
                 let result = await simulation.runSimulation(homeTeamName: teamName, awayTeamName: oppName)
@@ -372,10 +373,16 @@ class ARViewController: UIViewController {
             let blue = SimpleMaterial(color: .blue, isMetallic: false)
             //Kickoff
             //Pass and Receiver
+            let hgk1 = koAnchor.homeGK1?.children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0] as! ModelEntity
+            
+            let agk1 = koAnchor.awayGK1?.children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0] as! ModelEntity
+            
             let passer = koAnchor.homePass?.children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0] as! ModelEntity
             
             let receiver = koAnchor.homeRec?.children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0] as! ModelEntity
             
+            hgk1.model?.materials = [red]
+            agk1.model?.materials = [blue]
             passer.model?.materials = [red]
             receiver.model?.materials = [red]
             
@@ -406,6 +413,10 @@ class ARViewController: UIViewController {
             awayI5.model?.materials = [blue]
             
             //Dribble
+            let hgk2 = dribbleAnchor.homeGK2?.children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0] as! ModelEntity
+            
+            let agk2 = dribbleAnchor.awayGK2?.children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0] as! ModelEntity
+            
             let drib1 = dribbleAnchor.drib1?.children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0] as! ModelEntity
             
             let drib2 = dribbleAnchor.drib2?.children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0] as! ModelEntity
@@ -413,10 +424,26 @@ class ARViewController: UIViewController {
             let drib3 = dribbleAnchor.drib3?.children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0] as! ModelEntity
             
             let drib4 = dribbleAnchor.drib4?.children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0] as! ModelEntity
+            
+            let drib5 = dribbleAnchor.drib5?.children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0] as! ModelEntity
+            
+            let drib6 = dribbleAnchor.drib6?.children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0] as! ModelEntity
+            
+            let drib7 = dribbleAnchor.drib7?.children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0] as! ModelEntity
+            
+            let drib8 = dribbleAnchor.drib8?.children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0] as! ModelEntity
             drib1.model?.materials = [red]
             drib2.model?.materials = [red]
             drib3.model?.materials = [red]
             drib4.model?.materials = [red]
+            drib5.model?.materials = [red]
+            drib6.model?.materials = [red]
+            drib7.model?.materials = [red]
+            drib8.model?.materials = [red]
+            hgk2.model?.materials = [red]
+            agk2.model?.materials = [blue]
+            
+            
             
             //Home Tackle
             let TD1 = tackleAnchor.tH1?.children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0] as! ModelEntity
@@ -431,12 +458,27 @@ class ARViewController: UIViewController {
             
             let TA6 = tackleAnchor.tH6?.children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0] as! ModelEntity
             
+            let TD7 = tackleAnchor.tH7?.children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0] as! ModelEntity
+           
+            let TD8 = tackleAnchor.tH8?.children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0] as! ModelEntity
+            
+            let TD9 = tackleAnchor.tH9?.children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0] as! ModelEntity
+            
+            let hgk3 = tackleAnchor.homeGK3?.children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0] as! ModelEntity
+            
+            let agk3 = tackleAnchor.awayGK3?.children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0] as! ModelEntity
+            
             TD1.model?.materials = [blue]
             TD2.model?.materials = [blue]
             TD3.model?.materials = [blue]
             TD4.model?.materials = [blue]
             TD5.model?.materials = [blue]
+            TD7.model?.materials = [blue]
+            TD8.model?.materials = [blue]
+            TD9.model?.materials = [blue]
             TA6.model?.materials = [red]
+            hgk3.model?.materials = [red]
+            agk3.model?.materials = [blue]
             
             //Away tackle
             let TA1 = tackleAnchor2.tA1?.children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0] as! ModelEntity
@@ -449,7 +491,17 @@ class ARViewController: UIViewController {
            
             let TA5 = tackleAnchor2.tA5?.children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0] as! ModelEntity
             
-            let TD6 = tackleAnchor2.tH6?.children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0] as! ModelEntity
+            let TD6 = tackleAnchor2.tH10?.children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0] as! ModelEntity
+            
+            let TAA6 = tackleAnchor2.tA6?.children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0] as! ModelEntity
+            
+            let TA8 = tackleAnchor2.tA8?.children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0] as! ModelEntity
+           
+            let TA9 = tackleAnchor2.tA9?.children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0] as! ModelEntity
+            
+            //let hgk4 = tackleAnchor2.homeGK4?.children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0] as! ModelEntity
+            
+            //let agk4 = tackleAnchor2.awayGK4?.children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0] as! ModelEntity
             
             TA1.model?.materials = [red]
             TA2.model?.materials = [red]
@@ -457,6 +509,11 @@ class ARViewController: UIViewController {
             TA4.model?.materials = [red]
             TA5.model?.materials = [red]
             TD6.model?.materials = [blue]
+            TAA6.model?.materials = [red]
+            TA8.model?.materials = [red]
+            TA9.model?.materials = [red]
+            //agk4.model?.materials = [red]
+            //hgk4.model?.materials = [blue]
             
             //Home Goal
             let gh1 = goalAnchor.gh1?.children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0] as! ModelEntity
