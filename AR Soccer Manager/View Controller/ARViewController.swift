@@ -499,9 +499,9 @@ class ARViewController: UIViewController {
            
             let TA9 = tackleAnchor2.tA9?.children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0] as! ModelEntity
             
-            //let hgk4 = tackleAnchor2.homeGK4?.children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0] as! ModelEntity
+            let hgk4 = tackleAnchor2.homeGK3?.children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0] as! ModelEntity
             
-            //let agk4 = tackleAnchor2.awayGK4?.children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0] as! ModelEntity
+            let agk4 = tackleAnchor2.awayGK3?.children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0] as! ModelEntity
             
             TA1.model?.materials = [red]
             TA2.model?.materials = [red]
@@ -512,8 +512,8 @@ class ARViewController: UIViewController {
             TAA6.model?.materials = [red]
             TA8.model?.materials = [red]
             TA9.model?.materials = [red]
-            //agk4.model?.materials = [red]
-            //hgk4.model?.materials = [blue]
+            agk4.model?.materials = [red]
+            hgk4.model?.materials = [blue]
             
             //Home Goal
             let gh1 = goalAnchor.gh1?.children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0] as! ModelEntity
@@ -522,9 +522,16 @@ class ARViewController: UIViewController {
             
             let ga2 = goalAnchor.ga2?.children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0] as! ModelEntity
             
+            let ga3 = goalAnchor.ga3?.children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0] as! ModelEntity
+
+            let ga4 = goalAnchor.ga4?.children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0] as! ModelEntity
+
+            
             gh1.model?.materials = [red]
             ga1.model?.materials = [blue]
             ga2.model?.materials = [blue]
+            ga3.model?.materials = [red]
+            ga4.model?.materials = [blue]
             
             //Away goal
             let ag1 = goalAnchor2.ag1?.children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0] as! ModelEntity
@@ -533,9 +540,15 @@ class ARViewController: UIViewController {
             
             let hg2 = goalAnchor2.hg2?.children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0] as! ModelEntity
             
+            let hg3 = goalAnchor2.hg3?.children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0] as! ModelEntity
+
+            let agg2 = goalAnchor2.agg2?.children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0] as! ModelEntity
+            
             ag1.model?.materials = [blue]
+            agg2.model?.materials = [blue]
             hg1.model?.materials = [red]
             hg2.model?.materials = [red]
+            hg3.model?.materials = [red]
             
             //Home save
             let gka1 = saveAnchor.gka1?.children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0] as! ModelEntity
