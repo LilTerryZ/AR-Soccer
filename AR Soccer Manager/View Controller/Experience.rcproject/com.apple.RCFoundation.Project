@@ -415,7 +415,7 @@
                       ],
                       "identifier" : "27DE0B01-94E4-461C-93AA-CF1340DB6ED1",
                       "isEnabled" : true,
-                      "isLooping" : false,
+                      "isLooping" : true,
                       "isModal" : false,
                       "name" : "Behaviour",
                       "triggers" : [
@@ -2493,9 +2493,9 @@
                   0.4799659252166748,
                   0.8771207332611084,
                   0,
-                  -0.29129719734191895,
-                  3.7209475040435791,
-                  2.361398458480835,
+                  -0.28374791145324707,
+                  3.2062695026397705,
+                  2.6431818008422852,
                   1
                 ],
                 "sceneTransform" : [
@@ -2937,7 +2937,7 @@
                       ],
                       "identifier" : "27DE0B01-94E4-461C-93AA-CF1340DB6ED1",
                       "isEnabled" : true,
-                      "isLooping" : false,
+                      "isLooping" : true,
                       "isModal" : false,
                       "name" : "Behaviour",
                       "triggers" : [
@@ -5449,7 +5449,7 @@
                       ],
                       "identifier" : "27DE0B01-94E4-461C-93AA-CF1340DB6ED1",
                       "isEnabled" : true,
-                      "isLooping" : false,
+                      "isLooping" : true,
                       "isModal" : false,
                       "name" : "Behaviour",
                       "triggers" : [
@@ -8093,7 +8093,7 @@
                       ],
                       "identifier" : "27DE0B01-94E4-461C-93AA-CF1340DB6ED1",
                       "isEnabled" : true,
-                      "isLooping" : false,
+                      "isLooping" : true,
                       "isModal" : false,
                       "name" : "Behaviour",
                       "triggers" : [
@@ -10121,9 +10121,9 @@
                   0.65580081939697266,
                   0.74752610921859741,
                   0,
-                  0.51406073570251465,
-                  3.8817546367645264,
-                  0.85480451583862305,
+                  -0.38384139537811279,
+                  3.4004538059234619,
+                  1.1503260135650635,
                   1
                 ],
                 "sceneTransform" : [
@@ -12092,7 +12092,7 @@
                       ],
                       "identifier" : "27DE0B01-94E4-461C-93AA-CF1340DB6ED1",
                       "isEnabled" : true,
-                      "isLooping" : false,
+                      "isLooping" : true,
                       "isModal" : false,
                       "name" : "Behaviour",
                       "triggers" : [
@@ -14830,7 +14830,7 @@
                       ],
                       "identifier" : "27DE0B01-94E4-461C-93AA-CF1340DB6ED1",
                       "isEnabled" : true,
-                      "isLooping" : false,
+                      "isLooping" : true,
                       "isModal" : false,
                       "name" : "Behaviour",
                       "triggers" : [
@@ -17478,7 +17478,7 @@
                       ],
                       "identifier" : "27DE0B01-94E4-461C-93AA-CF1340DB6ED1",
                       "isEnabled" : true,
-                      "isLooping" : false,
+                      "isLooping" : true,
                       "isModal" : false,
                       "name" : "Behaviour",
                       "triggers" : [
@@ -20037,7 +20037,7 @@
                       ],
                       "identifier" : "27DE0B01-94E4-461C-93AA-CF1340DB6ED1",
                       "isEnabled" : true,
-                      "isLooping" : false,
+                      "isLooping" : true,
                       "isModal" : false,
                       "name" : "Behaviour",
                       "triggers" : [
@@ -22368,9 +22368,9 @@
                   0.38988110423088074,
                   0.92078161239624023,
                   0,
-                  -0.43775510787963867,
-                  4.6166057586669922,
-                  4.529850959777832,
+                  -1.1843469142913818,
+                  2.9958996772766113,
+                  5.2261600494384766,
                   1
                 ],
                 "sceneTransform" : [
@@ -22744,7 +22744,7 @@
                       ],
                       "identifier" : "7EB8C5E1-38F5-42ED-82BF-EA18F12C213E",
                       "isEnabled" : true,
-                      "isLooping" : false,
+                      "isLooping" : true,
                       "isModal" : false,
                       "name" : "Behaviour",
                       "triggers" : [
@@ -23953,7 +23953,7 @@
                       ],
                       "identifier" : "7EB8C5E1-38F5-42ED-82BF-EA18F12C213E",
                       "isEnabled" : true,
-                      "isLooping" : false,
+                      "isLooping" : true,
                       "isModal" : false,
                       "name" : "Behaviour",
                       "triggers" : [
@@ -25269,7 +25269,7 @@
                       ],
                       "identifier" : "7EB8C5E1-38F5-42ED-82BF-EA18F12C213E",
                       "isEnabled" : true,
-                      "isLooping" : false,
+                      "isLooping" : true,
                       "isModal" : false,
                       "name" : "Behaviour",
                       "triggers" : [
