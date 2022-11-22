@@ -15,27 +15,10 @@ import FirebaseFirestore
 
 class HomeVC: UIViewController{
    
-    @IBOutlet weak var containerView: UIView!
     
-    @IBOutlet weak var circleA: UIView!
-    @IBOutlet weak var circleB: UIView!
-    @IBOutlet weak var circleD: UIView!
-    @IBOutlet weak var circleC: UIView!
-    
-    lazy var circles: [UIView] = [circleA, circleB, circleC, circleD]
-    var circle = 0
-    var colors: [UIColor] = [UIColor.systemPink, UIColor.systemYellow, UIColor.systemIndigo, UIColor.systemPurple ]
-    lazy var random = Int.random(in: 0...colors.count-1)
-    var loading = false
-    
-    lazy var blurry: UIVisualEffectView = {
-        let blurEffect = UIBlurEffect(style: .regular)
-        let blurEffectView = UIVisualEffectView(effect: blurEffect)
-        blurEffectView.alpha = 0
-        blurEffectView.frame = self.view.bounds
-        blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        return blurEffectView
-    }()
+    @IBOutlet weak var vsImage: UIImageView!
+    @IBOutlet weak var loadingText: UILabel?
+
     
     @IBOutlet weak var oppositeClub: UILabel?
     @IBOutlet weak var userClub: UILabel?
@@ -54,10 +37,16 @@ class HomeVC: UIViewController{
 //    let randomInt = Int.random(in: 1..<73)
     
     @IBAction func startBtn(sender: Any){
-        
-        self.loading = true
-        self.loadingView()
-        
+        Task{
+            vsImage.rotate()
+            loadingText?.isHidden = false
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                self.switchViews()
+            }
+        }
+    }
+    
+    func switchViews() {
         let vc=storyboard?.instantiateViewController(withIdentifier: "ARViewController") as! ARViewController
         vc.teamName = txtUserClub
         vc.oppName = txtOppoClub
@@ -77,7 +66,9 @@ class HomeVC: UIViewController{
 //        }
         self.userClub?.text=txtUserClub
         self.oppositeClub?.text=txtOppoClub
-        setupCirlces()
+        vsImage.image = UIImage(named: "vs")
+        loadingText?.isHidden = true
+        loadingText?.text = "Match now loading!"
         // Do any additional setup after loading the view.
     }
     override func viewWillAppear(_ animated: Bool) {
@@ -96,57 +87,6 @@ class HomeVC: UIViewController{
         self.getData(success: (clubImageData))
     }
        
-    func setupCirlces(){
-        containerView.isUserInteractionEnabled = false
-        circles.forEach{circle in
-            circle.layer.cornerRadius = circle.frame.height / 2
-            circle.backgroundColor = .clear
-        }
-    }
-    
-    func blurView(completion: @escaping (_ success: Bool) -> ()) {
-        
-            self.view.addSubview(blurry)
-            self.view.bringSubviewToFront(blurry)
-            self.view.bringSubviewToFront(containerView)
-            
-    }
-    
-    func nextCircle() {
-        random = Int.random(in: 0...colors.count-1)
-        if circle == circles.count-1{
-            circle = 0
-        } else {
-            circle = circle + 1
-        }
-    }
-    
-    func circlesAnimation(){
-        circles[circle].backgroundColor = colors[random].withAlphaComponent(0)
-        
-        UIView.animate(withDuration: 0.50){
-            self.circles[self.circle].backgroundColor = self.colors[self.random].withAlphaComponent(0.70)
-        } completion: { success in
-            self.circles[self.circle].backgroundColor = self.colors[self.random].withAlphaComponent(0.70)
-            self.nextCircle()
-            if self.loading == true{
-                self.circlesAnimation()
-            }
-        }
-    }
-    
-    func loadingView(){
-        if loading == true {
-            blurView { success in
-                self.circlesAnimation()
-            }
-        } else {
-            if self.view.contains(blurry) {
-                setupCirlces()
-                blurry.removeFromSuperview()
-            }
-        }
-    }
 
     func getData(success:([String: String])){
         let db=Firestore.firestore()
@@ -215,9 +155,18 @@ class HomeVC: UIViewController{
         }
     }
 
-    
-    
-    
+}
+
+extension UIImageView{
+    func rotate() {
+        print("ROTATING")
+        let rotation : CABasicAnimation = CABasicAnimation(keyPath: "transform.rotation.z")
+        rotation.toValue = NSNumber(value: Double.pi * 2)
+        rotation.duration = 10
+        rotation.isCumulative = true
+        rotation.repeatCount = Float.greatestFiniteMagnitude
+        self.layer.add(rotation, forKey: "rotationAnimation")
+    }
 }
 
 
