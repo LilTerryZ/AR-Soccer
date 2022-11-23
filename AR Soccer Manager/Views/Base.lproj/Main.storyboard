@@ -1079,17 +1079,13 @@
                     </view>
                     <navigationItem key="navigationItem" id="VfZ-cD-Tt2"/>
                     <connections>
-                        <outlet property="circleA" destination="SL1-nk-MSc" id="0MG-iW-Pss"/>
-                        <outlet property="circleB" destination="g6N-3D-dgX" id="ftF-tw-WOM"/>
-                        <outlet property="circleC" destination="7Ya-xc-t17" id="Cvs-xV-R9o"/>
-                        <outlet property="circleD" destination="G8k-OI-SEi" id="xNh-NL-FG6"/>
-                        <outlet property="containerView" destination="7dB-Zo-SLC" id="Vu6-MC-0Vc"/>
                         <outlet property="oppositeClub" destination="kxv-Hb-CBD" id="oEU-ul-sMB"/>
                         <outlet property="oppositeClubLogo" destination="Unc-fG-xDR" id="xhy-lF-zj3"/>
                         <outlet property="oppositeName" destination="eti-Z1-dDp" id="slQ-nJ-yLV"/>
                         <outlet property="userClub" destination="8WJ-Bq-rsx" id="3qU-kF-F3N"/>
                         <outlet property="userClubLogo" destination="v79-KB-dSI" id="c9k-OF-7ld"/>
                         <outlet property="userName" destination="sHl-55-m3u" id="M1i-BE-3GD"/>
+                        <outlet property="vsImage" destination="nR9-1B-RDG" id="DYb-rA-dcG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -2069,12 +2065,12 @@
     </scenes>
     <designables>
         <designable name="Zby-Zj-BkF">
-            <size key="intrinsicContentSize" width="91.333333333333329" height="32.666666666666664"/>
+            <size key="intrinsicContentSize" width="71.333333333333329" height="15.666666666666666"/>
         </designable>
     </designables>
     <inferredMetricsTieBreakers>
         <segue reference="3HU-hs-Wg3"/>
-        <segue reference="8UA-wQ-jdc"/>
+        <segue reference="We3-Jl-08n"/>
         <segue reference="e81-JE-43u"/>
     </inferredMetricsTieBreakers>
     <resources>
