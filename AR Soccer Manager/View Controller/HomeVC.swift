@@ -71,7 +71,7 @@ class HomeVC: UIViewController{
         self.oppositeClub?.text=txtOppoClub
         vsImage.image = UIImage(named: "vs")
         loadingText?.isHidden = true
-        loadingText?.text = "Match now loading!"
+        loadingText?.text = "Match is now loading!"
         // Do any additional setup after loading the view.
     }
     override func viewWillAppear(_ animated: Bool) {
