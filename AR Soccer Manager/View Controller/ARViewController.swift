@@ -108,8 +108,8 @@ class ARViewController: UIViewController {
         let koAnchor = try! Experience.loadKickoff()
         setPlayerColours()
         
-        self.homeScore?.text = "Home: \(hScore)"
-        self.awayScore?.text = "Away: \(aScore)"
+        self.homeScore?.text = "\(self.teamName): \(hScore)"
+        self.awayScore?.text = "\(self.oppName): \(aScore)"
         
         runSimulation()
 

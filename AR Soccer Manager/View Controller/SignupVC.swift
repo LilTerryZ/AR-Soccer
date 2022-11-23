@@ -50,7 +50,7 @@ class SignupVC: UIViewController {
                                 
                                 if err != nil{
                                     
-                                    let alert = UIAlertController(title: "Error", message: "Please fill all the credential property", preferredStyle: UIAlertController.Style.alert)
+                                    let alert = UIAlertController(title: "Error", message: "The email has been registered", preferredStyle: UIAlertController.Style.alert)
                                     alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
                                     self.present(alert, animated: true, completion: nil)
                                     

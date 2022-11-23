@@ -50,7 +50,6 @@ class LoginVC: UIViewController {
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "Homebcg.jpg")!)
         
         passwd.isSecureTextEntry = true
-        
         if(txtEmail != ""){self.email.text=txtEmail}
         
         let userId = userDefault.getInfo(itemID: "userId")
@@ -125,28 +124,26 @@ class LoginVC: UIViewController {
                     
                     
                     let user = Auth.auth().currentUser
-                    if let user = user {
+                  //  if let user = user {
                         // The user's ID, unique to the Firebase project.
                         // Do NOT use this value to authenticate with your backend server,
                         // if you have one. Use getTokenWithCompletion:completion: instead.
-                        let uid = user.uid
-                        let email = user.email
-                        let photoURL = user.photoURL
-                    }
+                        //let uid = user.uid
+                       // let email = user.email
+                      //  let photoURL = user.photoURL
+                    //}
                     
                     
                     print(user)
                     self.userDefault.removeInfo(itemID: "userId")
                     self.userDefault.storeInfo(itemID: "userId", data: user?.uid.data(using: .utf8) as! Data)
                     
-                    
+                    let vc = self.storyboard?.instantiateViewController(withIdentifier: "MainVC") as! MainVC
+                       vc.modalPresentationStyle = .fullScreen
+                       present(vc,animated: true,completion: nil)
+                       
                 }
-            
-                
-                let vc = self.storyboard?.instantiateViewController(withIdentifier: "MainVC") as! MainVC
-                vc.modalPresentationStyle = .fullScreen
-                present(vc,animated: true,completion: nil)
-                
+       
             }else{
                 let alert = UIAlertController(title: "Login Error", message: "The email format is incorrect", preferredStyle: UIAlertController.Style.alert)
                 alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))

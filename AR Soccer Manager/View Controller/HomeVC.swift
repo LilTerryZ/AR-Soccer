@@ -42,6 +42,7 @@ class HomeVC: UIViewController{
     @IBOutlet weak var oppositeName: UILabel!
     @IBOutlet weak var oppositeClubLogo: UIImageView?
     @IBOutlet weak var userName: UILabel?
+    
     @IBOutlet weak var userClubLogo: UIImageView?
     //let vc = PickerVC()
     var clubImageData=[String: String]()
@@ -75,6 +76,8 @@ class HomeVC: UIViewController{
 //        vc.completionHandler={text in
 //            self.userClub?.text=text
 //        }
+        self.userName?.isHidden=true
+        self.oppositeName.isHidden=true
         self.userClub?.text=txtUserClub
         self.oppositeClub?.text=txtOppoClub
         setupCirlces()
