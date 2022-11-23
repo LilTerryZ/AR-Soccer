@@ -37,6 +37,8 @@ class ARViewController: UIViewController {
     var simAS = 0
     
     var eventsList = ["events"]
+    
+    var gameStatus = true
 
         
    @IBOutlet weak var resultBtn: UIButton!
@@ -62,6 +64,7 @@ class ARViewController: UIViewController {
     }
     
     @IBAction func skipBtn(sender: Any){
+        self.gameStatus = false
         let vc=storyboard?.instantiateViewController(withIdentifier: "ResultVC") as! ResultVC
         vc.txtUserScore=String(simHS)
         vc.txtOppositeScore=String(simAS)
@@ -115,12 +118,9 @@ class ARViewController: UIViewController {
 
         func runSimulation() {
             let simulation = Simulation()
-            print(oppName)
             
-            Task{
+           Task{
                 let result = await simulation.runSimulation(homeTeamName: teamName, awayTeamName: oppName)
-                print(teamName)
-                print(result["events"]!)
                 
                 let events = result["events"]
                 
@@ -200,131 +200,170 @@ class ARViewController: UIViewController {
                 print(oppPasses)
                 skipBtn.isHidden=false
                 
-                for event in events as! [String] {
-                    if event == "HA" {
-                        arView.scene.anchors.append(dribbleAnchor)
-                        eventChange(text: "\(teamName) is trying to make some moves!")
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 6.57) {
-                            print("Removing")
-                            self.arView.scene.anchors.removeAll()
-                            self.arView.scene.removeAnchor(dribbleAnchor)
+                    for event in events as! [String] {
+                        if event == "HA" {
+                            arView.scene.anchors.append(dribbleAnchor)
+                            eventChange(text: "\(teamName) is trying to make some moves!")
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 6.57) {
+                                print("Removing")
+                                self.arView.scene.anchors.removeAll()
+                                self.arView.scene.removeAnchor(dribbleAnchor)
+                            }
+                            if self.gameStatus == false{
+                                break
+                            }
+                            try await Task.sleep(nanoseconds: 7000000000)
+                        } else if event == "AT" {
+                            arView.scene.anchors.append(passAnchor)
+                            eventChange(text: "\(oppName) presses the attack!")
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 6.57) {
+                                print("Removing")
+                                self.arView.scene.anchors.removeAll()
+                                self.arView.scene.removeAnchor(passAnchor)
+                            }
+                            if self.gameStatus == false{
+                                break
+                            }
+                            try await Task.sleep(nanoseconds: 7000000000)
+                        } else if event == "HDC" {
+                            arView.scene.anchors.append(tackleAnchor)
+                            eventChange(text: "An excellent steal by \(teamName)")
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 5.4) {
+                                print("Removing")
+                                self.arView.scene.anchors.removeAll()
+                                self.arView.scene.removeAnchor(tackleAnchor)
+                            }
+                            if self.gameStatus == false{
+                                break
+                            }
+                            try await Task.sleep(nanoseconds: 6000000000)
+                        } else if event == "ADC" {
+                            arView.scene.anchors.append(tackleAnchor2)
+                            eventChange(text: "An amazing tackle from \(oppName)")
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 5.4) {
+                                print("Removing")
+                                self.arView.scene.anchors.removeAll()
+                                self.arView.scene.removeAnchor(tackleAnchor2)
+                            }
+                            if self.gameStatus == false{
+                                break
+                            }
+                            try await Task.sleep(nanoseconds: 6000000000)
+                        } else if event == "HMC" {
+                            arView.scene.anchors.append(passIAnchor)
+                            eventChange(text: "\(oppName) has stolen possesion from \(teamName)!")
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 3.71) {
+                                print("Removing")
+                                self.arView.scene.anchors.removeAll()
+                                self.arView.scene.removeAnchor(passIAnchor)
+                            }
+                            if self.gameStatus == false{
+                                break
+                            }
+                            try await Task.sleep(nanoseconds: 4000000000)
+                        } else if event == "AMC" {
+                            arView.scene.anchors.append(passIAnchor2)
+                            eventChange(text: "\(teamName) intercepts \(oppName)'s pass!")
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 3.71) {
+                                print("Removing")
+                                self.arView.scene.anchors.removeAll()
+                                self.arView.scene.removeAnchor(passIAnchor)
+                            }
+                            if self.gameStatus == false{
+                                break
+                            }
+                            try await Task.sleep(nanoseconds: 4000000000)
+                        } else if event == "HS" {
+                            homeScore()
+                            arView.scene.anchors.append(goalAnchor)
+                            eventChange(text: "\(teamName) has scored!")
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 6.2) {
+                                print("Removing")
+                                self.arView.scene.anchors.removeAll()
+                                self.arView.scene.removeAnchor(goalAnchor)
+                            }
+                            if self.gameStatus == false{
+                                break
+                            }
+                            try await Task.sleep(nanoseconds: 7000000000)
+                        } else if event == "AS" {
+                            awayScore()
+                            arView.scene.anchors.append(goalAnchor2)
+                            eventChange(text: "\(oppName) has scored!")
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 6.2) {
+                                print("Removing")
+                                self.arView.scene.anchors.removeAll()
+                                self.arView.scene.removeAnchor(goalAnchor2)
+                            }
+                            if self.gameStatus == false{
+                                break
+                            }
+                            try await Task.sleep(nanoseconds: 7000000000)
+                        } else if event == "HGKS" {
+                            arView.scene.anchors.append(saveAnchor)
+                            eventChange(text: "\(teamName) has blocked \(oppName)'s shot!")
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 6) {
+                                print("Removing")
+                                self.arView.scene.anchors.removeAll()
+                                self.arView.scene.removeAnchor(saveAnchor)
+                            }
+                            if self.gameStatus == false{
+                                break
+                            }
+                            try await Task.sleep(nanoseconds: 7000000000)
+                        } else if event == "AGKS" {
+                            arView.scene.anchors.append(saveAnchor2)
+                            eventChange(text: "\(oppName) has blocked \(teamName)'s shot!")
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 6) {
+                                print("Removing")
+                                self.arView.scene.anchors.removeAll()
+                                self.arView.scene.removeAnchor(saveAnchor2)
+                            }
+                            if self.gameStatus == false{
+                                break
+                            }
+                            try await Task.sleep(nanoseconds: 7000000000)
+                            
+                        } else if event == "HT" {
+                            arView.scene.anchors.append(koAnchor)
+                            eventChange(text: "HALF TIME")
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 7.2) {
+                                print("Removing")
+                                self.arView.scene.anchors.removeAll()
+                                self.arView.scene.removeAnchor(koAnchor)
+                            }
+                            if self.gameStatus == false{
+                                break
+                            }
+                            try await Task.sleep(nanoseconds: 8000000000)
+                            
+                        } else if event == "FT" {
+                            arView.scene.anchors.append(koAnchor)
+                            eventChange(text: "MATCH DONE")
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 7.2) {
+                                print("Removing")
+                                self.arView.scene.anchors.removeAll()
+                                self.arView.scene.removeAnchor(koAnchor)
+                            }
+                            if self.gameStatus == false{
+                                break
+                            }
+                            try await Task.sleep(nanoseconds: 8000000000)
+                            
+                        } else if event == "KF"  {
+                            arView.scene.anchors.append(koAnchor)
+                            eventChange(text: "Kickoff")
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 7.2) {
+                                print("Removing")
+                                self.arView.scene.anchors.removeAll()
+                                self.arView.scene.removeAnchor(koAnchor)
+                            }
+                            if self.gameStatus == false{
+                                break
+                            }
+                            try await Task.sleep(nanoseconds: 8000000000)
                         }
-                        try await Task.sleep(nanoseconds: 7000000000)
-                    } else if event == "AT" {
-                        arView.scene.anchors.append(passAnchor)
-                        eventChange(text: "\(oppName) presses the attack!")
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 6.57) {
-                            print("Removing")
-                            self.arView.scene.anchors.removeAll()
-                            self.arView.scene.removeAnchor(passAnchor)
-                        }
-                        try await Task.sleep(nanoseconds: 7000000000)
-                    } else if event == "HDC" {
-                        arView.scene.anchors.append(tackleAnchor)
-                        eventChange(text: "An excellent steal by \(teamName)")
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 5.4) {
-                            print("Removing")
-                            self.arView.scene.anchors.removeAll()
-                            self.arView.scene.removeAnchor(tackleAnchor)
-                        }
-                        try await Task.sleep(nanoseconds: 6000000000)
-                    } else if event == "ADC" {
-                        arView.scene.anchors.append(tackleAnchor2)
-                        eventChange(text: "An amazing tackle from \(oppName)")
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 5.4) {
-                            print("Removing")
-                            self.arView.scene.anchors.removeAll()
-                            self.arView.scene.removeAnchor(tackleAnchor2)
-                        }
-                        try await Task.sleep(nanoseconds: 6000000000)
-                    } else if event == "HMC" {
-                        arView.scene.anchors.append(passIAnchor)
-                        eventChange(text: "\(oppName) has stolen possesion from \(teamName)!")
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 3.71) {
-                            print("Removing")
-                            self.arView.scene.anchors.removeAll()
-                            self.arView.scene.removeAnchor(passIAnchor)
-                        }
-                        try await Task.sleep(nanoseconds: 4000000000)
-                    } else if event == "AMC" {
-                        arView.scene.anchors.append(passIAnchor2)
-                        eventChange(text: "\(teamName) intercepts \(oppName)'s pass!")
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 3.71) {
-                            print("Removing")
-                            self.arView.scene.anchors.removeAll()
-                            self.arView.scene.removeAnchor(passIAnchor)
-                        }
-                        try await Task.sleep(nanoseconds: 4000000000)
-                    } else if event == "HS" {
-                        homeScore()
-                        arView.scene.anchors.append(goalAnchor)
-                        eventChange(text: "\(teamName) has scored!")
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 6.2) {
-                            print("Removing")
-                            self.arView.scene.anchors.removeAll()
-                            self.arView.scene.removeAnchor(goalAnchor)
-                        }
-                        try await Task.sleep(nanoseconds: 7000000000)
-                    } else if event == "AS" {
-                        awayScore()
-                        arView.scene.anchors.append(goalAnchor2)
-                        eventChange(text: "\(oppName) has scored!")
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 6.2) {
-                            print("Removing")
-                            self.arView.scene.anchors.removeAll()
-                            self.arView.scene.removeAnchor(goalAnchor2)
-                        }
-                        try await Task.sleep(nanoseconds: 7000000000)
-                    } else if event == "HGKS" {
-                        arView.scene.anchors.append(saveAnchor)
-                        eventChange(text: "\(teamName) has blocked \(oppName)'s shot!")
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 6) {
-                            print("Removing")
-                            self.arView.scene.anchors.removeAll()
-                            self.arView.scene.removeAnchor(saveAnchor)
-                        }
-                        try await Task.sleep(nanoseconds: 7000000000)
-                    } else if event == "AGKS" {
-                        arView.scene.anchors.append(saveAnchor2)
-                        eventChange(text: "\(oppName) has blocked \(teamName)'s shot!")
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 6) {
-                            print("Removing")
-                            self.arView.scene.anchors.removeAll()
-                            self.arView.scene.removeAnchor(saveAnchor2)
-                        }
-                        try await Task.sleep(nanoseconds: 7000000000)
-                        
-                    } else if event == "HT" {
-                        arView.scene.anchors.append(koAnchor)
-                        eventChange(text: "HALF TIME")
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 7.2) {
-                            print("Removing")
-                            self.arView.scene.anchors.removeAll()
-                            self.arView.scene.removeAnchor(koAnchor)
-                        }
-                        try await Task.sleep(nanoseconds: 8000000000)
-                        
-                    } else if event == "FT" {
-                        arView.scene.anchors.append(koAnchor)
-                        eventChange(text: "MATCH DONE")
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 7.2) {
-                            print("Removing")
-                            self.arView.scene.anchors.removeAll()
-                            self.arView.scene.removeAnchor(koAnchor)
-                        }
-                        try await Task.sleep(nanoseconds: 8000000000)
-                        
-                    } else if event == "KF"  {
-                        arView.scene.anchors.append(koAnchor)
-                        eventChange(text: "Kickoff")
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 7.2) {
-                            print("Removing")
-                            self.arView.scene.anchors.removeAll()
-                            self.arView.scene.removeAnchor(koAnchor)
-                        }
-                        try await Task.sleep(nanoseconds: 8000000000)
                     }
-                }
                 resultBtn.isHidden=false
             }
             

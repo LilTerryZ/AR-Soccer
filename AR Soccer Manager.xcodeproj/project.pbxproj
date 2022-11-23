@@ -16,6 +16,7 @@
 		C552606928FB9F2600065A60 /* SimulationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C552606728FB9F2600065A60 /* SimulationService.swift */; };
 		C552606A28FB9F2600065A60 /* ARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C552606828FB9F2600065A60 /* ARViewController.swift */; };
 		C552606C28FB9F3F00065A60 /* Experience.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = C552606B28FB9F3F00065A60 /* Experience.rcproject */; };
+		C570100D292C77E100DA9B3B /* spinner.gif in Resources */ = {isa = PBXBuildFile; fileRef = C570100C292C77E100DA9B3B /* spinner.gif */; };
 		EB1217302922E4AD00AD47D1 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB12172F2922E4AD00AD47D1 /* LoginVC.swift */; };
 		EB12173229231F2D00AD47D1 /* SignupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB12173129231F2D00AD47D1 /* SignupVC.swift */; };
 		EB1217342923246100AD47D1 /* logo.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = EB1217332923246100AD47D1 /* logo.jpeg */; };
@@ -117,6 +118,7 @@
 		C552606728FB9F2600065A60 /* SimulationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimulationService.swift; sourceTree = "<group>"; };
 		C552606828FB9F2600065A60 /* ARViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARViewController.swift; sourceTree = "<group>"; };
 		C552606B28FB9F3F00065A60 /* Experience.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Experience.rcproject; sourceTree = "<group>"; };
+		C570100C292C77E100DA9B3B /* spinner.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = spinner.gif; sourceTree = "<group>"; };
 		EB12172F2922E4AD00AD47D1 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		EB12173129231F2D00AD47D1 /* SignupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupVC.swift; sourceTree = "<group>"; };
 		EB1217332923246100AD47D1 /* logo.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = logo.jpeg; sourceTree = "<group>"; };
@@ -222,6 +224,7 @@
 		EB37FC4828D15F9800D7F714 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				C570100C292C77E100DA9B3B /* spinner.gif */,
 				EB1217332923246100AD47D1 /* logo.jpeg */,
 				EBE5588A2913731700B8B68C /* 1.png */,
 				EB749CA428EA5EC000BAAD15 /* play.png */,
@@ -537,6 +540,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C570100D292C77E100DA9B3B /* spinner.gif in Resources */,
 				EB1F41D528DE072F006B2F94 /* settings.png in Resources */,
 				EB1217342923246100AD47D1 /* logo.jpeg in Resources */,
 				EB37FC5628D1767E00D7F714 /* vs.png in Resources */,
