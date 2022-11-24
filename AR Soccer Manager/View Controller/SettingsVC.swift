@@ -5,8 +5,6 @@
 //  Created by Haonan Zhang on 2022-10-02.
 //
 
-//  blackSnow by airtone (c) copyright 2021 Licensed under a Creative Commons Attribution (3.0) license. http://dig.ccmixter.org/files/airtone/63513
-
 import Foundation
 import UIKit
 import FirebaseAuth

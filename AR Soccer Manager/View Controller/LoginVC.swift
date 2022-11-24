@@ -79,8 +79,7 @@ class LoginVC: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: animated)
-//        handle = Auth.auth().addStateDidChangeListener { auth, user in
-//      
+//        handle = Auth.auth().addStateDidChangeListener { auth, user in    
 //        }
     }
     
