@@ -12,7 +12,6 @@ import FirebaseAuth
 
 
 class LoginVC: UIViewController {
-
     @IBOutlet weak var email: UITextField!
     @IBOutlet weak var passwd: UITextField!
     @IBOutlet weak var signInBtn: UIButton!
@@ -48,6 +47,7 @@ class LoginVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "Homebcg.jpg")!)
+        MusicPlayer.shared.startBackgroundMusic()
         
         passwd.isSecureTextEntry = true
         if(txtEmail != ""){self.email.text=txtEmail}
@@ -74,14 +74,11 @@ class LoginVC: UIViewController {
 //            RRGoogleLogin.shared.googleSignIn(viewController: strongSelf)
 //        }.disposed(by: rxbag)
 //    }
-
-
     }
-    
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: animated)
-        
 //        handle = Auth.auth().addStateDidChangeListener { auth, user in
 //      
 //        }

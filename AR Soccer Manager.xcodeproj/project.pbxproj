@@ -14,6 +14,7 @@
 		C552606A28FB9F2600065A60 /* ARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C552606828FB9F2600065A60 /* ARViewController.swift */; };
 		C552606C28FB9F3F00065A60 /* Experience.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = C552606B28FB9F3F00065A60 /* Experience.rcproject */; };
 		C570100D292C77E100DA9B3B /* spinner.gif in Resources */ = {isa = PBXBuildFile; fileRef = C570100C292C77E100DA9B3B /* spinner.gif */; };
+		EB0B2E3D292F0E60001C028E /* music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EB0B2E3C292F0E60001C028E /* music.mp3 */; };
 		EB1217302922E4AD00AD47D1 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB12172F2922E4AD00AD47D1 /* LoginVC.swift */; };
 		EB12173229231F2D00AD47D1 /* SignupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB12173129231F2D00AD47D1 /* SignupVC.swift */; };
 		EB1217342923246100AD47D1 /* logo.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = EB1217332923246100AD47D1 /* logo.jpeg */; };
@@ -135,6 +136,7 @@
 		C552606828FB9F2600065A60 /* ARViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARViewController.swift; sourceTree = "<group>"; };
 		C552606B28FB9F3F00065A60 /* Experience.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Experience.rcproject; sourceTree = "<group>"; };
 		C570100C292C77E100DA9B3B /* spinner.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = spinner.gif; sourceTree = "<group>"; };
+		EB0B2E3C292F0E60001C028E /* music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = music.mp3; sourceTree = "<group>"; };
 		EB12172F2922E4AD00AD47D1 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		EB12173129231F2D00AD47D1 /* SignupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupVC.swift; sourceTree = "<group>"; };
 		EB1217332923246100AD47D1 /* logo.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = logo.jpeg; sourceTree = "<group>"; };
@@ -253,6 +255,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EB0B2E3B292F0E4D001C028E /* Music */ = {
+			isa = PBXGroup;
+			children = (
+				EB0B2E3C292F0E60001C028E /* music.mp3 */,
+			);
+			path = Music;
+			sourceTree = "<group>";
+		};
 		EB37FC4828D15F9800D7F714 /* Images */ = {
 			isa = PBXGroup;
 			children = (
@@ -322,6 +332,7 @@
 		EBD9BB8328D11CFE007E75D9 /* AR Soccer Manager */ = {
 			isa = PBXGroup;
 			children = (
+				EB0B2E3B292F0E4D001C028E /* Music */,
 				EBF59DD328F912DE00CE4A14 /* Model */,
 				EBF59DB228F8F6F000CE4A14 /* GoogleService-Info.plist */,
 				EBD9BBBB28D11D7D007E75D9 /* Views */,
@@ -598,6 +609,7 @@
 				EB1F41D328DE032F006B2F94 /* return.png in Resources */,
 				EBD9BB9128D11D00007E75D9 /* Assets.xcassets in Resources */,
 				EB647C6928D40E890000B8A3 /* Homebcg.jpg in Resources */,
+				EB0B2E3D292F0E60001C028E /* music.mp3 in Resources */,
 				EBE5588B2913731700B8B68C /* 1.png in Resources */,
 				EB37FC6628D17E5D00D7F714 /* Barcelona.png in Resources */,
 				EB37FC6028D17A7200D7F714 /* Sell.png in Resources */,
@@ -854,7 +866,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = S96YGH2XSQ;
+				DEVELOPMENT_TEAM = 9963RQX256;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "AR Soccer Manager/Info.plist";
 				INFOPLIST_KEY_NSCameraUsageDescription = "Allow AR Soccer Manager to access your camera for simulation purposes.";
@@ -883,7 +895,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = S96YGH2XSQ;
+				DEVELOPMENT_TEAM = 9963RQX256;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "AR Soccer Manager/Info.plist";
 				INFOPLIST_KEY_NSCameraUsageDescription = "Allow AR Soccer Manager to access your camera for simulation purposes.";

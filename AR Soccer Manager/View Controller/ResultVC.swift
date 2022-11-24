@@ -29,7 +29,7 @@ class ResultVC: UIViewController{
     @IBOutlet weak var eventsList: UITableView!
     @IBOutlet weak var exp: UILabel!
     
-    var txtUserClub="",txtOppositeClub="",txtUserScore="0",txtOppositeScore="",txtUserShots="0",txtOppositeShots="",txtUserPasses="",txtOppositePassses="",txtUserPose="",txtOppositePose="",totPasses=0,totShots=0,totScore=0, wins=0,txtGamePlayed=0,txtAvgScore=0,txtAvgShots=0,txtAvgPasses=0,txtExp=0,txtLevel=1,totExp=0
+    var txtUserClub="",txtOppositeClub="",txtUserScore="0",txtOppositeScore="",txtUserShots="0",txtOppositeShots="",txtUserPasses="",txtOppositePassses="",txtUserPose="",txtOppositePose="",totPasses=0.0,totShots=0.0,totScore=0.0, wins=0,txtGamePlayed=0.0,txtAvgScore=0.0,txtAvgShots=0.0,txtAvgPasses=0.0,txtExp=0,txtLevel=1,totExp=0,DbavgScore="",DbavgShots="",DbavgPasses=""
     
     
     var events = ["Game Events:"]
@@ -89,9 +89,9 @@ class ResultVC: UIViewController{
                        "totPasses": totPasses,
                        "wins": wins,
                        "gamePlayed": txtGamePlayed,
-                       "avgScore": txtAvgScore,
-                       "avgShots": txtAvgShots,
-                        "avgPasses": txtAvgPasses,
+                       "avgScore": DbavgScore,
+                       "avgShots": DbavgShots,
+                        "avgPasses": DbavgPasses,
                         "exp": totExp,
                         "level": txtLevel] as [String : Any]
 
@@ -118,26 +118,32 @@ class ResultVC: UIViewController{
             self.txtLevel=Int("\(self.allData["level"] ?? "1")")!
             self.totExp=Int("\(self.allData["exp"] ?? "0")")!
             
-            self.totScore=Int("\(self.allData["totScore"] ?? "0")")!
-            self.totShots=Int("\(self.allData["totShots"] ?? "0")")!
-            self.totPasses=Int("\(self.allData["totPasses"] ?? "0")")!
-            self.txtGamePlayed=Int("\(self.allData["gamePlayed"] ?? "0")")!
+            self.totScore=Double("\(self.allData["totScore"] ?? "0")")!
+            self.totShots=Double("\(self.allData["totShots"] ?? "0")")!
+            self.totPasses=Double("\(self.allData["totPasses"] ?? "0")")!
+            self.txtGamePlayed=Double("\(self.allData["gamePlayed"] ?? "0")")!
             self.wins=Int("\(self.allData["wins"] ?? "0")")!
-            self.txtAvgScore=Int("\(self.allData["avgScore"] ?? "0")")!
-            self.txtAvgShots=Int("\(self.allData["avgShots"] ?? "0")")!
-            self.txtAvgPasses=Int("\(self.allData["avgPasses"] ?? "0")")!
+            self.txtAvgScore=Double("\(self.allData["avgScore"] ?? "0")")!
+            self.txtAvgShots=Double("\(self.allData["avgShots"] ?? "0")")!
+            self.txtAvgPasses=Double("\(self.allData["avgPasses"] ?? "0")")!
 
             //Calculation
-            self.totScore+=Int(self.txtUserScore)!
-            self.totShots+=Int(self.txtUserShots)!
-            self.totPasses+=Int(self.txtUserPasses)!
+            self.totScore+=Double(self.txtUserScore)!
+            self.totShots+=Double(self.txtUserShots)!
+            self.totPasses+=Double(self.txtUserPasses)!
             if(self.txtUserScore>self.txtOppositeScore){
                 self.wins+=1
             }
             self.txtGamePlayed+=1
+           
             self.txtAvgScore=self.totScore/self.txtGamePlayed
+            self.DbavgScore = String(format: "%.1f", self.txtAvgScore)
+           
             self.txtAvgShots=self.totShots/self.txtGamePlayed
-            self.txtAvgPasses=self.totPasses/self.txtGamePlayed
+            self.DbavgShots = String(format: "%.1f", self.txtAvgShots)
+           
+            self.txtAvgPasses=(self.totPasses/self.txtGamePlayed)
+            self.DbavgPasses = String(format: "%.1f", self.txtAvgPasses)
 
             self.txtExp+=(Int(self.txtUserScore)!+1)*20
             self.txtExp+=Int(self.txtUserShots)!*5

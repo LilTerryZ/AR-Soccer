@@ -27,9 +27,9 @@ class ProfileVC: UIViewController {
     @IBOutlet weak var level: UILabel!
     @IBOutlet weak var exp: UILabel!
     
-    
-    var txtTotScore="0",txtTotShots="0",txtTotPasses=0, txtWins=0,txtGamePlayed=0,txtAvgScore=0,txtAvgShots=0,txtAvgPasses=0
-    
+//
+//    var txtTotScore="0",txtTotShots="0",txtTotPasses=0, txtWins=0,txtGamePlayed=0,txtAvgScore=0.0,txtAvgShots=0.0,txtAvgPasses=0
+//
     let user = Auth.auth().currentUser
     let db=Firestore.firestore()
     
@@ -79,7 +79,11 @@ class ProfileVC: UIViewController {
             self.totPasses.text="\(self.allData["totPasses"] ?? "0")"
             self.gamePlayed.text="\(self.allData["gamePlayed"] ?? "0")"
             self.wins.text="\(self.allData["wins"] ?? "0")"
-            self.avgScore.text="\(self.allData["avgScore"] ?? "0")"
+            
+            let txtAvgScore="\(self.allData["avgScore"] ?? "0")"
+            
+            
+            self.avgScore.text=txtAvgScore
             self.avgShots.text="\(self.allData["avgShots"] ?? "0")"
             self.avgPasses.text="\(self.allData["avgPasses"] ?? "0")"
             }
