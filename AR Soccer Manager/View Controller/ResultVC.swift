@@ -93,7 +93,15 @@ class ResultVC: UIViewController{
                        "avgShots": DbavgShots,
                         "avgPasses": DbavgPasses,
                         "exp": totExp,
-                        "level": txtLevel] as [String : Any]
+                        "level": txtLevel,
+                        "game":[ "game\(String(format: "%.0f", self.txtGamePlayed))":[
+                            "userClubName":txtUserClub,
+                            "oppoClubName":txtOppositeClub,
+                            "userScore":txtUserScore,
+                            "oppoScore":txtOppositeScore
+                            ]
+                        ]
+                            ] as [String : Any]
 
         db.collection("users").document(userId!).setData(userData,merge: true) { err in
             if let err = err {

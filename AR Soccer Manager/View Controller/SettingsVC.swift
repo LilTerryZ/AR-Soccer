@@ -13,8 +13,8 @@ import AVFoundation
 
 class SettingsVC: UIViewController {
     let db=Firestore.firestore()
+    let user = Auth.auth().currentUser
 
-    
     @IBOutlet weak var signOutBtn: UIButton!
     @IBOutlet weak var deleteBtn: UIButton!
     @IBOutlet weak var supportBtn: UIButton!
@@ -44,13 +44,11 @@ class SettingsVC: UIViewController {
     }
     
     @IBAction func deleteBtn(_ sender: Any) {
-        
+        let userId = user!.uid
         let alert = UIAlertController(title: "DELETE ACCOUNT", message: "Are you sure to delete your acoout?", preferredStyle: UIAlertController.Style.alert)
         
         alert.addAction(UIAlertAction(title: "YES", style: UIAlertAction.Style.default, handler:{(_) in
-            let user = Auth.auth().currentUser
-            user!.delete();
-            let userId = user!.uid
+            
             self.db.collection("users").document(userId).delete() { err in
                 if let err = err {
                     print("Error removing document: \(err)")
@@ -58,6 +56,9 @@ class SettingsVC: UIViewController {
                     print("User document successfully removed!")
                 }
             }
+            self.user!.delete();
+       
+            
             print("User deleted")
             
             let alert2 = UIAlertController(title: "Deleted Successful", message: "Your account has been successfully deleted", preferredStyle: UIAlertController.Style.alert)

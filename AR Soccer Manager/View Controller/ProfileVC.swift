@@ -26,13 +26,15 @@ class ProfileVC: UIViewController {
     @IBOutlet weak var avgPasses: UILabel!
     @IBOutlet weak var level: UILabel!
     @IBOutlet weak var exp: UILabel!
-    
-//
+    @IBOutlet weak var gameHistory: UITableView!
+    //
 //    var txtTotScore="0",txtTotShots="0",txtTotPasses=0, txtWins=0,txtGamePlayed=0,txtAvgScore=0.0,txtAvgShots=0.0,txtAvgPasses=0
 //
     let user = Auth.auth().currentUser
     let db=Firestore.firestore()
     
+   // var games=["":""]
+    var games: [[String]] = []
     var allData=[String:Any]()
     
     
@@ -40,6 +42,8 @@ class ProfileVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.getUserData()
+        gameHistory.delegate=self
+        gameHistory.dataSource=self
         if Auth.auth().currentUser != nil {
             self.username.text=user!.displayName!
         }
@@ -78,6 +82,7 @@ class ProfileVC: UIViewController {
             self.totShots.text="\(self.allData["totShots"] ?? "0")"
             self.totPasses.text="\(self.allData["totPasses"] ?? "0")"
             self.gamePlayed.text="\(self.allData["gamePlayed"] ?? "0")"
+            let txtGamePlayed="\(self.allData["gamePlayed"] ?? "0")"
             self.wins.text="\(self.allData["wins"] ?? "0")"
             
             let txtAvgScore="\(self.allData["avgScore"] ?? "0")"
@@ -86,9 +91,55 @@ class ProfileVC: UIViewController {
             self.avgScore.text=txtAvgScore
             self.avgShots.text="\(self.allData["avgShots"] ?? "0")"
             self.avgPasses.text="\(self.allData["avgPasses"] ?? "0")"
+            //self.games="\(self.allData["game"] ?? "0")"
+           
+            let gameItems = self.allData["game"] as? [String: Any]
+            var counter=0
+            for item in gameItems ?? ["":(Any).self]{
+                print("Key"+item.key)
+               
+                let parsedItem=item.1 as? [String: Any]
+                
+                let userScore=parsedItem!["userScore"] as? String
+                let userClubName=parsedItem!["userClubName"] as? String
+                let oppoScore=parsedItem!["oppoScore"] as? String
+                let oppoClubName=parsedItem!["oppoClubName"] as? String
+                
+                print("Value \(item.value)")
+                self.games.append([userClubName!,userScore!,oppoScore!,oppoClubName!])
+                
+                counter+=1
+                }
+            print("Final array:\(self.games)")
+            self.gameHistory.reloadData()
             }
        }
     
-
-    
 }
+
+extension ProfileVC:UITableViewDelegate{
+    func numberOfSections(in tableView: UITableView) -> Int {
+        print("count:\(games.count)")
+        return 1
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("cell tapped")
+    }
+
+}
+extension ProfileVC:UITableViewDataSource{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
+        return games.count
+    }
+    func tableView(_ tableView:UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
+       // let cell = tableView.dequeueReusableCell(withIdentifier: "foodCellType", for: indexPath) as! LeaderCell
+        let gameCell=tableView.dequeueReusableCell(withIdentifier: "gameCell", for: indexPath)
+        var cell="\(games[indexPath.row][0])    \(games[indexPath.row][1]) :  \(games[indexPath.row][2])    \(games[indexPath.row][3])"
+        
+        gameCell.textLabel?.text=cell
+
+        return gameCell
+
+    }
+}
+
