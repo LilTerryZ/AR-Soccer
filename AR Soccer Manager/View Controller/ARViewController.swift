@@ -101,9 +101,27 @@ class ARViewController: UIViewController {
         //let boxAnchor = try! Experience.loadBox()
         
         
+        
+        
+        
+        
+        
+        
+       
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        setPlayerColours()
+        
         self.homeScore?.text = "\(self.teamName): \(hScore)"
         self.awayScore?.text = "\(self.oppName): \(aScore)"
-        eventL.text = "Players getting into position now"
+        
         runSimulation()
 
         func runSimulation() {
@@ -365,7 +383,6 @@ class ARViewController: UIViewController {
                             try await Task.sleep(nanoseconds: 6000000000)
                         } else if event == "HMC" {
                             let passIAnchor = try! Experience.loadPassIncomplete()
-                            arView.scene.anchors.append(passIAnchor)
                             let pih1 = passIAnchor.pih1?.children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0] as! ModelEntity
                             
                             let pih2 = passIAnchor.pih2?.children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0] as! ModelEntity
@@ -387,6 +404,7 @@ class ARViewController: UIViewController {
                             pia2.model?.materials = [blue]
                             hgk6.model?.materials = [red]
                             agk6.model?.materials = [blue]
+                            arView.scene.anchors.append(passIAnchor)
                             eventChange(text: "\(teamName) has stolen possesion from \(oppName)!")
                             DispatchQueue.main.asyncAfter(deadline: .now() + 3.71) {
                                 print("Removing")
@@ -752,6 +770,41 @@ class ARViewController: UIViewController {
             self.eventL.text = text
             animation.duration = 0.25
             self.eventL.layer.add(animation, forKey: CATransitionType.fade.rawValue)
+        }
+        
+        func setPlayerColours(){
+            
+            //Kickoff
+            //Pass and Receiver
+            
+            //Dribble
+            
+            
+            
+            
+            //Home Tackle
+            
+            
+            //Away tackle
+            
+            
+            //Home Goal
+            
+            
+            //Away goal
+            
+            
+            //Home save
+            
+            
+            //Away save
+           
+            
+            //Pass complete
+           
+            //Pass incomplete home
+            
+            
         }
             
     }
