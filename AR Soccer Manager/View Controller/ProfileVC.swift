@@ -41,6 +41,7 @@ class ProfileVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.getUserData()
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "Homebcg.jpg")!)
         gameHistory.delegate=self
         gameHistory.dataSource=self
         if Auth.auth().currentUser != nil {
