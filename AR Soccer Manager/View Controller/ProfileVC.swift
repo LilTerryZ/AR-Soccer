@@ -82,7 +82,7 @@ class ProfileVC: UIViewController {
             self.totShots.text="\(self.allData["totShots"] ?? "0")"
             self.totPasses.text="\(self.allData["totPasses"] ?? "0")"
             self.gamePlayed.text="\(self.allData["gamePlayed"] ?? "0")"
-            let txtGamePlayed="\(self.allData["gamePlayed"] ?? "0")"
+           // let txtGamePlayed="\(self.allData["gamePlayed"] ?? "0")"
             self.wins.text="\(self.allData["wins"] ?? "0")"
             
             let txtAvgScore="\(self.allData["avgScore"] ?? "0")"
@@ -100,13 +100,13 @@ class ProfileVC: UIViewController {
                
                 let parsedItem=item.1 as? [String: Any]
                 
-                let userScore=parsedItem!["userScore"] as? String
-                let userClubName=parsedItem!["userClubName"] as? String
-                let oppoScore=parsedItem!["oppoScore"] as? String
-                let oppoClubName=parsedItem!["oppoClubName"] as? String
+                let userScore=parsedItem?["userScore"] as? String ?? "0"
+                let userClubName=parsedItem?["userClubName"] as? String ?? "N/A"
+                let oppoScore=parsedItem?["oppoScore"] as? String ?? "0"
+                let oppoClubName=parsedItem?["oppoClubName"] as? String ?? "N/A"
                 
                 print("Value \(item.value)")
-                self.games.append([userClubName!,userScore!,oppoScore!,oppoClubName!])
+                self.games.append([userClubName,userScore,oppoScore,oppoClubName])
                 
                 counter+=1
                 }
@@ -134,7 +134,7 @@ extension ProfileVC:UITableViewDataSource{
     func tableView(_ tableView:UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
        // let cell = tableView.dequeueReusableCell(withIdentifier: "foodCellType", for: indexPath) as! LeaderCell
         let gameCell=tableView.dequeueReusableCell(withIdentifier: "gameCell", for: indexPath)
-        var cell="\(games[indexPath.row][0])    \(games[indexPath.row][1]) :  \(games[indexPath.row][2])    \(games[indexPath.row][3])"
+        let cell="\(games[indexPath.row][0])    \(games[indexPath.row][1]) :  \(games[indexPath.row][2])    \(games[indexPath.row][3])"
         
         gameCell.textLabel?.text=cell
 
