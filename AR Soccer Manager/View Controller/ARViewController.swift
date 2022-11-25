@@ -100,22 +100,7 @@ class ARViewController: UIViewController {
         // Load the "Box" scene from the "Experience" Reality File
         //let boxAnchor = try! Experience.loadBox()
         
-        
-        
-        
-        
-        
-        
-        
-       
-        
-        
-        
-        
-        
-        
-        
-        
+        eventL.text = "Players getting into position!"
         
         setPlayerColours()
         
