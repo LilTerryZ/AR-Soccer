@@ -626,11 +626,16 @@ class ARViewController: UIViewController {
             
             let pa3 = passAnchor.pa3?.children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0] as! ModelEntity
             
+            let agk5 = passAnchor.agk5?.children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0] as! ModelEntity
+            
+            let hgk5 = passAnchor.hgk5?.children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0] as! ModelEntity
+            
             ph1.model?.materials = [red]
             pa1.model?.materials = [blue]
             pa2.model?.materials = [blue]
             pa3.model?.materials = [blue]
-            
+            hgk5.model?.materials = [red]
+            agk5.model?.materials = [blue]
             //Pass incomplete home
             let pih1 = passIAnchor.pih1?.children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0] as! ModelEntity
             
@@ -642,11 +647,17 @@ class ARViewController: UIViewController {
             
             let pia2 = passIAnchor.pia2?.children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0] as! ModelEntity
             
+            let agk6 = passIAnchor.agk6?.children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0] as! ModelEntity
+            
+            let hgk6 = passIAnchor.hgk6?.children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0] as! ModelEntity
+            
             pih1.model?.materials = [red]
             pih2.model?.materials = [red]
             pih3.model?.materials = [red]
             pia1.model?.materials = [blue]
             pia2.model?.materials = [blue]
+            hgk6.model?.materials = [red]
+            agk6.model?.materials = [blue]
             
             //Pass incomplete away
             let pia3 = passIAnchor2.pia3?.children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0] as! ModelEntity
@@ -659,11 +670,19 @@ class ARViewController: UIViewController {
             
             let pih5 = passIAnchor2.pih5?.children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0] as! ModelEntity
             
+            let agk7 = passIAnchor2.agk7?.children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0] as! ModelEntity
+            
+            let hgk7 = passIAnchor2.hgk7?.children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0] as! ModelEntity
+            
+            
             pia3.model?.materials = [blue]
             pia4.model?.materials = [blue]
             pia5.model?.materials = [blue]
             pih4.model?.materials = [red]
             pih5.model?.materials = [red]
+            hgk7.model?.materials = [red]
+            agk7.model?.materials = [blue]
+            
         }
             
     }
