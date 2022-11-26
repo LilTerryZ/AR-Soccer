@@ -115,8 +115,7 @@ class ARViewController: UIViewController {
            Task{
                 let result = await simulation.runSimulation(homeTeamName: teamName, awayTeamName: oppName)
                 
-                let events = result["events"]
-                
+        
                 for event in events as! [String]{
                     if event == "HA" {
                         eventsList.append("\(teamName) is trying to make some moves!")
@@ -226,8 +225,8 @@ class ARViewController: UIViewController {
                             drib6.model?.materials = [red]
                             drib7.model?.materials = [red]
                             drib8.model?.materials = [red]
-                            hgk2.model?.materials = [red]
-                            agk2.model?.materials = [blue]
+                            hgk2.model?.materials = [blue]
+                            agk2.model?.materials = [red]
                             arView.scene.anchors.append(dribbleAnchor)
                             eventChange(text: "\(teamName) is trying to make some moves!")
                             DispatchQueue.main.asyncAfter(deadline: .now() + 6.57) {
@@ -368,41 +367,6 @@ class ARViewController: UIViewController {
                             }
                             try await Task.sleep(nanoseconds: 6000000000)
                         } else if event == "HMC" {
-                            let passIAnchor = try! Experience.loadPassIncomplete()
-                            let pih1 = passIAnchor.pih1?.children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0] as! ModelEntity
-                            
-                            let pih2 = passIAnchor.pih2?.children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0] as! ModelEntity
-                            
-                            let pih3 = passIAnchor.pih3?.children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0] as! ModelEntity
-                            
-                            let pia1 = passIAnchor.pia1?.children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0] as! ModelEntity
-                            
-                            let pia2 = passIAnchor.pia2?.children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0] as! ModelEntity
-                            
-                            let agk6 = passIAnchor.agk6?.children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0] as! ModelEntity
-                            
-                            let hgk6 = passIAnchor.hgk6?.children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0] as! ModelEntity
-                            
-                            pih1.model?.materials = [red]
-                            pih2.model?.materials = [red]
-                            pih3.model?.materials = [red]
-                            pia1.model?.materials = [blue]
-                            pia2.model?.materials = [blue]
-                            hgk6.model?.materials = [red]
-                            agk6.model?.materials = [blue]
-                            arView.scene.anchors.append(passIAnchor)
-                            eventChange(text: "\(teamName) has stolen possesion from \(oppName)!")
-                            DispatchQueue.main.asyncAfter(deadline: .now() + 3.71) {
-                                print("Removing")
-                                self.arView.scene.anchors.removeAll()
-                                //self.arView.scene.removeAnchor(passIAnchor)
-                             //   self.arView.session.run(self.configuration, options: ARSession.RunOptions.resetTracking)
-                            }
-                            if self.gameStatus == false{
-                                break
-                            }
-                            try await Task.sleep(nanoseconds: 4000000000)
-                        } else if event == "AMC" {
                             let passIAnchor2 = try! Experience.loadPassIncompleteAway()
                         
                             let pia3 = passIAnchor2.pia3?.children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0] as! ModelEntity
@@ -429,6 +393,43 @@ class ARViewController: UIViewController {
                             agk7.model?.materials = [blue]
                             arView.scene.anchors.append(passIAnchor2)
                             eventChange(text: "\(oppName) intercepts \(teamName)'s pass!")
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 3.71) {
+                                print("Removing")
+                                self.arView.scene.anchors.removeAll()
+                                //self.arView.scene.removeAnchor(passIAnchor)
+                             //   self.arView.session.run(self.configuration, options: ARSession.RunOptions.resetTracking)
+                            }
+                            if self.gameStatus == false{
+                                break
+                            }
+                            try await Task.sleep(nanoseconds: 4000000000)
+                        } else if event == "AMC" {
+                            
+                            
+                            let passIAnchor = try! Experience.loadPassIncomplete()
+                            let pih1 = passIAnchor.pih1?.children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0] as! ModelEntity
+                            
+                            let pih2 = passIAnchor.pih2?.children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0] as! ModelEntity
+                            
+                            let pih3 = passIAnchor.pih3?.children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0] as! ModelEntity
+                            
+                            let pia1 = passIAnchor.pia1?.children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0] as! ModelEntity
+                            
+                            let pia2 = passIAnchor.pia2?.children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0] as! ModelEntity
+                            
+                            let agk6 = passIAnchor.agk6?.children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0] as! ModelEntity
+                            
+                            let hgk6 = passIAnchor.hgk6?.children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0] as! ModelEntity
+                            
+                            pih1.model?.materials = [red]
+                            pih2.model?.materials = [red]
+                            pih3.model?.materials = [red]
+                            pia1.model?.materials = [blue]
+                            pia2.model?.materials = [blue]
+                            hgk6.model?.materials = [red]
+                            agk6.model?.materials = [blue]
+                            arView.scene.anchors.append(passIAnchor)
+                            eventChange(text: "\(teamName) has stolen possesion from \(oppName)!")
                             DispatchQueue.main.asyncAfter(deadline: .now() + 3.71) {
                                 print("Removing")
                                 self.arView.scene.anchors.removeAll()
@@ -595,7 +596,7 @@ class ARViewController: UIViewController {
                             awayI5.model?.materials = [blue]
                             
                             arView.scene.anchors.append(koAnchor)
-                            eventChange(text: "HALF TIME")
+                            eventChange(text: "HALF TIME HAS STARTED")
                             DispatchQueue.main.asyncAfter(deadline: .now() + 7.2) {
                                 print("Removing")
                                 self.arView.scene.anchors.removeAll()

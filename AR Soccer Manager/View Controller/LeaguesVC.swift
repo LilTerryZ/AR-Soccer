@@ -67,10 +67,8 @@ class LeaguesVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
 
             let team = standingsSorted[indexPath.row]
             
-            print("team Points", team.points)
-            print("row", indexPath.row)
 
-            cell.name?.text = team.name
+            cell.name?.text = String(indexPath.row) + " - " + team.name
             cell.played?.text = String(team.played as! Int)
             cell.points?.text = String(team.points as! Int)
             cell.won?.text = String(team.won as! Int)
