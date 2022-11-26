@@ -17,13 +17,6 @@ class ARViewController: UIViewController {
     
     @IBOutlet var arView: ARView!
     
-    let configuration = ARWorldTrackingConfiguration()
-    
-    func runConfig() {(
-     configuration: ARConfiguration.self,
-     options: [ARSession.RunOptions.resetTracking, ARSession.RunOptions.removeExistingAnchors]
-    )}
-    
     var hScore: Int = 0
     var aScore: Int = 0
     
@@ -52,6 +45,7 @@ class ARViewController: UIViewController {
    @IBOutlet weak var resultBtn: UIButton!
     @IBOutlet weak var skipBtn: UIButton!
     
+    //This button sends all required stats from the match to be displayed in the results page.
     @IBAction func resultBtn(sender: Any){
         let vc=storyboard?.instantiateViewController(withIdentifier: "ResultVC") as! ResultVC
         vc.txtUserScore=String(simHS)
@@ -71,6 +65,7 @@ class ARViewController: UIViewController {
         present(vc,animated: true,completion: nil)
     }
     
+    //This button sends all required stats from the match to be displayed in the results page.
     @IBAction func skipBtn(sender: Any){
         self.gameStatus = false
         let vc=storyboard?.instantiateViewController(withIdentifier: "ResultVC") as! ResultVC
@@ -97,81 +92,81 @@ class ARViewController: UIViewController {
         skipBtn.isHidden=true
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "Homebcg.jpg")!)
         
-        // Load the "Box" scene from the "Experience" Reality File
-        //let boxAnchor = try! Experience.loadBox()
         
         eventL.text = "Players getting into position!"
-        
-        setPlayerColours()
-        
+
         self.homeScore?.text = "\(self.teamName): \(hScore)"
         self.awayScore?.text = "\(self.oppName): \(aScore)"
         
         runSimulation()
 
+        //Function that handles the simulation and display of the augmented reality scenes
         func runSimulation() {
             let simulation = Simulation()
             
            Task{
                 let result = await simulation.runSimulation(homeTeamName: teamName, awayTeamName: oppName)
-                
                 let events = result["events"]
                 
-                for event in events as! [String]{
-                    if event == "HA" {
-                        eventsList.append("\(teamName) is trying to make some moves!")
+               //For loop to create stats for results page when simulation is done
+                for event in events as! [Dictionary<String, AnyObject>]{
+                    let code = event["code"] as! String
+                    let time = event["time"] as! Int
+                    let player = event["player"] as! String
+                    if code == "HA" {
+                        eventsList.append("\(time)' : \(teamName) is trying to make some moves!")
                         teamPasses = teamPasses+1
                         teamPoss = teamPoss + 1
                         totalPoss = totalPoss+1
-                    } else if event == "AT" {
-                        eventsList.append("\(oppName) presses the attack!")
+                    } else if code == "AT" {
+                        eventsList.append("\(time)' : \(oppName) presses the attack!")
                         oppPasses = oppPasses+1
                         oppPoss = oppPoss+1
                         totalPoss = totalPoss+1
-                    } else if event == "HDC" {
-                        eventsList.append("An excellent steal by \(teamName)")
+                    } else if code == "HDC" {
+                        eventsList.append("\(time)' : An excellent steal by \(teamName)")
                         teamPoss = teamPoss + 1
                         totalPoss = totalPoss+1
-                    } else if event == "ADC" {
-                        eventsList.append("An amazing tackle from \(oppName)")
+                    } else if code == "ADC" {
+                        eventsList.append("\(time)' : An amazing tackle from \(oppName)")
                         oppPoss = oppPoss+1
                         totalPoss = totalPoss+1
-                    } else if event == "HMC" {
-                        eventsList.append("\(teamName) has stolen possesion from \(oppName)!")
+                    } else if code == "HMC" {
+                        eventsList.append("\(time)' : \(teamName) has stolen possesion from \(oppName)!")
                         oppPoss = oppPoss+1
                         totalPoss = totalPoss+1
-                    } else if event == "AMC" {
-                        eventsList.append("\(oppName) intercepts \(teamName)'s pass!")
+                    } else if code == "AMC" {
+                        eventsList.append("\(time)' : \(oppName) intercepts \(teamName)'s pass!")
                         teamPoss = teamPoss + 1
                         totalPoss = totalPoss+1
-                    } else if event == "HS" {
+                    } else if code == "HS" {
                         teamShots = teamShots+1
                         teamPoss = teamPoss + 1
                         totalPoss = totalPoss+1
                         simHS = simHS+1
-                        eventsList.append("\(teamName) has scored!")
-                    } else if event == "AS" {
+                        eventsList.append("\(time)' : \(player) from \(teamName) has scored!")
+                    } else if code == "AS" {
                         oppShots = oppShots+1
                         oppPoss = oppPoss+1
                         totalPoss = totalPoss+1
                         simAS = simAS+1
-                        eventsList.append("\(oppName) has scored!")
-                    } else if event == "HGKS" {
-                        eventsList.append("\(teamName) has blocked \(oppName)'s shot!")
+                        eventsList.append("\(time)' : \(player) from \(oppName) has scored!")
+                    } else if code == "HGKS" {
+                        eventsList.append("\(time)' : \(teamName) has blocked \(oppName)'s shot!")
                         oppShots = oppShots+1
                         oppPoss = oppPoss+1
                         totalPoss = totalPoss+1
-                    } else if event == "AGKS" {
-                        eventsList.append("\(oppName) has blocked \(teamName)'s shot!")
+                    } else if code == "AGKS" {
+                        eventsList.append("\(time)' : \(oppName) has blocked \(teamName)'s shot!")
                         teamShots = teamShots+1
                         teamPoss = teamPoss + 1
                         totalPoss = totalPoss+1
-                    } else if event == "HT" {
-                        eventsList.append("HALFTIME!")
-                    } else if event == "FT" {
-                        eventsList.append("FULLTIME!")
-                    } else if event == "KF"  {
-                        eventsList.append("KICKOFF!")
+                    } else if code == "HT" {
+                        eventsList.append("\(time)' : HALFTIME!")
+                    } else if code == "FT" {
+                        eventsList.append("\(time)' : FULLTIME!")
+                    } else if code == "KF"  {
+                        eventsList.append("\(time)' : KICKOFF!")
                     }
                 }
                 
@@ -180,25 +175,21 @@ class ARViewController: UIViewController {
                 
                 oppPoss = (oppPoss/totalPoss) * 100.0
                 oppPoss = round(oppPoss * 10) / 10.0
-                
-                print("STATS DONE")
-                print(totalPoss)
-                print(teamPoss)
-                print(oppPoss)
-                print(simAS)
-                print(simHS)
-                print(teamShots)
-                print(oppShots)
-                print(teamPasses)
-                print(oppPasses)
+               
+               //Show skip button once stats are complete
                 skipBtn.isHidden=false
                 
+               //Set colours for models
                let red = SimpleMaterial(color: .red, isMetallic: false)
                let blue = SimpleMaterial(color: .blue, isMetallic: false)
                
-                    for event in events as! [String] {
-                        if event == "HA" {
+               for event in events as! [Dictionary<String, AnyObject>]{
+                   let code = event["code"] as! String
+                   let time = event["time"] as! Int
+                   let player = event["player"] as! String
+                        if code == "HA" {
                             let dribbleAnchor = try! Experience.loadDribble()
+                            //Add player colours
                             let hgk2 = dribbleAnchor.homeGK2?.children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0] as! ModelEntity
                             
                             let agk2 = dribbleAnchor.awayGK2?.children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0] as! ModelEntity
@@ -229,19 +220,20 @@ class ARViewController: UIViewController {
                             hgk2.model?.materials = [blue]
                             agk2.model?.materials = [red]
                             arView.scene.anchors.append(dribbleAnchor)
-                            eventChange(text: "\(teamName) is trying to make some moves!")
+                            eventChange(text: "\(time)' : \(teamName) is trying to make some moves!")
+                            //Remove anchor when scene is done
                             DispatchQueue.main.asyncAfter(deadline: .now() + 6.57) {
                                 print("Removing")
                                 self.arView.scene.anchors.removeAll()
-                                //self.arView.scene.removeAnchor(dribbleAnchor)
-                                //self.arView.session.run(self.configuration, options: ARSession.RunOptions.resetTracking)
+                                
                             }
                             if self.gameStatus == false{
                                 break
                             }
                             try await Task.sleep(nanoseconds: 7000000000)
-                        } else if event == "AT" {
+                        } else if code == "AT" {
                             let passAnchor = try! Experience.loadPassComplete()
+                            //Add player colours
                             let ph1 = passAnchor.ph1?.children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0] as! ModelEntity
                             
                             let pa1 = passAnchor.pa1?.children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0] as! ModelEntity
@@ -261,20 +253,20 @@ class ARViewController: UIViewController {
                             hgk5.model?.materials = [red]
                             agk5.model?.materials = [blue]
                             arView.scene.anchors.append(passAnchor)
-                            eventChange(text: "\(oppName) presses the attack!")
+                            eventChange(text: "\(time)' : \(oppName) presses the attack!")
+                            
+                            //Remove anchor when scene is done
                             DispatchQueue.main.asyncAfter(deadline: .now() + 6.57) {
                                 print("Removing")
                                 self.arView.scene.anchors.removeAll()
-                                //self.arView.scene.removeAnchor(passAnchor)
-                               // self.arView.session.run(self.configuration, options: ARSession.RunOptions.resetTracking)
                             }
                             if self.gameStatus == false{
                                 break
                             }
                             try await Task.sleep(nanoseconds: 7000000000)
-                        } else if event == "HDC" {
-                            
+                        } else if code == "HDC" {
                             let tackleAnchor2 = try! Experience.loadTackleAway()
+                            //Add player colour
                             let TA1 = tackleAnchor2.tA1?.children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0] as! ModelEntity
                             
                             let TA2 = tackleAnchor2.tA2?.children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0] as! ModelEntity
@@ -309,19 +301,19 @@ class ARViewController: UIViewController {
                             agk4.model?.materials = [red]
                             hgk4.model?.materials = [blue]
                             arView.scene.anchors.append(tackleAnchor2)
-                            eventChange(text: "An excellent stop by \(oppName)")
+                            eventChange(text: "\(time)' : An excellent stop by \(oppName)")
+                            //Remove anchor when scene is done
                             DispatchQueue.main.asyncAfter(deadline: .now() + 5.4) {
                                 print("Removing")
                                 self.arView.scene.anchors.removeAll()
-                                //self.arView.scene.removeAnchor(tackleAnchor)
-                               // self.arView.session.run(self.configuration, options: ARSession.RunOptions.resetTracking)
                             }
                             if self.gameStatus == false{
                                 break
                             }
                             try await Task.sleep(nanoseconds: 6000000000)
-                        } else if event == "ADC" {
+                        } else if code == "ADC" {
                             let tackleAnchor = try! Experience.loadTackle()
+                            //Add colours to players
                             let TD1 = tackleAnchor.tH1?.children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0] as! ModelEntity
                             
                             let TD2 = tackleAnchor.tH2?.children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0] as! ModelEntity
@@ -356,20 +348,19 @@ class ARViewController: UIViewController {
                             hgk3.model?.materials = [red]
                             agk3.model?.materials = [blue]
                             arView.scene.anchors.append(tackleAnchor)
-                            eventChange(text: "An amazing tackle from \(teamName)")
+                            eventChange(text: "\(time)' : An amazing tackle from \(teamName)")
+                            //Remove anchor when scene is done
                             DispatchQueue.main.asyncAfter(deadline: .now() + 5.4) {
                                 print("Removing")
                                 self.arView.scene.anchors.removeAll()
-                                //self.arView.scene.removeAnchor(tackleAnchor2)
-                                //self.arView.session.run(self.configuration, options: ARSession.RunOptions.resetTracking)
                             }
                             if self.gameStatus == false{
                                 break
                             }
                             try await Task.sleep(nanoseconds: 6000000000)
-                        } else if event == "HMC" {
+                        } else if code == "HMC" {
                             let passIAnchor2 = try! Experience.loadPassIncompleteAway()
-                        
+                            //Add player colours
                             let pia3 = passIAnchor2.pia3?.children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0] as! ModelEntity
                             
                             let pia4 = passIAnchor2.pia4?.children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0] as! ModelEntity
@@ -393,21 +384,20 @@ class ARViewController: UIViewController {
                             hgk7.model?.materials = [red]
                             agk7.model?.materials = [blue]
                             arView.scene.anchors.append(passIAnchor2)
-                            eventChange(text: "\(oppName) intercepts \(teamName)'s pass!")
+                            eventChange(text: "\(time)' : \(oppName) intercepts \(teamName)'s pass!")
+                            //Remove anchor when scene is done
                             DispatchQueue.main.asyncAfter(deadline: .now() + 3.71) {
                                 print("Removing")
                                 self.arView.scene.anchors.removeAll()
-                                //self.arView.scene.removeAnchor(passIAnchor)
-                             //   self.arView.session.run(self.configuration, options: ARSession.RunOptions.resetTracking)
                             }
                             if self.gameStatus == false{
                                 break
                             }
                             try await Task.sleep(nanoseconds: 4000000000)
-                        } else if event == "AMC" {
-                            
+                        } else if code == "AMC" {
                             
                             let passIAnchor = try! Experience.loadPassIncomplete()
+                            //Add colour to players
                             let pih1 = passIAnchor.pih1?.children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0] as! ModelEntity
                             
                             let pih2 = passIAnchor.pih2?.children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0] as! ModelEntity
@@ -430,20 +420,20 @@ class ARViewController: UIViewController {
                             hgk6.model?.materials = [red]
                             agk6.model?.materials = [blue]
                             arView.scene.anchors.append(passIAnchor)
-                            eventChange(text: "\(teamName) has stolen possesion from \(oppName)!")
+                            eventChange(text: "\(time)' : \(teamName) has stolen possesion from \(oppName)!")
+                            //Remove anchor when is done
                             DispatchQueue.main.asyncAfter(deadline: .now() + 3.71) {
                                 print("Removing")
                                 self.arView.scene.anchors.removeAll()
-                                //self.arView.scene.removeAnchor(passIAnchor)
-                                //self.arView.session.run(self.configuration, options: ARSession.RunOptions.resetTracking)
                             }
                             if self.gameStatus == false{
                                 break
                             }
                             try await Task.sleep(nanoseconds: 4000000000)
-                        } else if event == "HS" {
+                        } else if code == "HS" {
                             homeScore()
                             let goalAnchor = try! Experience.loadGoalkeeperScore()
+                            //Add player colours
                             let gh1 = goalAnchor.gh1?.children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0] as! ModelEntity
                             
                             let ga1 = goalAnchor.ga1?.children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0] as! ModelEntity
@@ -461,20 +451,20 @@ class ARViewController: UIViewController {
                             ga3.model?.materials = [red]
                             ga4.model?.materials = [blue]
                             arView.scene.anchors.append(goalAnchor)
-                            eventChange(text: "\(teamName) has scored!")
+                            eventChange(text: "\(time)' : \(player) from \(teamName) has scored!")
+                            //Remove anchor when scene is done
                             DispatchQueue.main.asyncAfter(deadline: .now() + 6.2) {
                                 print("Removing")
                                 self.arView.scene.anchors.removeAll()
-                                //self.arView.scene.removeAnchor(goalAnchor)
-                                //self.arView.session.run(self.configuration, options: ARSession.RunOptions.resetTracking)
                             }
                             if self.gameStatus == false{
                                 break
                             }
                             try await Task.sleep(nanoseconds: 7000000000)
-                        } else if event == "AS" {
+                        } else if code == "AS" {
                             awayScore()
                             let goalAnchor2 = try! Experience.loadGoalkeeperScoreAway()
+                            //Add player colours
                             let ag1 = goalAnchor2.ag1?.children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0] as! ModelEntity
                             
                             let hg1 = goalAnchor2.hg1?.children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0] as! ModelEntity
@@ -491,19 +481,21 @@ class ARViewController: UIViewController {
                             hg2.model?.materials = [red]
                             hg3.model?.materials = [red]
                             arView.scene.anchors.append(goalAnchor2)
-                            eventChange(text: "\(oppName) has scored!")
+                            eventChange(text: "\(time)' : \(player) from \(oppName) has scored!")
+                            
+                            //Remove anchor when scene is done
                             DispatchQueue.main.asyncAfter(deadline: .now() + 6.2) {
                                 print("Removing")
                                 self.arView.scene.anchors.removeAll()
-                                //self.arView.scene.removeAnchor(goalAnchor2)
-                                //self.arView.session.run(self.configuration, options: ARSession.RunOptions.resetTracking)
                             }
                             if self.gameStatus == false{
                                 break
                             }
                             try await Task.sleep(nanoseconds: 7000000000)
-                        } else if event == "HGKS" {
+                        } else if code == "HGKS" {
                             let saveAnchor = try! Experience.loadGoalkeeperSave()
+                    
+                            //Add player colours
                             let gka1 = saveAnchor.gka1?.children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0] as! ModelEntity
                             
                             let gkh1 = saveAnchor.gkh1?.children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0] as! ModelEntity
@@ -516,20 +508,21 @@ class ARViewController: UIViewController {
                             gkh2.model?.materials = [red]
                             gkh3.model?.materials = [red]
                             gka1.model?.materials = [blue]
+                            
                             arView.scene.anchors.append(saveAnchor)
-                            eventChange(text: "\(teamName) has blocked \(oppName)'s shot!")
+                            eventChange(text: "\(time)' : \(teamName) has blocked \(oppName)'s shot!")
+                            //Remove anchor when scene is done
                             DispatchQueue.main.asyncAfter(deadline: .now() + 6) {
                                 print("Removing")
                                 self.arView.scene.anchors.removeAll()
-                                //self.arView.scene.removeAnchor(saveAnchor)
-                                //self.arView.session.run(self.configuration, options: ARSession.RunOptions.resetTracking)
                             }
                             if self.gameStatus == false{
                                 break
                             }
                             try await Task.sleep(nanoseconds: 7000000000)
-                        } else if event == "AGKS" {
+                        } else if code == "AGKS" {
                             let saveAnchor2 = try! Experience.loadGoalkeeperSaveAway()
+                            //Add player colours
                             let gkh4 = saveAnchor2.gkh4?.children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0] as! ModelEntity
                             
                             let gka2 = saveAnchor2.gka2?.children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0] as! ModelEntity
@@ -543,20 +536,21 @@ class ARViewController: UIViewController {
                             gka3.model?.materials = [blue]
                             gka4.model?.materials = [blue]
                             arView.scene.anchors.append(saveAnchor2)
-                            eventChange(text: "\(oppName) has blocked \(teamName)'s shot!")
+                            eventChange(text: "\(time)' : \(oppName) has blocked \(teamName)'s shot!")
+                            
+                            //Remove anchor when scene is complete
                             DispatchQueue.main.asyncAfter(deadline: .now() + 6) {
                                 print("Removing")
                                 self.arView.scene.anchors.removeAll()
-                                //self.arView.scene.removeAnchor(saveAnchor2)
-                                //self.arView.session.run(self.configuration, options: ARSession.RunOptions.resetTracking)
                             }
                             if self.gameStatus == false{
                                 break
                             }
                             try await Task.sleep(nanoseconds: 7000000000)
                             
-                        } else if event == "HT" {
+                        } else if code == "HT" {
                             let koAnchor = try! Experience.loadKickoff()
+                            //Add colours to players
                             let hgk1 = koAnchor.homeGK1?.children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0] as! ModelEntity
                             
                             let agk1 = koAnchor.awayGK1?.children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0] as! ModelEntity
@@ -597,20 +591,23 @@ class ARViewController: UIViewController {
                             awayI5.model?.materials = [blue]
                             
                             arView.scene.anchors.append(koAnchor)
-                            eventChange(text: "HALF TIME HAS STARTED")
+                            eventChange(text: "\(time)' : HALF TIME HAS STARTED")
+                            
+                            //Remove anchor when scene is done.
                             DispatchQueue.main.asyncAfter(deadline: .now() + 7.2) {
                                 print("Removing")
                                 self.arView.scene.anchors.removeAll()
-                                //self.arView.scene.removeAnchor(koAnchor)
-                                //self.arView.session.run(self.configuration, options: ARSession.RunOptions.resetTracking)
+
                             }
                             if self.gameStatus == false{
                                 break
                             }
                             try await Task.sleep(nanoseconds: 8000000000)
                             
-                        } else if event == "FT" {
+                        } else if code == "FT" {
                             let koAnchor = try! Experience.loadKickoff()
+                            
+                            //Add colours to players
                             let hgk1 = koAnchor.homeGK1?.children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0] as! ModelEntity
                             
                             let agk1 = koAnchor.awayGK1?.children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0] as! ModelEntity
@@ -651,20 +648,21 @@ class ARViewController: UIViewController {
                             awayI5.model?.materials = [blue]
                             
                             arView.scene.anchors.append(koAnchor)
-                            eventChange(text: "MATCH DONE")
+                            eventChange(text: "\(time)' : MATCH DONE")
+                            
+                            //Remove anchor when scene is done
                             DispatchQueue.main.asyncAfter(deadline: .now() + 7.2) {
                                 print("Removing")
                                 self.arView.scene.anchors.removeAll()
-                                //self.arView.scene.removeAnchor(koAnchor)
-                                //self.arView.session.run(self.configuration, options: ARSession.RunOptions.resetTracking)
                             }
                             if self.gameStatus == false{
                                 break
                             }
                             try await Task.sleep(nanoseconds: 8000000000)
                             
-                        } else if event == "KF"  {
+                        } else if code == "KF"  {
                             let koAnchor = try! Experience.loadKickoff()
+                            //Add colours to players
                             let hgk1 = koAnchor.homeGK1?.children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0] as! ModelEntity
                             
                             let agk1 = koAnchor.awayGK1?.children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0] as! ModelEntity
@@ -705,11 +703,12 @@ class ARViewController: UIViewController {
                             awayI5.model?.materials = [blue]
                             
                             arView.scene.anchors.append(koAnchor)
-                            eventChange(text: "Kickoff")
+                            eventChange(text: "\(time)' : KICKOFF")
+                            
+                            //Remove anchor when scene is done
                             DispatchQueue.main.asyncAfter(deadline: .now() + 7.2) {
                                 print("Removing")
                                 self.arView.scene.anchors.removeAll()
-                               // self.arView.session.run(self.configuration, options: ARSession.RunOptions.resetTracking)
                             }
                             if self.gameStatus == false{
                                 break
@@ -721,7 +720,7 @@ class ARViewController: UIViewController {
             }
             
         }
-        
+        //Function that handles animation for text change when the team scores
         func awayScore(){
             let animation:CATransition = CATransition()
             
@@ -736,6 +735,7 @@ class ARViewController: UIViewController {
             self.awayScore.layer.add(animation, forKey: CATransitionType.push.rawValue)//2.
         }
         
+        //Function that handles animation for text change when the team scores
         func homeScore(){
             let animation:CATransition = CATransition()
             
@@ -749,7 +749,7 @@ class ARViewController: UIViewController {
             animation.duration = 0.25
             self.homeScore.layer.add(animation, forKey: CATransitionType.push.rawValue)//2.
         }
-        
+        //Function that handles animation for when the event text is changed
         func eventChange(text: String){
             let animation:CATransition = CATransition()
             animation.timingFunction = CAMediaTimingFunction(name:CAMediaTimingFunctionName.easeInEaseOut)
@@ -759,41 +759,7 @@ class ARViewController: UIViewController {
             animation.duration = 0.25
             self.eventL.layer.add(animation, forKey: CATransitionType.fade.rawValue)
         }
-        
-        func setPlayerColours(){
-            
-            //Kickoff
-            //Pass and Receiver
-            
-            //Dribble
-            
-            
-            
-            
-            //Home Tackle
-            
-            
-            //Away tackle
-            
-            
-            //Home Goal
-            
-            
-            //Away goal
-            
-            
-            //Home save
-            
-            
-            //Away save
-           
-            
-            //Pass complete
-           
-            //Pass incomplete home
-            
-            
-        }
+
             
     }
 }

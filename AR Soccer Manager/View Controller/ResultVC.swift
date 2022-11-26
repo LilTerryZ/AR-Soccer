@@ -42,7 +42,7 @@ class ResultVC: UIViewController{
         super.viewDidLoad()
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "Homebcg.jpg")!)
        
-     
+        //Transfer all variables passed from the ARViewController to its proper text labels.
         userScore.font = UIFont.systemFont(ofSize: 30, weight: UIFont.Weight.heavy)
         oppositeScore.font = UIFont.systemFont(ofSize: 30, weight: UIFont.Weight.heavy)
         eventsList.delegate=self
@@ -78,7 +78,7 @@ class ResultVC: UIViewController{
        
     }
 
-    
+    //Save all data from match and add it to the users current colleciton of data
     func saveUserData(){
         
         let userId = user?.uid
@@ -112,7 +112,7 @@ class ResultVC: UIViewController{
        }
         
     }
-    
+    //Get the users collection of data from their previous games.
     func getUserData(){
         let userId = user!.uid
         let docRef = db.collection("users").document(userId)
