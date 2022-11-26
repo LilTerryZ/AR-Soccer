@@ -115,7 +115,8 @@ class ARViewController: UIViewController {
            Task{
                 let result = await simulation.runSimulation(homeTeamName: teamName, awayTeamName: oppName)
                 
-        
+                let events = result["events"]
+                
                 for event in events as! [String]{
                     if event == "HA" {
                         eventsList.append("\(teamName) is trying to make some moves!")
