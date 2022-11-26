@@ -38,10 +38,16 @@ class HomeVC: UIViewController{
 //    let randomInt = Int.random(in: 1..<73)
     
     @IBAction func startBtn(sender: Any){
+        let alert = UIAlertController(title: "Pre match", message: "Notice: Please have a clear area for scenes to appear. If next scene does not appear for the new event, tilt the device slightly down then up", preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+        runTask()
+        }
+    func runTask (){
         Task{
-            vsImage.rotate()
-            loadingText?.isHidden = false
-            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+            self.vsImage.rotate()
+            self.loadingText?.isHidden = false
+            DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
                 self.switchViews()
             }
         }
@@ -172,6 +178,15 @@ extension UIImageView{
     }
 }
 
+extension UIAlertController {
+    func presentInOwnWindow(animated: Bool, completion: (() -> Void)?) {
+        let alertWindow = UIWindow(frame: UIScreen.main.bounds)
+        alertWindow.rootViewController = UIViewController()
+        alertWindow.windowLevel = UIWindow.Level.alert + 1;
+        alertWindow.makeKeyAndVisible()
+        alertWindow.rootViewController?.present(self, animated: animated, completion: completion)
+    }
+}
 
 
 
