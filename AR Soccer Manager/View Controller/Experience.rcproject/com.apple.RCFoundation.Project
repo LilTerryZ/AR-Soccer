@@ -415,7 +415,7 @@
                       ],
                       "identifier" : "27DE0B01-94E4-461C-93AA-CF1340DB6ED1",
                       "isEnabled" : true,
-                      "isLooping" : true,
+                      "isLooping" : false,
                       "isModal" : false,
                       "name" : "Behaviour",
                       "triggers" : [
@@ -2937,7 +2937,7 @@
                       ],
                       "identifier" : "27DE0B01-94E4-461C-93AA-CF1340DB6ED1",
                       "isEnabled" : true,
-                      "isLooping" : true,
+                      "isLooping" : false,
                       "isModal" : false,
                       "name" : "Behaviour",
                       "triggers" : [
@@ -5449,7 +5449,7 @@
                       ],
                       "identifier" : "27DE0B01-94E4-461C-93AA-CF1340DB6ED1",
                       "isEnabled" : true,
-                      "isLooping" : true,
+                      "isLooping" : false,
                       "isModal" : false,
                       "name" : "Behaviour",
                       "triggers" : [
@@ -8093,7 +8093,7 @@
                       ],
                       "identifier" : "27DE0B01-94E4-461C-93AA-CF1340DB6ED1",
                       "isEnabled" : true,
-                      "isLooping" : true,
+                      "isLooping" : false,
                       "isModal" : false,
                       "name" : "Behaviour",
                       "triggers" : [
@@ -12092,7 +12092,7 @@
                       ],
                       "identifier" : "27DE0B01-94E4-461C-93AA-CF1340DB6ED1",
                       "isEnabled" : true,
-                      "isLooping" : true,
+                      "isLooping" : false,
                       "isModal" : false,
                       "name" : "Behaviour",
                       "triggers" : [
@@ -14830,7 +14830,7 @@
                       ],
                       "identifier" : "27DE0B01-94E4-461C-93AA-CF1340DB6ED1",
                       "isEnabled" : true,
-                      "isLooping" : true,
+                      "isLooping" : false,
                       "isModal" : false,
                       "name" : "Behaviour",
                       "triggers" : [
@@ -17478,7 +17478,7 @@
                       ],
                       "identifier" : "27DE0B01-94E4-461C-93AA-CF1340DB6ED1",
                       "isEnabled" : true,
-                      "isLooping" : true,
+                      "isLooping" : false,
                       "isModal" : false,
                       "name" : "Behaviour",
                       "triggers" : [
@@ -20037,7 +20037,7 @@
                       ],
                       "identifier" : "27DE0B01-94E4-461C-93AA-CF1340DB6ED1",
                       "isEnabled" : true,
-                      "isLooping" : true,
+                      "isLooping" : false,
                       "isModal" : false,
                       "name" : "Behaviour",
                       "triggers" : [
@@ -22828,7 +22828,7 @@
                       ],
                       "identifier" : "7EB8C5E1-38F5-42ED-82BF-EA18F12C213E",
                       "isEnabled" : true,
-                      "isLooping" : true,
+                      "isLooping" : false,
                       "isModal" : false,
                       "name" : "Behaviour",
                       "triggers" : [
@@ -24603,7 +24603,7 @@
                       ],
                       "identifier" : "7EB8C5E1-38F5-42ED-82BF-EA18F12C213E",
                       "isEnabled" : true,
-                      "isLooping" : true,
+                      "isLooping" : false,
                       "isModal" : false,
                       "name" : "Behaviour",
                       "triggers" : [
@@ -26473,7 +26473,7 @@
                       ],
                       "identifier" : "7EB8C5E1-38F5-42ED-82BF-EA18F12C213E",
                       "isEnabled" : true,
-                      "isLooping" : true,
+                      "isLooping" : false,
                       "isModal" : false,
                       "name" : "Behaviour",
                       "triggers" : [

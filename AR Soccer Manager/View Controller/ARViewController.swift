@@ -273,53 +273,7 @@ class ARViewController: UIViewController {
                             }
                             try await Task.sleep(nanoseconds: 7000000000)
                         } else if event == "HDC" {
-                            let tackleAnchor = try! Experience.loadTackle()
-                            let TD1 = tackleAnchor.tH1?.children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0] as! ModelEntity
                             
-                            let TD2 = tackleAnchor.tH2?.children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0] as! ModelEntity
-                            
-                            let TD3 = tackleAnchor.tH3?.children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0] as! ModelEntity
-                            
-                            let TD4 = tackleAnchor.tH4?.children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0] as! ModelEntity
-                           
-                            let TD5 = tackleAnchor.tH5?.children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0] as! ModelEntity
-                            
-                            let TA6 = tackleAnchor.tH6?.children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0] as! ModelEntity
-                            
-                            let TD7 = tackleAnchor.tH7?.children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0] as! ModelEntity
-                           
-                            let TD8 = tackleAnchor.tH8?.children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0] as! ModelEntity
-                            
-                            let TD9 = tackleAnchor.tH9?.children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0] as! ModelEntity
-                            
-                            let hgk3 = tackleAnchor.homeGK3?.children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0] as! ModelEntity
-                            
-                            let agk3 = tackleAnchor.awayGK3?.children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0] as! ModelEntity
-                            
-                            TD1.model?.materials = [blue]
-                            TD2.model?.materials = [blue]
-                            TD3.model?.materials = [blue]
-                            TD4.model?.materials = [blue]
-                            TD5.model?.materials = [blue]
-                            TD7.model?.materials = [blue]
-                            TD8.model?.materials = [blue]
-                            TD9.model?.materials = [blue]
-                            TA6.model?.materials = [red]
-                            hgk3.model?.materials = [red]
-                            agk3.model?.materials = [blue]
-                            arView.scene.anchors.append(tackleAnchor)
-                            eventChange(text: "An excellent steal by \(teamName)")
-                            DispatchQueue.main.asyncAfter(deadline: .now() + 5.4) {
-                                print("Removing")
-                                self.arView.scene.anchors.removeAll()
-                                //self.arView.scene.removeAnchor(tackleAnchor)
-                               // self.arView.session.run(self.configuration, options: ARSession.RunOptions.resetTracking)
-                            }
-                            if self.gameStatus == false{
-                                break
-                            }
-                            try await Task.sleep(nanoseconds: 6000000000)
-                        } else if event == "ADC" {
                             let tackleAnchor2 = try! Experience.loadTackleAway()
                             let TA1 = tackleAnchor2.tA1?.children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0] as! ModelEntity
                             
@@ -355,7 +309,54 @@ class ARViewController: UIViewController {
                             agk4.model?.materials = [red]
                             hgk4.model?.materials = [blue]
                             arView.scene.anchors.append(tackleAnchor2)
-                            eventChange(text: "An amazing tackle from \(oppName)")
+                            eventChange(text: "An excellent stop by \(oppName)")
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 5.4) {
+                                print("Removing")
+                                self.arView.scene.anchors.removeAll()
+                                //self.arView.scene.removeAnchor(tackleAnchor)
+                               // self.arView.session.run(self.configuration, options: ARSession.RunOptions.resetTracking)
+                            }
+                            if self.gameStatus == false{
+                                break
+                            }
+                            try await Task.sleep(nanoseconds: 6000000000)
+                        } else if event == "ADC" {
+                            let tackleAnchor = try! Experience.loadTackle()
+                            let TD1 = tackleAnchor.tH1?.children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0] as! ModelEntity
+                            
+                            let TD2 = tackleAnchor.tH2?.children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0] as! ModelEntity
+                            
+                            let TD3 = tackleAnchor.tH3?.children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0] as! ModelEntity
+                            
+                            let TD4 = tackleAnchor.tH4?.children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0] as! ModelEntity
+                           
+                            let TD5 = tackleAnchor.tH5?.children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0] as! ModelEntity
+                            
+                            let TA6 = tackleAnchor.tH6?.children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0] as! ModelEntity
+                            
+                            let TD7 = tackleAnchor.tH7?.children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0] as! ModelEntity
+                           
+                            let TD8 = tackleAnchor.tH8?.children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0] as! ModelEntity
+                            
+                            let TD9 = tackleAnchor.tH9?.children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0] as! ModelEntity
+                            
+                            let hgk3 = tackleAnchor.homeGK3?.children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0] as! ModelEntity
+                            
+                            let agk3 = tackleAnchor.awayGK3?.children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0].children[0] as! ModelEntity
+                            
+                            TD1.model?.materials = [blue]
+                            TD2.model?.materials = [blue]
+                            TD3.model?.materials = [blue]
+                            TD4.model?.materials = [blue]
+                            TD5.model?.materials = [blue]
+                            TD7.model?.materials = [blue]
+                            TD8.model?.materials = [blue]
+                            TD9.model?.materials = [blue]
+                            TA6.model?.materials = [red]
+                            hgk3.model?.materials = [red]
+                            agk3.model?.materials = [blue]
+                            arView.scene.anchors.append(tackleAnchor)
+                            eventChange(text: "An amazing tackle from \(teamName)")
                             DispatchQueue.main.asyncAfter(deadline: .now() + 5.4) {
                                 print("Removing")
                                 self.arView.scene.anchors.removeAll()
