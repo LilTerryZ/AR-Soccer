@@ -221,7 +221,7 @@ class ResultVC: UIViewController{
 
 extension ResultVC:UITableViewDelegate{
     func numberOfSections(in tableView: UITableView) -> Int {
-        return events.count
+        return 1
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("cell tapped")
