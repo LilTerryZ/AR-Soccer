@@ -729,7 +729,7 @@ class ARViewController: UIViewController {
             animation.type = CATransitionType.push //1.
             
             self.aScore = aScore + 1
-            self.awayScore?.text = "Away: \(aScore)"
+            self.awayScore?.text = "\(oppName): \(aScore)"
             
             animation.duration = 0.25
             self.awayScore.layer.add(animation, forKey: CATransitionType.push.rawValue)//2.
@@ -744,7 +744,7 @@ class ARViewController: UIViewController {
             animation.type = CATransitionType.push //1.
             
             self.hScore = hScore + 1
-            self.homeScore?.text = "Home: \(hScore)"
+            self.homeScore?.text = "\(teamName): \(hScore)"
             
             animation.duration = 0.25
             self.homeScore.layer.add(animation, forKey: CATransitionType.push.rawValue)//2.

@@ -743,8 +743,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="844" height="390"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wku-Iq-Rbu">
-                                <rect key="frame" x="290" y="261.33333333333331" width="207" height="60"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wku-Iq-Rbu">
+                                <rect key="frame" x="319" y="268" width="207" height="60"/>
                                 <color key="backgroundColor" red="0.84457999340000001" green="0.69333894549999997" blue="0.23961580160000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="207" id="EI3-tQ-wwg"/>
@@ -1063,7 +1063,7 @@
                                 </attributedString>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bfd-ca-RIH">
-                                <rect key="frame" x="323" y="232" width="228" height="21"/>
+                                <rect key="frame" x="329" y="239" width="228" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" systemColor="systemRedColor"/>
@@ -2189,13 +2189,13 @@
     </scenes>
     <designables>
         <designable name="Zby-Zj-BkF">
-            <size key="intrinsicContentSize" width="91.333333333333329" height="32.666666666666664"/>
+            <size key="intrinsicContentSize" width="71.333333333333329" height="15.666666666666666"/>
         </designable>
     </designables>
     <inferredMetricsTieBreakers>
         <segue reference="3HU-hs-Wg3"/>
         <segue reference="We3-Jl-08n"/>
-        <segue reference="eEZ-Gf-g9g"/>
+        <segue reference="vA1-j6-YVc"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Barcelona.png" width="96" height="97.199996948242188"/>
