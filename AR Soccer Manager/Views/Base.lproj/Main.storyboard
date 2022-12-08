@@ -624,7 +624,7 @@
                                 <color key="backgroundColor" red="0.84457999340000001" green="0.69333894549999997" blue="0.23961580160000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="tintColor" systemColor="labelColor"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="World Cup Final Simulation" titleAlignment="center">
+                                <buttonConfiguration key="configuration" style="filled" title="World Cup Final" titleAlignment="center">
                                     <color key="baseBackgroundColor" red="0.84457999340000001" green="0.69333894549999997" blue="0.23961580160000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
                                 <userDefinedRuntimeAttributes>
@@ -2095,7 +2095,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Off-gL-sVX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-127.25118483412322" y="-1463.0769230769231"/>
+            <point key="canvasLocation" x="-134" y="-1305"/>
         </scene>
         <!--PickVC-->
         <scene sceneID="2NL-ZZ-y7v">
@@ -2283,190 +2283,14 @@
             </objects>
             <point key="canvasLocation" x="-1054" y="-2118"/>
         </scene>
-        <!--HomeVC-->
+        <!--WorldCupVC-->
         <scene sceneID="krW-zW-Rt3">
             <objects>
-                <viewController storyboardIdentifier="WorldCupVC" title="HomeVC" id="7G9-DD-oZO" customClass="WorldCupVC" customModule="AR_Soccer_Manager" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WorldCupVC" title="WorldCupVC" id="7G9-DD-oZO" customClass="WorldCupVC" customModule="AR_Soccer_Manager" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zYX-sn-dYx">
                         <rect key="frame" x="0.0" y="0.0" width="844" height="390"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LEb-FW-jJn">
-                                <rect key="frame" x="318" y="261" width="207" height="60"/>
-                                <color key="backgroundColor" red="0.84457999340000001" green="0.69333894549999997" blue="0.23961580160000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="207" id="FDQ-Dj-7pE"/>
-                                    <constraint firstAttribute="height" constant="60" id="JNl-hU-u9E"/>
-                                </constraints>
-                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Start Game" titleAlignment="center">
-                                    <color key="baseForegroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <color key="baseBackgroundColor" red="0.84457999340000001" green="0.69333894549999997" blue="0.23961580160000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                </buttonConfiguration>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
-                                        <integer key="value" value="3"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="10"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="startBtnWithSender:" destination="7G9-DD-oZO" eventType="touchUpInside" id="E7l-LO-YPf"/>
-                                </connections>
-                            </button>
-                            <stackView opaque="NO" contentMode="top" ambiguous="YES" axis="vertical" distribution="fillEqually" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="r96-OJ-yRx">
-                                <rect key="frame" x="110" y="268" width="0.0" height="0.0"/>
-                                <subviews>
-                                    <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="cgU-Ba-R0W">
-                                        <rect key="frame" x="0.0" y="0.0" width="641" height="50"/>
-                                        <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="m4U-Xy-jFZ">
-                                                <rect key="frame" x="0.0" y="0.0" width="207" height="50"/>
-                                                <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Player.png" translatesAutoresizingMaskIntoConstraints="NO" id="c8B-HU-3cg">
-                                                        <rect key="frame" x="8" y="8" width="50" height="34"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="50" id="3a2-jH-YRM"/>
-                                                        </constraints>
-                                                        <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
-                                                    </imageView>
-                                                    <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Yin-hk-YXP">
-                                                        <rect key="frame" x="61" y="8" width="106" height="34"/>
-                                                        <subviews>
-                                                            <label opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" verticalCompressionResistancePriority="749" text="Line-up" textAlignment="natural" lineBreakMode="tailTruncation" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="P3F-R9-qgd">
-                                                                <rect key="frame" x="28" y="0.0" width="50" height="0.0"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                            </label>
-                                                            <label opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" placeholderIntrinsicWidth="100" placeholderIntrinsicHeight="34" usesAttributedText="YES" lineBreakMode="tailTruncation" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="F9m-Rd-hk1">
-                                                                <rect key="frame" x="3" y="0.0" width="100" height="34"/>
-                                                                <attributedString key="attributedText">
-                                                                    <fragment content="4-2-3-1">
-                                                                        <attributes>
-                                                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                                            <font key="NSFont" metaFont="smallSystem"/>
-                                                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                                        </attributes>
-                                                                    </fragment>
-                                                                </attributedString>
-                                                            </label>
-                                                        </subviews>
-                                                    </stackView>
-                                                </subviews>
-                                                <color key="backgroundColor" red="0.84457999340000001" green="0.69333894549999997" blue="0.23961580160000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                <gestureRecognizers/>
-                                                <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="40"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
-                                                        <integer key="value" value="3"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                        <integer key="value" value="10"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                                <connections>
-                                                    <outletCollection property="gestureRecognizers" destination="g9S-N2-p6w" appends="YES" id="adr-Oc-5gB"/>
-                                                </connections>
-                                            </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="w11-ur-Ntz">
-                                                <rect key="frame" x="217" y="0.0" width="207" height="50"/>
-                                                <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Whistle.png" translatesAutoresizingMaskIntoConstraints="NO" id="55U-Uw-VtL">
-                                                        <rect key="frame" x="8" y="8" width="50" height="34"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="50" id="y1t-xA-QmN"/>
-                                                        </constraints>
-                                                    </imageView>
-                                                    <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="3rs-Zf-D6r">
-                                                        <rect key="frame" x="68" y="9.9999999999999982" width="99" height="30.333333333333329"/>
-                                                        <subviews>
-                                                            <label opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" verticalCompressionResistancePriority="749" text="Training" textAlignment="natural" lineBreakMode="tailTruncation" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rnA-o2-kmC">
-                                                                <rect key="frame" x="23.666666666666682" y="0.0" width="51.666666666666657" height="17"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                            </label>
-                                                            <label opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" usesAttributedText="YES" lineBreakMode="tailTruncation" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="glB-50-QfF">
-                                                                <rect key="frame" x="8.3333333333333144" y="17" width="82.333333333333329" height="13.333333333333336"/>
-                                                                <attributedString key="attributedText">
-                                                                    <fragment content="Coach available">
-                                                                        <attributes>
-                                                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                                            <font key="NSFont" metaFont="smallSystem"/>
-                                                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                                        </attributes>
-                                                                    </fragment>
-                                                                </attributedString>
-                                                            </label>
-                                                        </subviews>
-                                                    </stackView>
-                                                </subviews>
-                                                <color key="backgroundColor" red="0.84457999340000001" green="0.69333894549999997" blue="0.23961580160000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="40"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
-                                                        <integer key="value" value="3"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                        <integer key="value" value="10"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                            </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="V5d-fy-cOx">
-                                                <rect key="frame" x="434" y="0.0" width="207" height="50"/>
-                                                <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Sell.png" translatesAutoresizingMaskIntoConstraints="NO" id="Syr-PO-xuV">
-                                                        <rect key="frame" x="8" y="8" width="50" height="34"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="50" id="3n1-aK-Ovw"/>
-                                                        </constraints>
-                                                    </imageView>
-                                                    <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="TkZ-fb-kla">
-                                                        <rect key="frame" x="68" y="9.9999999999999982" width="99" height="30.333333333333329"/>
-                                                        <subviews>
-                                                            <label opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" verticalCompressionResistancePriority="749" text="Sell players" textAlignment="natural" lineBreakMode="tailTruncation" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LzM-mK-5EZ">
-                                                                <rect key="frame" x="12.666666666666629" y="0.0" width="73.666666666666671" height="17"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                            </label>
-                                                            <label opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" usesAttributedText="YES" lineBreakMode="tailTruncation" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SDc-kK-IQx">
-                                                                <rect key="frame" x="0.0" y="17" width="99" height="13.333333333333336"/>
-                                                                <attributedString key="attributedText">
-                                                                    <fragment content="Your call is needed">
-                                                                        <attributes>
-                                                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                                            <font key="NSFont" metaFont="smallSystem"/>
-                                                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                                        </attributes>
-                                                                    </fragment>
-                                                                </attributedString>
-                                                            </label>
-                                                        </subviews>
-                                                    </stackView>
-                                                </subviews>
-                                                <color key="backgroundColor" red="0.84457999340000001" green="0.69333894549999997" blue="0.23961580160000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                <gestureRecognizers/>
-                                                <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="40"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
-                                                        <integer key="value" value="3"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                        <integer key="value" value="10"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                                <connections>
-                                                    <outletCollection property="gestureRecognizers" destination="LAK-lg-7RZ" appends="YES" id="EDZ-Nl-vtW"/>
-                                                </connections>
-                                            </stackView>
-                                        </subviews>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="cR5-CG-EZl"/>
-                                        </constraints>
-                                    </stackView>
-                                </subviews>
-                            </stackView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t2g-6y-0ng">
                                 <rect key="frame" x="73" y="36" width="32" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -2474,68 +2298,9 @@
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" image="return.png"/>
                             </button>
-                            <label opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" ambiguous="YES" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="imM-Sd-gxc">
-                                <rect key="frame" x="520" y="190" width="210" height="29"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="300" id="lkj-4v-B7J"/>
-                                </constraints>
-                                <attributedString key="attributedText">
-                                    <fragment content="Argentina">
-                                        <attributes>
-                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" metaFont="system" size="24"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                            </label>
-                            <label opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" ambiguous="YES" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ff2-lH-diT">
-                                <rect key="frame" x="115" y="199" width="210" height="29"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="300" id="hwm-Nl-4zk"/>
-                                </constraints>
-                                <attributedString key="attributedText">
-                                    <fragment content="Portugal">
-                                        <attributes>
-                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" metaFont="system" size="24"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                            </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="vs.png" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5Wh-VC-qHn">
-                                <rect key="frame" x="402" y="187" width="40" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="55" id="PQB-Bk-kHj"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="Tdd-EX-kbC"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="40" id="Zvr-bf-vMX"/>
-                                    <constraint firstAttribute="height" constant="55" id="cob-A0-ncL"/>
-                                </constraints>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eFr-Bm-YkC">
-                                <rect key="frame" x="323" y="232" width="228" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="QRv-Iy-h4M"/>
-                                    <constraint firstAttribute="width" constant="228" id="Ret-xT-3Io"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" systemColor="systemRedColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="argen.png" translatesAutoresizingMaskIntoConstraints="NO" id="P9b-lr-zaQ">
-                                <rect key="frame" x="578" y="104" width="95" height="86"/>
+                            <label opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="siY-Qc-nE2" customClass="PaddingLabel" customModule="AR_Soccer_Manager" customModuleProvider="target">
+                                <rect key="frame" x="335" y="81" width="173" height="23"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="portugal.png" translatesAutoresizingMaskIntoConstraints="NO" id="kWK-ID-GHJ">
-                                <rect key="frame" x="173" y="110" width="95" height="86"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <label opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" usesAttributedText="YES" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="siY-Qc-nE2" customClass="PaddingLabel" customModule="AR_Soccer_Manager" customModuleProvider="target">
-                                <rect key="frame" x="352" y="94" width="136" height="23"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="23" id="He3-aB-BMv"/>
-                                </constraints>
                                 <attributedString key="attributedText">
                                     <fragment content="Qatar World Cup 2022">
                                         <attributes>
@@ -2560,31 +2325,82 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </label>
-                            <label opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" ambiguous="YES" misplaced="YES" text="Final Match" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="I7E-u5-zRE">
-                                <rect key="frame" x="383" y="125" width="75" height="23"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="23" id="LG4-0N-TZC"/>
-                                    <constraint firstAttribute="height" constant="23" id="San-e1-XhV"/>
-                                    <constraint firstAttribute="width" constant="75" id="zJU-QX-oIl"/>
-                                </constraints>
+                            <label opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" text="Final Match" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="I7E-u5-zRE">
+                                <rect key="frame" x="386" y="58" width="75" height="23"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="italicSystem" pointSize="14"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </label>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LEb-FW-jJn">
+                                <rect key="frame" x="318" y="280" width="207" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.84457999340000001" green="0.69333894549999997" blue="0.23961580160000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Start Game" titleAlignment="center">
+                                    <color key="baseForegroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="baseBackgroundColor" red="0.84457999340000001" green="0.69333894549999997" blue="0.23961580160000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="startBtnWithSender:" destination="7G9-DD-oZO" eventType="touchUpInside" id="E7l-LO-YPf"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="imM-Sd-gxc">
+                                <rect key="frame" x="520" y="209" width="210" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Argentina">
+                                        <attributes>
+                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" metaFont="system" size="24"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                            </label>
+                            <label opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ff2-lH-diT">
+                                <rect key="frame" x="115" y="218" width="210" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Portugal">
+                                        <attributes>
+                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" metaFont="system" size="24"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="vs.png" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5Wh-VC-qHn">
+                                <rect key="frame" x="392" y="170" width="58" height="53"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eFr-Bm-YkC">
+                                <rect key="frame" x="308" y="246" width="228" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" systemColor="systemRedColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="argen.png" translatesAutoresizingMaskIntoConstraints="NO" id="P9b-lr-zaQ">
+                                <rect key="frame" x="565" y="101" width="120" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="portugal.png" translatesAutoresizingMaskIntoConstraints="NO" id="kWK-ID-GHJ">
+                                <rect key="frame" x="160" y="101" width="120" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="5sL-je-2ZS"/>
                         <color key="backgroundColor" systemColor="systemTealColor"/>
-                        <constraints>
-                            <constraint firstItem="r96-OJ-yRx" firstAttribute="top" relation="greaterThanOrEqual" secondItem="zYX-sn-dYx" secondAttribute="top" constant="260" id="23c-vi-Tya"/>
-                            <constraint firstItem="5sL-je-2ZS" firstAttribute="trailing" secondItem="imM-Sd-gxc" secondAttribute="trailing" constant="50" id="8Kf-5s-ewc"/>
-                            <constraint firstItem="5sL-je-2ZS" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="r96-OJ-yRx" secondAttribute="trailing" constant="70" id="AkC-Zk-kUW"/>
-                            <constraint firstItem="5sL-je-2ZS" firstAttribute="bottom" secondItem="LEb-FW-jJn" secondAttribute="bottom" constant="34.670000000000002" id="DPJ-ko-8G9"/>
-                            <constraint firstItem="r96-OJ-yRx" firstAttribute="leading" secondItem="zYX-sn-dYx" secondAttribute="leading" constant="110" id="Dbk-57-cOC"/>
-                            <constraint firstItem="siY-Qc-nE2" firstAttribute="top" secondItem="5sL-je-2ZS" secondAttribute="top" constant="47" id="RJg-QW-jHH"/>
-                            <constraint firstItem="LEb-FW-jJn" firstAttribute="leading" secondItem="5sL-je-2ZS" secondAttribute="leading" constant="290" id="RzV-4A-Zfq"/>
-                            <constraint firstItem="ff2-lH-diT" firstAttribute="leading" secondItem="5sL-je-2ZS" secondAttribute="leading" constant="50" id="k8d-4B-jL9"/>
-                            <constraint firstItem="I7E-u5-zRE" firstAttribute="top" secondItem="siY-Qc-nE2" secondAttribute="bottom" constant="1" id="smm-Ey-UT3"/>
-                            <constraint firstItem="siY-Qc-nE2" firstAttribute="top" secondItem="5sL-je-2ZS" secondAttribute="top" constant="85" id="srG-3F-Nca"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="hHo-Ff-ECx"/>
                     <connections>
@@ -2611,8 +2427,9 @@
         </designable>
     </designables>
     <inferredMetricsTieBreakers>
+        <segue reference="Zgd-ZK-H6S"/>
         <segue reference="3HU-hs-Wg3"/>
-        <segue reference="vA1-j6-YVc"/>
+        <segue reference="Xjb-Dd-7Vw"/>
         <segue reference="xo7-QI-sbh"/>
     </inferredMetricsTieBreakers>
     <resources>
