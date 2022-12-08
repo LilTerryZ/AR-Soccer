@@ -38,20 +38,66 @@ class PickerVC: UIViewController,DataRetrieval{
 
     var completionHandler:((String)->Void)?
     
+    @IBOutlet weak var vs: UIImageView!
+    @IBOutlet weak var err1: UILabel!
+    @IBOutlet weak var err2: UILabel!
+    
+    @IBOutlet weak var txtTitle: UILabel!
     @IBOutlet weak var clubSelected: UILabel!
     @IBOutlet weak var leagueSelected: UILabel!
+    @IBOutlet weak var oppoClubSelected: UILabel!
     
-    
+//    @IBOutlet weak var oppoLegueSelected: UILabel!
+    @IBOutlet weak var nextBtn: UIButton!
     @IBOutlet weak var startBtn: UIButton!
     
-    @IBAction func startBtn(sender: Any){
+    @IBAction func startBtn(_ sender: Any) {
+        let vc=storyboard?.instantiateViewController(withIdentifier: "HomeVC") as! HomeVC
+        vc.txtUserClub=clubSelected.text!
+        vc.txtOppoClub=oppoClubSelected.text!
+        vc.modalPresentationStyle = .fullScreen
+        present(vc,animated: true,completion: nil)
+    }
+    @IBAction func nextBtn(sender: Any){
       //  print("\(clubSelected.text) &&&&&&&&&&&&&&")
         //completionHandler?(txtClub)
         //completionHandler?(clubSelected.text)
-        let vc=storyboard?.instantiateViewController(withIdentifier: "HomeVC") as! HomeVC
-        vc.txtUserClub=clubSelected.text!
-        vc.modalPresentationStyle = .fullScreen
-        present(vc,animated: true,completion: nil)
+        txtTitle.text="Pick opponent club"
+        vs.isHidden=false
+        clubSelected.frame.origin = CGPoint(x: 115, y: 270)
+        leagueSelected.isHidden=true
+        if (premier.isHidden==false){
+            selectLiga.isHidden = true
+            selectLigue.isHidden = true
+            selectBundesliga.isHidden = true
+            premier.frame.origin = CGPoint(x: 3650, y: 170)
+            selectPremier.frame.origin = CGPoint(x: 365, y: 100)
+        }
+        if (liga.isHidden==false){
+            selectPremier.isHidden = true
+            selectLigue.isHidden = true
+            selectBundesliga.isHidden = true
+            liga.frame.origin = CGPoint(x: 365, y: 170)
+            selectLiga.frame.origin = CGPoint(x: 365, y: 100)
+        }
+        if (ligue.isHidden==false){
+            selectPremier.isHidden = true
+            selectLiga.isHidden = true
+            selectBundesliga.isHidden = true
+            ligue.frame.origin = CGPoint(x: 365, y: 170)
+            selectLigue.frame.origin = CGPoint(x: 365, y: 100)
+        }
+        if (bundesliga.isHidden==false){
+            selectPremier.isHidden = true
+            selectLigue.isHidden = true
+            selectLiga.isHidden = true
+            bundesliga.frame.origin = CGPoint(x: 350, y: 170)
+            selectBundesliga.frame.origin = CGPoint(x: 350, y: 100)
+        }
+        oppoClubSelected.isHidden=false
+        nextBtn.isHidden=true
+       
+
     }
 
     @IBAction func selectPremier( sender: UIButton )
@@ -61,8 +107,8 @@ class PickerVC: UIViewController,DataRetrieval{
         ligue.isHidden = true
         bundesliga.isHidden = true
         if (clubSelected.text == "TBD"){
-            startBtn.isHidden=true}else{
-                startBtn.isHidden=false
+            nextBtn.isHidden=true}else{
+                nextBtn.isHidden=false
             }
     }
 
@@ -175,10 +221,28 @@ class PickerVC: UIViewController,DataRetrieval{
     
     func createPicker(league:String){
         let optionClosurePremier = {(actionPremier: UIAction) in
-            self.clubSelected.text=actionPremier.title
+           
             self.leagueSelected.text="Premier League"
-            if (self.clubSelected.text != "TBD"){
-                self.startBtn.isHidden=false}
+            if( self.selectPremier.isHidden == true ||
+                self.selectLigue.isHidden == true ||
+                self.selectLiga.isHidden == true ||
+                self.selectBundesliga.isHidden == true){
+                self.oppoClubSelected.text=actionPremier.title
+                if(self.clubSelected.text == self.oppoClubSelected.text){
+                    self.err1.isHidden=false
+                    self.err2.isHidden=false
+                    self.startBtn.isHidden=true
+                }else{
+                        self.startBtn.isHidden=false
+                        self.err1.isHidden=true
+                        self.err2.isHidden=true
+                    }
+            }else{ self.clubSelected.text=actionPremier.title
+                self.nextBtn.isHidden=false
+            }
+//            if (self.clubSelected.text != "TBD"){
+//                self.nextBtn.isHidden=false}
+          
             print(actionPremier.title)
             
 //            self.txtClub = actionPremier.title
@@ -188,27 +252,78 @@ class PickerVC: UIViewController,DataRetrieval{
            // self.completionHandler?(self.txtClub)
         }
         let optionClosureLiga = {(actionLiga: UIAction) in
-            self.clubSelected.text=actionLiga.title
+//            self.clubSelected.text=actionLiga.title
             self.leagueSelected.text="La Liga"
-            if (self.clubSelected.text != "TBD"){
-                self.startBtn.isHidden=false}
+            if( self.selectPremier.isHidden == true ||
+                self.selectLigue.isHidden == true ||
+                self.selectLiga.isHidden == true ||
+                self.selectBundesliga.isHidden == true){
+                self.oppoClubSelected.text=actionLiga.title
+                if(self.clubSelected.text == self.oppoClubSelected.text){
+                    self.err1.isHidden=false
+                    self.err2.isHidden=false
+                    self.startBtn.isHidden=true
+                }else{
+                        self.startBtn.isHidden=false
+                        self.err1.isHidden=true
+                        self.err2.isHidden=true
+                    }
+            }else{ self.clubSelected.text=actionLiga.title
+                self.nextBtn.isHidden=false
+            }
+//            if (self.clubSelected.text != "TBD"){
+//                self.nextBtn.isHidden=false}
             print(actionLiga.title)
 //            self.txtClub = actionLiga.title
         }
         let optionClosureLigue = {(actionLigue: UIAction) in
-            self.clubSelected.text=actionLigue.title
+           // self.clubSelected.text=actionLigue.title
             self.leagueSelected.text="Ligue 1"
-            if (self.clubSelected.text != "TBD"){
-                self.startBtn.isHidden=false}
+            if( self.selectPremier.isHidden == true ||
+                self.selectLigue.isHidden == true ||
+                self.selectLiga.isHidden == true ||
+                self.selectBundesliga.isHidden == true){
+                self.oppoClubSelected.text=actionLigue.title
+                if(self.clubSelected.text == self.oppoClubSelected.text){
+                    self.err1.isHidden=false
+                    self.err2.isHidden=false
+                    self.startBtn.isHidden=true
+                }else{
+                        self.startBtn.isHidden=false
+                        self.err1.isHidden=true
+                        self.err2.isHidden=true
+                    }
+            }else{ self.clubSelected.text=actionLigue.title
+                self.nextBtn.isHidden=false
+            }
+//            if (self.clubSelected.text != "TBD"){
+//                self.nextBtn.isHidden=false}
             print(actionLigue.title)
            // self.vc.txtClub = actionLigue.title
         }
         let optionClosureBundesliga = {(actionBundesliga: UIAction) in
-            self.clubSelected.text=actionBundesliga.title
+//            self.clubSelected.text=actionBundesliga.title
             self.leagueSelected.text="Bundesliga"
-            if (self.clubSelected.text != "TBD"){
-                self.startBtn.isHidden=false}
+            if( self.selectPremier.isHidden == true ||
+                self.selectLigue.isHidden == true ||
+                self.selectLiga.isHidden == true ||
+                self.selectBundesliga.isHidden == true){
+                self.oppoClubSelected.text=actionBundesliga.title
+                if(self.clubSelected.text == self.oppoClubSelected.text){
+                    self.err1.isHidden=false
+                    self.err2.isHidden=false
+                    self.startBtn.isHidden=true
+                }else{
+                        self.startBtn.isHidden=false
+                        self.err1.isHidden=true
+                        self.err2.isHidden=true
+                    }
+            }else{ self.clubSelected.text=actionBundesliga.title
+                self.nextBtn.isHidden=false
+            }
             print(actionBundesliga.title)
+//            if (self.clubSelected.text != "TBD"){
+//                self.nextBtn.isHidden=false}
             //self.vc.txtClub = actionBundesliga.title
         }
         
@@ -284,7 +399,7 @@ class PickerVC: UIViewController,DataRetrieval{
         liga.isHidden = true
         ligue.isHidden = true
         bundesliga.isHidden = true
-        startBtn.isHidden=true
+        nextBtn.isHidden=true
     }
 
   
