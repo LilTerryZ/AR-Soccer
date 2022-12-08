@@ -10,7 +10,7 @@ class Simulation{
     
     var resultDataDict = [String: Any]()
     
-    func runSimulation(homeTeamName: String , awayTeamName: String) async -> [String: Any] {
+    func runSimulation(homeTeamName: String , awayTeamName: String, leagueName: String) async -> [String: Any] {
         guard let url = URL(string: "https://us-central1-ar-soccer-manager-5cab3.cloudfunctions.net/simulateGame") else {
             print("Invalid URL")
             return ["Error": "Invalid URL"]
@@ -22,7 +22,7 @@ class Simulation{
         let userId = userDefault.getInfo(itemID: "userId")
         print(String(decoding: userId!, as: UTF8.self))
         
-        let body = ["homeTeam": ["name": homeTeamName],"awayTeam": ["name": awayTeamName], "leagueName" : "Premier League", "userId": String(decoding: userId!, as: UTF8.self)] as [String : Any]
+        let body = ["homeTeam": ["name": homeTeamName],"awayTeam": ["name": awayTeamName], "leagueName" : leagueName, "userId": String(decoding: userId!, as: UTF8.self)] as [String : Any]
         
         let requestBodyJson = try? JSONSerialization.data(withJSONObject: body)
 

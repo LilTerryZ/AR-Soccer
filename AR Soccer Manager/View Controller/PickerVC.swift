@@ -55,6 +55,7 @@ class PickerVC: UIViewController,DataRetrieval{
         let vc=storyboard?.instantiateViewController(withIdentifier: "HomeVC") as! HomeVC
         vc.txtUserClub=clubSelected.text!
         vc.txtOppoClub=oppoClubSelected.text!
+        vc.txtLeagueName = leagueSelected.text!
         vc.modalPresentationStyle = .fullScreen
         present(vc,animated: true,completion: nil)
     }
@@ -70,7 +71,7 @@ class PickerVC: UIViewController,DataRetrieval{
             selectLiga.isHidden = true
             selectLigue.isHidden = true
             selectBundesliga.isHidden = true
-            premier.frame.origin = CGPoint(x: 3650, y: 170)
+            premier.frame.origin = CGPoint(x: 365, y: 170)
             selectPremier.frame.origin = CGPoint(x: 365, y: 100)
         }
         if (liga.isHidden==false){

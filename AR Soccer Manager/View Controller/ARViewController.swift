@@ -17,6 +17,8 @@ class ARViewController: UIViewController {
     
     @IBOutlet var arView: ARView!
     
+    var leagueName = ""
+    
     var hScore: Int = 0
     var aScore: Int = 0
     
@@ -105,7 +107,7 @@ class ARViewController: UIViewController {
             let simulation = Simulation()
             
            Task{
-                let result = await simulation.runSimulation(homeTeamName: teamName, awayTeamName: oppName)
+                let result = await simulation.runSimulation(homeTeamName: teamName, awayTeamName: oppName, leagueName: leagueName)
                 let events = result["events"]
                 
                //For loop to create stats for results page when simulation is done

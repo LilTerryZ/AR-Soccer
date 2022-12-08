@@ -32,6 +32,7 @@ class HomeVC: UIViewController{
     var txtName=""
     var txtUserClub=""
     var txtOppoClub=""
+    var txtLeagueName=""
     var imgURL=""
     
 //    let vc = PickerVC(nibName: "PickerVC", bundle: nil)
@@ -57,6 +58,7 @@ class HomeVC: UIViewController{
         let vc=storyboard?.instantiateViewController(withIdentifier: "ARViewController") as! ARViewController
         vc.teamName = txtUserClub
         vc.oppName = txtOppoClub
+        vc.leagueName = txtLeagueName
         vc.modalPresentationStyle = .fullScreen
         present(vc,animated: true,completion: nil)
     }

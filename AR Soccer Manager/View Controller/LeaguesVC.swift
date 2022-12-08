@@ -23,12 +23,15 @@ class LeaguesVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
     
     @IBOutlet weak var StandingTableRef: UITableView!
     @IBOutlet weak var HeaderCell: UIView!
+    @IBOutlet weak var leagueSelector: UIButton!
+    
+    var leagueSelected = "pr"
     
     var standingsSorted = [TeamStanding]()
     let userId = String(decoding: UserRepository().getInfo(itemID: "userId")!, as: UTF8.self)
     
     override func loadView() {
-        loadLeague()
+        loadLeague(leagueName: leagueSelected)
         super.loadView()
     }
     
@@ -44,6 +47,52 @@ class LeaguesVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
         
         print(userId)
         
+        if #available(iOS 15.0, *) {
+               leagueSelector.showsMenuAsPrimaryAction=true
+               leagueSelector.changesSelectionAsPrimaryAction=true
+           } else {
+           }
+           
+           let optionSelector = {(action: UIAction) in
+               self.leagueSelector.setTitle(action.title, for: .normal)
+               
+               var leagueAbrv = ""
+               let actionTitle = action.title
+               
+               if(actionTitle == "Premier League") {
+                   leagueAbrv = "pr"
+               }else if(actionTitle == "Ligue 1") {
+                   leagueAbrv = "lig"
+               }else if(actionTitle == "La Liga") {
+                   leagueAbrv = "lalig"
+               }else if(actionTitle == "Bundesliga") {
+                   leagueAbrv = "bund"
+               }
+               
+               self.loadLeague(leagueName: leagueAbrv)
+               
+               print(actionTitle)
+           }
+           
+           var menuItems = [UIAction]()
+               
+           let prMenuItem = UIAction(title: "Premier League", state: .off, handler: optionSelector)
+           menuItems.append(prMenuItem)
+           
+           let laligMenuItem = UIAction(title: "La Liga", state: .off, handler: optionSelector)
+           menuItems.append(laligMenuItem)
+           
+           let ligMenuItem = UIAction(title: "Ligue 1", state: .off, handler: optionSelector)
+           menuItems.append(ligMenuItem)
+           
+           let bundMenuItem = UIAction(title: "Bundesliga", state: .off, handler: optionSelector)
+           menuItems.append(bundMenuItem)
+           
+           let menu = UIMenu(title: "", options: .displayInline, children: menuItems)
+           
+           leagueSelector.menu = menu
+               
+        
         
     }
     
@@ -54,7 +103,7 @@ class LeaguesVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
        
-        return 20
+        return standingsSorted.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -81,7 +130,7 @@ class LeaguesVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
       
     }
     
-    func loadLeague() {
+    func loadLeague(leagueName: String) {
         
         
         let db=Firestore.firestore()
@@ -93,7 +142,7 @@ class LeaguesVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
                 print("Document Good")
                 let dataDescription = document.data()! as Dictionary<String, AnyObject>
                 let leagues = dataDescription["leagues"] as! Dictionary<String, AnyObject>
-                let league = leagues["pr"] as! Dictionary<String, AnyObject>
+                let league = leagues[leagueName] as! Dictionary<String, AnyObject>
                 
                 let teams = league["standing"] as! [Dictionary<String, AnyObject>]
                 var teamsSorted = [TeamStanding]()
