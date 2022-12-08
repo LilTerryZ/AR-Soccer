@@ -1,8 +1,8 @@
 //
-//  HomeVC.swift
+//  WorldCupVC.swift
 //  AR Soccer Manager
 //
-//  Created by Haonan Zhang on 2022-09-14.
+//  Created by Diamond Winter-Hogan on 2022-12-07.
 //
 
 import Foundation
@@ -13,7 +13,7 @@ import FirebaseFirestore
 
 //HomeVC = (UIStoryboard(name: "Main",bundle: nil).instantiateViewControllerWithIdentifier("WWPhotoSlideShowVC") as! WWPhotoSlideShowVC)
 
-class HomeVC: UIViewController{
+class WorldCupVC: UIViewController{
    
     
     @IBOutlet weak var vsImage: UIImageView!
@@ -30,8 +30,8 @@ class HomeVC: UIViewController{
     //let vc = PickerVC()
     var clubImageData=[String: String]()
     var txtName=""
-    var txtUserClub=""
-    var txtOppoClub=""
+    var txtUserClub="Portugal"
+    var txtOppoClub="Argentina"
     var txtLeagueName=""
     var imgURL=""
     
@@ -73,8 +73,7 @@ class HomeVC: UIViewController{
 //        vc.completionHandler={text in
 //            self.userClub?.text=text
 //        }
-        self.userName?.isHidden=true
-        self.oppositeName.isHidden=true
+
         self.userClub?.text=txtUserClub
         self.oppositeClub?.text=txtOppoClub
         vsImage.image = UIImage(named: "vs")
@@ -85,7 +84,6 @@ class HomeVC: UIViewController{
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: animated)
-        self.getData(success: (clubImageData))
        
         //print("=========\(txtClub) ==============")
 //        self.userTeam()
@@ -95,35 +93,11 @@ class HomeVC: UIViewController{
    
     }
     override func viewDidAppear(_ animated: Bool) {
-        self.getData(success: (clubImageData))
+     
     }
        
 
-    func getData(success:([String: String])){
-        let db=Firestore.firestore()
-        db.collection("clubs").order(by: "name").getDocuments(){ [self] (querySnapshot, err) in
-                if let err = err {
-                    print("Error getting documents: \(err)")
-                    
-                } else {
-                    for document in querySnapshot!.documents {
-                        self.clubImageData.updateValue("\(document.data()["logo"]!)", forKey: "\(document.data()["name"]!)")
-//                        self.clubImageData.append(document.data()["logo"]! as! String)
-                    }
-                }
-                print("logo",self.clubImageData.count)
-                print(self.clubImageData)
-//                self.didFetchData(data: self.clubImageData)
 
-            self.imgURL=self.clubImageData[self.txtOppoClub] ?? "Barcelona"
-            self.loadOppoImg(logoURL: URL(string: imgURL)!)
-            
-            self.imgURL=self.clubImageData[self.txtUserClub] ?? "Barcelona"
-            self.loadUserImg(logoURL: URL(string: imgURL)!)
-//            self.userClubLogo?.frame = CGRect(x: 0, y: 0, width: 96, height: 96)
-//            var im=UIImageView(frame: CGRectMake(x:0, y:0, self.view.frame.size.width*0.2,50))
-            }
-       }
 //    func didFetchData(data:[String:String]){
 //        if(data==self.clubImageData){createPicker()}
 //    }
@@ -168,8 +142,24 @@ class HomeVC: UIViewController{
 
 }
 
+extension UIImageView{
+    func rotate() {
+        print("ROTATING")
+        let rotation : CABasicAnimation = CABasicAnimation(keyPath: "transform.rotation.z")
+        rotation.toValue = NSNumber(value: Double.pi * 2)
+        rotation.duration = 10
+        rotation.isCumulative = true
+        rotation.repeatCount = Float.greatestFiniteMagnitude
+        self.layer.add(rotation, forKey: "rotationAnimation")
+    }
+}
 
-
-
-
-
+extension UIAlertController {
+    func presentInOwnWindow(animated: Bool, completion: (() -> Void)?) {
+        let alertWindow = UIWindow(frame: UIScreen.main.bounds)
+        alertWindow.rootViewController = UIViewController()
+        alertWindow.windowLevel = UIWindow.Level.alert + 1;
+        alertWindow.makeKeyAndVisible()
+        alertWindow.rootViewController?.present(self, animated: animated, completion: completion)
+    }
+}

@@ -10,6 +10,9 @@
 		17C964CC2925D121001362D7 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C964CB2925D121001362D7 /* MainVC.swift */; };
 		17C964D02925E5CD001362D7 /* LeaguesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C964CF2925E5CD001362D7 /* LeaguesVC.swift */; };
 		17C964D22925E9E9001362D7 /* UserDefaultService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C964D12925E9E9001362D7 /* UserDefaultService.swift */; };
+		C52A44032941870A007055BD /* WorldCupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52A44022941870A007055BD /* WorldCupVC.swift */; };
+		C52A44062941885C007055BD /* argen.png in Resources */ = {isa = PBXBuildFile; fileRef = C52A44042941885C007055BD /* argen.png */; };
+		C52A44072941885C007055BD /* portugal.png in Resources */ = {isa = PBXBuildFile; fileRef = C52A44052941885C007055BD /* portugal.png */; };
 		C552606928FB9F2600065A60 /* SimulationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C552606728FB9F2600065A60 /* SimulationService.swift */; };
 		C552606A28FB9F2600065A60 /* ARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C552606828FB9F2600065A60 /* ARViewController.swift */; };
 		C552606C28FB9F3F00065A60 /* Experience.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = C552606B28FB9F3F00065A60 /* Experience.rcproject */; };
@@ -132,6 +135,9 @@
 		17C964CB2925D121001362D7 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		17C964CF2925E5CD001362D7 /* LeaguesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaguesVC.swift; sourceTree = "<group>"; };
 		17C964D12925E9E9001362D7 /* UserDefaultService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultService.swift; sourceTree = "<group>"; };
+		C52A44022941870A007055BD /* WorldCupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldCupVC.swift; sourceTree = "<group>"; };
+		C52A44042941885C007055BD /* argen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = argen.png; sourceTree = "<group>"; };
+		C52A44052941885C007055BD /* portugal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = portugal.png; sourceTree = "<group>"; };
 		C552606728FB9F2600065A60 /* SimulationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimulationService.swift; sourceTree = "<group>"; };
 		C552606828FB9F2600065A60 /* ARViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARViewController.swift; sourceTree = "<group>"; };
 		C552606B28FB9F3F00065A60 /* Experience.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Experience.rcproject; sourceTree = "<group>"; };
@@ -266,6 +272,8 @@
 		EB37FC4828D15F9800D7F714 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				C52A44042941885C007055BD /* argen.png */,
+				C52A44052941885C007055BD /* portugal.png */,
 				C570100C292C77E100DA9B3B /* spinner.gif */,
 				EBDC118B2932D06D0081B03E /* logo.jpeg */,
 				EBDC11912932D9050081B03E /* title.png */,
@@ -305,6 +313,7 @@
 				EBEE0D8A29256CE200F13C93 /* TradeVC.swift */,
 				17C964CB2925D121001362D7 /* MainVC.swift */,
 				17C964CF2925E5CD001362D7 /* LeaguesVC.swift */,
+				C52A44022941870A007055BD /* WorldCupVC.swift */,
 			);
 			path = "View Controller";
 			sourceTree = "<group>";
@@ -599,6 +608,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EBDC11922932D9050081B03E /* title.png in Resources */,
+				C52A44062941885C007055BD /* argen.png in Resources */,
 				C570100D292C77E100DA9B3B /* spinner.gif in Resources */,
 				EB1F41D528DE072F006B2F94 /* settings.png in Resources */,
 				EB37FC5628D1767E00D7F714 /* vs.png in Resources */,
@@ -608,6 +618,7 @@
 				EBDC118C2932D06D0081B03E /* logo.jpeg in Resources */,
 				EB1F41D328DE032F006B2F94 /* return.png in Resources */,
 				EBD9BB9128D11D00007E75D9 /* Assets.xcassets in Resources */,
+				C52A44072941885C007055BD /* portugal.png in Resources */,
 				EB647C6928D40E890000B8A3 /* Homebcg.jpg in Resources */,
 				EB0B2E3D292F0E60001C028E /* music.mp3 in Resources */,
 				EBE5588B2913731700B8B68C /* 1.png in Resources */,
@@ -683,6 +694,7 @@
 				EB37FC2128D12C9700D7F714 /* ContentSegue.swift in Sources */,
 				EB37FC1428D12C0600D7F714 /* SlidingAnimationOptions.swift in Sources */,
 				EB37FC1828D12C7400D7F714 /* SlidingContentAnimator.swift in Sources */,
+				C52A44032941870A007055BD /* WorldCupVC.swift in Sources */,
 				17C964D02925E5CD001362D7 /* LeaguesVC.swift in Sources */,
 				EBD9BB8528D11CFE007E75D9 /* AppDelegate.swift in Sources */,
 				EBD9BBBD28D122C3007E75D9 /* SceneDelegate.swift in Sources */,
@@ -866,7 +878,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 9963RQX256;
+				DEVELOPMENT_TEAM = S96YGH2XSQ;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "AR Soccer Manager/Info.plist";
 				INFOPLIST_KEY_NSCameraUsageDescription = "Allow AR Soccer Manager to access your camera for simulation purposes.";
@@ -895,7 +907,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 9963RQX256;
+				DEVELOPMENT_TEAM = S96YGH2XSQ;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "AR Soccer Manager/Info.plist";
 				INFOPLIST_KEY_NSCameraUsageDescription = "Allow AR Soccer Manager to access your camera for simulation purposes.";
